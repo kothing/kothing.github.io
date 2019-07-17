@@ -1,0 +1,17 @@
+<div class="share sticky-top sticky-top-offset">
+    <p>
+        {% if site.locale == "zh-cn" %}
+            {{ site.zh-cn_share }}
+        {% else %}
+            {{ site.en_share }}
+        {% endif %}
+    </p>
+    <div class="social-share"></div>
+    {% if page.comments != false %}
+    <ul>
+        <li>
+            <a class="small smoothscroll" href="#comments"></a>
+        </li>
+    </ul>
+    {% endif %}
+</div>

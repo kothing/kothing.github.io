@@ -1,0 +1,10 @@
+---
+layout: default
+title: 404
+permalink: /404.html
+---
+
+<div class="text-center">
+    <h1 class="display-1 mt-5 mb-4"><span class="badge badge-danger">404</span> {% if site.locale == "zh-cn" %}{{ site.zh-cn_404 }}{% else %}{{ site.en_404 }}{% endif %}</h1>
+    <p>{% if site.locale == "zh-cn" %}{{ site.zh-cn_visit-home }}{% else %}{{ site.en_visit-home }}{% endif %} <a href="{{site.baseurl}}/">{% if site.locale == "zh-cn" %}{{ site.zh-cn_home }}{% else %}{{ site.en_home }}{% endif %}</a>!</p>
+</div>

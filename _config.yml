@@ -1,0 +1,117 @@
+# Site
+name: "Kothing"
+title: "Kothing"
+description: "Kothing bloggers. Review products, books, movies, restaurant and anything you like on your blog with Kothing"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: ''
+include: ["_pages"]
+permalink: /:title/
+locale: 'zh-cn'
+
+# Authors
+authors:
+  Kothing:
+    name: Kothing
+    display_name: Kothing
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: ''
+    web: https://www.kothing.com
+    twitter: ''
+    description: "Author of Kothing, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
+  john:
+    name: John
+    display_name: John    
+    avatar: 'assets/images/avatar.png'
+    gravatar: b1cc14991db7a456fcd761680bbc8f81
+    email: ''
+    web: https://www.kothing.com
+    twitter: ''
+    description: "This is the author box. Write a short description of the author here. You are currently previewing Kothing demo, a Jekyll template compatible with Github pages."
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+    
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+    
+# Pagination 
+paginate: 6
+paginate_path: /page:num/
+    
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "disabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+# Comments
+comments:
+  gitalk: true
+  gitalk_ClientID: 2c2617ce0d0cb54ff37a
+  gitalk_ClientSecret: 36d1e944ce2e9adc3f4f4ab0de927fdc43bf741f
+  gitalk_repo: kothing.github.io
+  gitalk_owner: kothing
+  gitalk_admin: ['kothing']
+  gitalk_distractionFreeMode: false
+
+# Lang zh-cn
+zh-cn_home: '首页'
+zh-cn_about: '关于'
+zh-cn_categories: '博客'
+zh-cn_wp-version: 'Wordpress'
+zh-cn_fork-github: 'Github'
+zh-cn_featured: '特荐'
+zh-cn_all-stories: '全部博客'
+zh-cn_prev: '上一页'
+zh-cn_next: '下一页'
+zh-cn_category: '类目'
+zh-cn_read-story: '阅读详情'
+zh-cn_share: '分享'
+zh-cn_rating: '星级'
+zh-cn_type-and-enter: '搜索'
+zh-cn_search-results-for: '搜索结果: '
+zh-cn_no-search-result: '抱歉，未找到结果。关闭并尝试其他搜索！'
+zh-cn_close: '关闭'
+zh-cn_404: '页面不存在!'
+zh-cn_visit-home: '请使用栏里搜索其他内容或者访问'
+# Lang en
+en_home: 'Hme'
+en_about: 'About'
+en_categories: 'Blog'
+en_wp-version: 'Wordpress'
+en_fork-github: 'Github'
+en_featured: 'Featured'
+en_all-stories: 'All stories'
+en_prev: 'Prev'
+en_next: 'Next'
+en_category: 'Category:'
+en_read-story: 'Read story'
+en_share: 'Share'
+en_rating: 'Rating'
+en_type-and-enter: 'Type and enter'
+en_search-results-for: 'Search results for'
+en_no-search-result: 'Sorry, no results found. Close & try a different search!'
+en_close: 'Close'
+en_404: 'Page does not exist!'
+en_visit-home: 'Please use the search bar at the top or visit our'
