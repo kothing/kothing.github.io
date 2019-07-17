@@ -1,6 +1,6 @@
 # kothing - Jekyll Theme
 
-[Live Demo](https://kothing.github.io/) &nbsp; | &nbsp; [Download](https://github.com/kothing/kothing-theme-jekyll/archive/master.zip)
+[Live Demo](https://kothing.github.io/) &nbsp; | &nbsp; [Download](https://github.com/kothing/kothing-theme/archive/master.zip)
 
 ![Kothing](assets/images/kothing-template.jpg)
 
@@ -15,7 +15,7 @@ Copyright (C) 2019 Kothing, https://www.kothing.com
 
 ### Contribute
 
-1. [Fork the repo](https://github.com/kothing/kothing-theme-jekyll).
+1. [Fork the repo](https://github.com/kothing/kothing-theme).
 2. Clone a copy of your fork on your local
 3. Create a branch off of master and give it a meaningful name (e.g. my-new-kothing-feature).
 4. Make necessary changes, commit, push and open a pull request on GitHub.

@@ -66,8 +66,8 @@ comments: false
 <h4>How to use "Kothing" theme</h4>
 
 <ol>
-    <li><a href="https://github.com/kothing/kothing-theme-jekyll/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/wowthemesnet/kothing-theme-jekyll.git</code></li>
-    <li><code class="highlighter-rouge">cd kothing-theme-jekyll</code></li>
+    <li><a href="https://github.com/kothing/kothing-theme/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/wowthemesnet/kothing-theme.git</code></li>
+    <li><code class="highlighter-rouge">cd kothing-theme</code></li>
     <li><code class="highlighter-rouge">bundle</code></li>
     <li>Edit <code class="highlighter-rouge">_config.yml</code> options. If your site is in root: <code class="highlighter-rouge">baseurl: ''</code>. Also, change your Google Analytics code, disqus username, authors, Mailchimp list etc.</li>
     <li><code class="highlighter-rouge">jekyll serve --watch</code></li>
@@ -204,7 +204,7 @@ lazyimages: "enabled"
 
 <h4>Questions or bug reports?</h4>
 
-<p>Head over to our <a href="https://github.com/kothing/kothing-theme-jekyll">Github repository</a>!</p>
+<p>Head over to our <a href="https://github.com/kothing/kothing-theme">Github repository</a>!</p>
 
 </div>
 
@@ -213,7 +213,7 @@ lazyimages: "enabled"
 <div class="sticky-top sticky-top-80">
 <h5>Buy me a coffee</h5>
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/kothing/kothing-theme-jekyll">Kothing <i class="fab fa-github"></i></a>.</p>
+<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/kothing/kothing-theme">Kothing <i class="fab fa-github"></i></a>.</p>
 
 <a target="_blank" href="https://www.paypal.me/chzng" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://kothing.github.io/about" class="btn btn-warning">Documentation</a>
 
