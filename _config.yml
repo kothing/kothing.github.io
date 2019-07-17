@@ -66,6 +66,7 @@ lazyimages: "disabled"
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 
 # Comments
+# Sign up for GitHub Application: https://github.com/settings/applications/new
 comments:
   gitalk: true
   gitalk_ClientID: 5a9a72a3239969045341
