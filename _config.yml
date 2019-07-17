@@ -68,8 +68,8 @@ exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
 # Comments
 comments:
   gitalk: true
-  gitalk_ClientID: 2c2617ce0d0cb54ff37a
-  gitalk_ClientSecret: 36d1e944ce2e9adc3f4f4ab0de927fdc43bf741f
+  gitalk_ClientID: 5a9a72a3239969045341
+  gitalk_ClientSecret: ce4a88793ca12111f996bd1670d512c30abbe1d6
   gitalk_repo: kothing.github.io
   gitalk_owner: kothing
   gitalk_admin: ['kothing']
