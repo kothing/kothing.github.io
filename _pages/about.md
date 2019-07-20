@@ -8,12 +8,12 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Kothing template for Jekyll. It's for demonstration purposes, no real content can be found. Kothing template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>This website is built with Jekyll and Kothing template for Jekyll. Kothing template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/kothing-template.jpg" alt="jekyll template kothing" /></p>
 <h4>Documentation</h4>
 
-<p>"Kothing" is a free Bootstrap Jekyll theme for blogging, collections, resources, reviews websites</p>
+<p>"Kothing" is a free Jekyll theme for blogging, collections, resources, reviews websites</p>
 
 <h4>Features</h4>
 <ul>
