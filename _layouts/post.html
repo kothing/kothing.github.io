@@ -68,47 +68,49 @@ post_class: post-template
                 <!-- End Toc -->
                 {{content}}
             </div>
-
-            <!-- Rating -->
-            {% if page.rating %}
-            <div class="rating mb-4 d-flex align-items-center">
-                <strong class="mr-1">{% if site.locale == "zh-cn" %} {{ site.zh-cn_rating }} {% else %} {{ site.en_rating }} {% endif %}:</strong> {% include star_rating.html %}
-            </div>
-            {% endif %}
-
-            <!-- Post Date -->
-            <div class="datetime">
-                <span class="post-date"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}<!--{{ page.date | date_to_string }}--></time></span>
-                {% if page.last_modified_at %}
-                (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+            
+            <div class="after-post-meta">
+                <!-- Rating -->
+                {% if page.rating %}
+                <div class="rating mb-4 d-flex align-items-center">
+                    <strong class="mr-1">{% if site.locale == "zh-cn" %} {{ site.zh-cn_rating }} {% else %} {{ site.en_rating }} {% endif %}:</strong> {% include star_rating.html %}
+                </div>
                 {% endif %}
-            </div>
 
-            <!-- Post Categories -->
-            <div class="after-post-cats">
-                <ul class="tags mb-4">
-                    {% assign sortedCategories = page.categories | sort %}
-                    {% for category in sortedCategories %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
-            <!-- End Categories -->
+                <!-- Post Date -->
+                <div class="datetime">
+                    <span class="post-date"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}<!--{{ page.date | date_to_string }}--></time></span>
+                    {% if page.last_modified_at %}
+                    (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
+                    {% endif %}
+                </div>
 
-            <!-- Post Tags -->
-            <div class="after-post-tags">
-                <ul class="tags">
-                    {% assign sortedTags = page.tags | sort %}
-                    {% for tag in sortedTags %}
-                    <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
+                <!-- Post Categories -->
+                <div class="after-post-cats">
+                    <ul class="tags mb-4">
+                        {% assign sortedCategories = page.categories | sort %}
+                        {% for category in sortedCategories %}
+                        <li>
+                            <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- End Categories -->
+
+                <!-- Post Tags -->
+                <div class="after-post-tags">
+                    <ul class="tags">
+                        {% assign sortedTags = page.tags | sort %}
+                        {% for tag in sortedTags %}
+                        <li>
+                            <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <!-- End Tags -->
             </div>
-            <!-- End Tags -->
 
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
