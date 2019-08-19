@@ -66,7 +66,7 @@ comments: false
 <h4>How to use "Kothing" theme</h4>
 
 <ol>
-    <li><a href="https://github.com/kothing/kothing-theme/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/wowthemesnet/kothing-theme.git</code></li>
+    <li><a href="https://github.com/kothing/kothing-theme/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/kothing/kothing-theme.git</code></li>
     <li><code class="highlighter-rouge">cd kothing-theme</code></li>
     <li><code class="highlighter-rouge">bundle</code></li>
     <li>Edit <code class="highlighter-rouge">_config.yml</code> options. If your site is in root: <code class="highlighter-rouge">baseurl: ''</code>. Also, change your Google Analytics code, disqus username, authors, Mailchimp list etc.</li>
