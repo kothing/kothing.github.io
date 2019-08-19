@@ -31,7 +31,18 @@ post_class: post-template
                         {% endif %}
                     </div>
                     <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
-                        <span class="author-description">{{ author.description }}</span>
+                        <span class="author-description">
+                            {{ author.description }}
+                        </span>
+                        <span class="post-date"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time></span>
+                        <ul class="tags">
+                            {% assign sortedCategories = page.categories | sort %}
+                            {% for category in sortedCategories %}
+                            <li>
+                                <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
                 {% endif %}
