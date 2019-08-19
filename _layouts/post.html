@@ -42,22 +42,11 @@ post_class: post-template
                 <h1 class="posttitle">{{ page.title }}</h1>
                 <div class="post-meta">
                     <span class="post-date mb-2"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time></span>
-                    <ul class="cats">
-                        {% assign sortedCategories = page.categories | sort %}
-                        {% for category in sortedCategories %}
-                        <li>
-                            <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                    <ul class="tags">
-                        {% assign sortedTags = page.tags | sort %}
-                        {% for tag in sortedTags %}
-                        <li>
-                            <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    {% if page.rating %}
+                    <div class="rating mb-3">
+                        {% include star_rating.html %}
+                    </div>
+                    {% endif %}
                 </div>
             </div>
 
@@ -91,13 +80,6 @@ post_class: post-template
             
             <!-- Post meta -->
             <div class="after-post-meta">
-                <!-- Rating -->
-                {% if page.rating %}
-                <div class="rating mb-3">
-                    {% include star_rating.html %}
-                </div>
-                {% endif %}
-
                 <!-- Post Date -->
                 <div class="datetime mb-3">
                     <span class="post-date"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}<!--{{ page.date | date_to_string }}--></time></span>
