@@ -2,7 +2,8 @@
 layout: post
 title: "normalize.css"
 author: Kothing
-categories: [ web, css ]
+categories: [ web ]
+tags: [ css ]
 image: assets/images/17.jpg
 featured: true
 rating: 5
