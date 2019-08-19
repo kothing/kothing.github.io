@@ -43,7 +43,7 @@ post_class: post-template
                 <div class="post-meta">
                     <span class="post-date mb-2"><time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date:"%Y-%m-%d" }}</time></span>
                     {% if page.rating %}
-                    <div class="rating mb-3">
+                    <div class="rating">
                         {% include star_rating.html %}
                     </div>
                     {% endif %}
