@@ -3,7 +3,7 @@ layout: post
 title: "The best gift is you"
 author: Kothing
 categories: [ Blog ]
-image: assets/images/12.jpg
+image: assets/images/7.jpg
 featured: true
 rating: 5
 hidden: true

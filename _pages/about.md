@@ -8,12 +8,12 @@ comments: false
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Kothing template for Jekyll. It's for demonstration purposes, no real content can be found. Kothing template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>This website is built with Jekyll and Kothing template for Jekyll. Kothing template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/kothing-template.jpg" alt="jekyll template kothing" /></p>
 <h4>Documentation</h4>
 
-<p>"Kothing" is a free Bootstrap Jekyll theme for blogging, collections, resources, reviews websites</p>
+<p>"Kothing" is a free Jekyll theme for blogging, collections, resources, reviews websites</p>
 
 <h4>Features</h4>
 <ul>
@@ -66,7 +66,7 @@ comments: false
 <h4>How to use "Kothing" theme</h4>
 
 <ol>
-    <li><a href="https://github.com/kothing/kothing-theme/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/wowthemesnet/kothing-theme.git</code></li>
+    <li><a href="https://github.com/kothing/kothing-theme/archive/master.zip">Download</a> or <code class="highlighter-rouge">git clone https://github.com/kothing/kothing-theme.git</code></li>
     <li><code class="highlighter-rouge">cd kothing-theme</code></li>
     <li><code class="highlighter-rouge">bundle</code></li>
     <li>Edit <code class="highlighter-rouge">_config.yml</code> options. If your site is in root: <code class="highlighter-rouge">baseurl: ''</code>. Also, change your Google Analytics code, disqus username, authors, Mailchimp list etc.</li>

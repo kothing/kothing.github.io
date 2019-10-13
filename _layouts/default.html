@@ -72,20 +72,6 @@
                         </a>
                     </li>
 
-                    {% if page.url == "/about" %}
-                    <li class="nav-item active">
-                    {% else %}
-                    <li class="nav-item">
-                    {% endif %}
-                        <a class="nav-link" href="{{ site.baseurl }}/about">
-                            {% if site.locale == "zh-cn" %}
-                                {{ site.zh-cn_about }}
-                            {% else %}
-                                {{ site.en_about }}
-                            {% endif %}
-                        </a>
-                    </li>
-
                     {% if page.url == "/categories" %}
                     <li class="nav-item active">
                     {% else %}
@@ -99,7 +85,22 @@
                             {% endif %}
                         </a>
                     </li>
-
+			
+                    {% if page.url == "/about" %}
+                    <li class="nav-item active">
+                    {% else %}
+                    <li class="nav-item">
+                    {% endif %}
+                        <a class="nav-link" href="{{ site.baseurl }}/about">
+                            {% if site.locale == "zh-cn" %}
+                                {{ site.zh-cn_about }}
+                            {% else %}
+                                {{ site.en_about }}
+                            {% endif %}
+                        </a>
+                    </li>
+			
+		    <!--
                     <li class="nav-item">
                         <a target="_blank" class="nav-link" href="https://www.kothing.com/themes/kothing-wordpress/">
                             <i class="fab fa-wordpress-simple"></i> 
@@ -110,9 +111,10 @@
                             {% endif %}
                         </a>
                     </li>
+		    -->
 
                     <li class="nav-item">
-                        <a target="_blank" class="nav-link" href="https://github.com/kothing/kothing-theme">
+                        <a target="_blank" class="nav-link" href="https://github.com/kothing">
                             <i class="fab fa-github"></i> 
                             {% if site.locale == "zh-cn" %}
                                 {{ site.zh-cn_fork-github }}
