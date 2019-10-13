@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSDoc: KothingEditor</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    <!--<h1 class="page-title">Global</h1>-->
+    <section>
+        <header>
+            <h2></h2>
+        </header>
+        <article>
+            <div class="container-overview">
+                <dl class="details">
+                </dl>
+            </div>
+
+            <h3 class="subsection-title">Members</h3>
+
+            <h4 class="name" id="zeroWidthSpace"><span class="type-signature"></span>zeroWidthSpace<span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Unicode Character 'ZERO WIDTH SPACE' (U+200B)
+            </div>
+            <dl class="details"></dl>
+
+
+            <h3 class="subsection-title">Methods</h3>
+
+            <h4 class="name" id="onlyZeroWidthSpace"><span class="type-signature"></span>onlyZeroWidthSpace<span
+                    class="signature">(text)</span><span class="type-signature"> &rarr; {Boolean}</span></h4>
+            <div class="description">
+                A method that checks If the text is blank or to see if it contains only Unicode 'ZERO WIDTH SPACE' (\u200B)
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>text</code></td>
+                    <td class="type">
+                        <span class="param-type">String|Node</span>
+                    </td>
+                    <td class="description last">String value or Node</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getXMLHttpRequest"><span class="type-signature"></span>getXMLHttpRequest<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+            <div class="description">
+                Gets XMLHttpRequest object
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="createElement"><span class="type-signature"></span>createElement<span
+                class="signature">(elementName)</span><span class="type-signature"> &rarr; {Element}</span></h4>
+            <div class="description">
+                Create Element node
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>elementName</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Element name</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="createTextNode"><span class="type-signature"></span>createTextNode<span
+                class="signature">(text)</span><span class="type-signature"> &rarr; {Node}</span></h4>
+            <div class="description">
+                Create text node
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>text</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Text contents</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getIncludePath"><span class="type-signature"></span>getIncludePath<span class="signature">(nameArray, extension)</span><span
+                    class="type-signature"> &rarr; {String}</span></h4>
+            <div class="description">
+                Get the the tag path of the arguments value<br>
+                If not found, return the first found value
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>nameArray</code></td>
+                    <td class="type">
+                        <span class="param-type">Array</span>
+                    </td>
+                    <td class="description last">File name array</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>extension</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">js, css</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getPageStyle"><span class="type-signature"></span>getPageStyle<span class="signature">()</span><span
+                    class="type-signature"> &rarr; {String}</span></h4>
+            <div class="description">
+                Returns the CSS text that has been applied to the current page.
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="convertContentsForEditor"><span class="type-signature"></span>convertContentsForEditor<span class="signature">(contents)</span><span
+                    class="type-signature"> &rarr; {String}</span></h4>
+            <div class="description">
+                Converts contents into a format that can be placed in an editor.
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>contents</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Contents</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="convertHTMLForCodeView"><span class="type-signature"></span>convertHTMLForCodeView<span class="signature">(wysiwygDiv)</span><span
+                    class="type-signature"> &rarr; {String}</span></h4>
+            <div class="description">
+                Converts wysiwyg area element into a format that can be placed in an editor of code view mode
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>wysiwygDiv</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">WYSIWYG element (context.element.wysiwyg)</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="isWysiwygDiv"><span class="type-signature"></span>isWysiwygDiv<span class="signature">(element)</span><span
+                    class="type-signature"> &rarr; {Boolean}</span></h4>
+            <div class="description">
+                It is judged whether it is the edit region top div element or iframe's body tag.
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">The element to check</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="isFormatElement"><span class="type-signature"></span>isFormatElement<span class="signature">(element)</span><span
+                    class="type-signature"> &rarr; {Boolean}</span></h4>
+            <div class="description">
+                It is judged whether it is the format element. (P, DIV, H1-6, LI, TH, TD)
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">The element to check</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="isRangeFormatElement"><span class="type-signature"></span>isRangeFormatElement<span class="signature">(element)</span><span
+                    class="type-signature"> &rarr; {Boolean}</span></h4>
+            <div class="description">
+                It is judged whether it is the range format element. (BLOCKQUOTE, OL, UL, PRE, FIGCAPTION, TABLE, THEAD, TBODY, TR, TH, TD)<br>
+                Range format element is wrap the format element  (P, DIV, H1-6, LI)
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">The element to check</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="isComponent"><span class="type-signature"></span>isComponent<span class="signature">(element)</span><span
+                    class="type-signature"> &rarr; {Boolean}</span></h4>
+            <div class="description">
+                It is judged whether it is the component(img, iframe cover, table, hr) element - ".keditor-id-comp"
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">The element to check</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getFormatElement"><span class="type-signature"></span>getFormatElement<span
+                class="signature">(element, validation)</span><span class="type-signature"> &rarr; {Element}</span></h4>
+            <div class="description">
+                If a parent node that contains an argument node finds a format node (P, DIV, H[1-6], LI), it returns that node.
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">Reference element if null or no value, it is relative to the current focus node.</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>validation</code></td>
+                    <td class="type">
+                        <span class="param-type">Function|null</span>
+                    </td>
+                    <td class="description last">Additional validation function.</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getRangeFormatElement"><span class="type-signature"></span>getRangeFormatElement<span
+                class="signature">(element, validation)</span><span class="type-signature"> &rarr; {Element|null}</span></h4>
+            <div class="description">
+                If a parent node that contains an argument node finds a format node (BLOCKQUOTE, TABLE, TH, TD, OL, UL, PRE), it returns that node.
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">Reference element if null or no value, it is relative to the current focus node.</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>validation</code></td>
+                    <td class="type">
+                        <span class="param-type">Function|null</span>
+                    </td>
+                    <td class="description last">Additional validation function.</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getArrayIndex"><span class="type-signature"></span>getArrayIndex<span
+                    class="signature">(array, element)</span><span class="type-signature"> &rarr; {Number}</span></h4>
+            <div class="description">
+                Get the index of the argument value in the element array
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>array</code></td>
+                    <td class="type">
+                        <span class="param-type">Array</span>
+                    </td>
+                    <td class="description last">element array</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>element</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">Element to find index</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+        <h4 class="name" id="nextIdx"><span class="type-signature"></span>nextIdx<span class="signature">(array, element)</span><span
+                class="type-signature"> &rarr; {Number}</span></h4>
+        <div class="description">
+            Get the next index of the argument value in the element array
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>array</code></td>
+                <td class="type">
+                    <span class="param-type">Array</span>
+                </td>
+                <td class="description last">element array</td>
+            </tr>
+            <tr>
+                <td class="name"><code>item</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to find index</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="prevIdx"><span class="type-signature"></span>prevIdx<span class="signature">(array, element)</span><span
+                class="type-signature"> &rarr; {Number}</span></h4>
+        <div class="description">
+            Get the previous index of the argument value in the element array
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>array</code></td>
+                <td class="type">
+                    <span class="param-type">Array</span>
+                </td>
+                <td class="description last">element array</td>
+            </tr>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to find index</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getPositionIndex"><span class="type-signature"></span>getPositionIndex<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Number}</span></h4>
+        <div class="description">
+            Returns the index compared to other sibling nodes.
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Node</span>
+                </td>
+                <td class="description last">Node to find index</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getNodePath"><span class="type-signature"></span>getNodePath<span class="signature">(node, parentNode)</span><span
+                class="type-signature"> &rarr; {Array}</span></h4>
+        <div class="description">
+            Returns the position of the "node" in the "parentNode" in a numerical array.<br>
+            ex) &lt;p&gt;&lt;span&gt;aa&lt;/span&gt;&lt;span&gt;bb&lt;/span&gt;&lt;/p&gt; : <span class="type-signature">(node: "bb", parentNode: "&lt;P&gt;") &rarr; [1, 0]</span>
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Node</span>
+                </td>
+                <td class="description last">The Node to find position path</td>
+            </tr>
+            <tr>
+                <td class="name"><code>parentNode</code></td>
+                <td class="type">
+                    <span class="param-type">Element|null</span>
+                </td>
+                <td class="description last">Parent node. If null, wysiwyg div area</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getNodeFromPath"><span class="type-signature"></span>getNodeFromPath<span class="signature">(node, parentNode)</span><span
+                class="type-signature"> &rarr; {Array}</span></h4>
+        <div class="description">
+            Returns the node in the location of the path array obtained from "util.getNodePath".
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>offsets</code></td>
+                <td class="type">
+                    <span class="param-type">Array</span>
+                </td>
+                <td class="description last">Position array, array obtained from "util.getNodePath"</td>
+            </tr>
+            <tr>
+                <td class="name"><code>parentNode</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Base parent element</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isList"><span class="type-signature"></span>isList<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Check the node is a list (ol, ul)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Element|String</span>
+                </td>
+                <td class="description last">The element or element name to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isListCell"><span class="type-signature"></span>isListCell<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Check the node is a list cell (li)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Element|String</span>
+                </td>
+                <td class="description last">The element or element name to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isTable"><span class="type-signature"></span>isTable<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Check the node is a list table (table, thead, tbody, tr, th, td)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Element|String</span>
+                </td>
+                <td class="description last">The element or element name to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isCell"><span class="type-signature"></span>isCell<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Check the node is a table cell (td, th)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Element|String</span>
+                </td>
+                <td class="description last">The element or element name to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isBreak"><span class="type-signature"></span>isBreak<span class="signature">(node)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Check the node is a break node (BR)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>node</code></td>
+                <td class="type">
+                    <span class="param-type">Element|String</span>
+                </td>
+                <td class="description last">The element or element name to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getListChildren"><span class="type-signature"></span>getListChildren<span
+                class="signature">(element, validation)</span><span class="type-signature"> &rarr; {Array}</span>
+        </h4>
+        <div class="description">
+            Get all child nodes of the argument value element (Without text node)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">element to get child node</td>
+            </tr>
+            <tr>
+                <td class="name"><code>validation</code></td>
+                <td class="type">
+                    <span class="param-type">function</span>
+                    |
+                    <span class="param-type">null</span>
+                </td>
+                <td class="description last">Conditional function</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getListChildNodes"><span class="type-signature"></span>getListChildNodes<span
+                class="signature">(element, validation)</span><span class="type-signature"> &rarr; {Array}</span>
+        </h4>
+        <div class="description">
+            Get all child nodes of the argument value element (Include text nodes)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">element to get child node</td>
+            </tr>
+            <tr>
+                <td class="name"><code>validation</code></td>
+                <td class="type">
+                    <span class="param-type">function</span>
+                    |
+                    <span class="param-type">null</span>
+                </td>
+                <td class="description last">Conditional function</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getElementDepth"><span class="type-signature"></span>getElementDepth<span
+                class="signature">(element)</span><span class="type-signature"> &rarr; {Number}</span>
+        </h4>
+        <div class="description">
+            Returns the number of parents nodes.<br>
+            "0" when the parent node is the WYSIWYG area.
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">The element to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getParentElement"><span class="type-signature"></span>getParentElement<span
+                class="signature">(element, query)</span><span class="type-signature"> &rarr; {Element}</span>
+        </h4>
+        <div class="description">
+            Get the parent element of the argument value.<br>
+            A tag that satisfies the query condition is imported.<br>
+            Returns null if not found.
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Reference element</td>
+            </tr>
+            <tr>
+                <td class="name"><code>query</code></td>
+                <td class="type">
+                    <span class="param-type">String | Function</span>
+                </td>
+                <td class="description last">Query String (nodeName, .className, #ID, :name) or validation function.<br>
+                    Not use it like jquery.<br>
+                    Only one condition can be entered at a time.</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getChildElement"><span class="type-signature"></span>getChildElement<span
+                class="signature">(element, query, last)</span><span class="type-signature"> &rarr; {Element}</span>
+        </h4>
+        <div class="description">
+            Get the parent child of the argument value.<br>
+            A tag that satisfies the query condition is imported.<br>
+            Returns null if not found.
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Reference element</td>
+            </tr>
+            <tr>
+                <td class="name"><code>query</code></td>
+                <td class="type">
+                    <span class="param-type">String | Function</span>
+                </td>
+                <td class="description last">Query String (nodeName, .className, #ID, :name) or validation function.<br>
+                    Not use it like jquery.<br>
+                    Only one condition can be entered at a time.</td>
+            </tr>
+            <tr>
+                <td class="name"><code>last</code></td>
+                <td class="type">
+                    <span class="param-type">Boolean</span>
+                </td>
+                <td class="description last">If true returns the last node among the found child nodes. (default: first node)</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getEdgeChildNodes"><span class="type-signature"></span>getEdgeChildNodes<span
+                class="signature">(first, last)</span><span class="type-signature"> &rarr; {Object}</span>
+        </h4>
+        <div class="description">
+            1. The first node of all the child nodes of the "first" element is returned.<br>
+            2. The last node of all the child nodes of the "last" element is returned.<br>
+            3. When there is no "last" element, the first and last nodes of all the children of the "first" element are returned.<br>
+            { sc: "first", ec: "last" }
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>first</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">First element</td>
+            </tr>
+            <tr>
+                <td class="name"><code>last</code></td>
+                <td class="type">
+                    <span class="param-type">Element | null</span>
+                </td>
+                <td class="description last">Last element</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getOffset"><span class="type-signature"></span>getOffset<span
+                class="signature">(element, wysiwygFrame)</span><span class="type-signature"> &rarr; {Object}</span>
+        </h4>
+        <div class="description">
+            Returns the position of the left and top of argument.<br>
+            {left:0, top:0}
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element node</td>
+            </tr>
+            <tr>
+                <td class="name"><code>wysiwygFrame</code></td>
+                <td class="type">
+                    <span class="param-type">Element|null</span>
+                </td>
+                <td class="description last">When use iframe option, iframe object should be sent (context.element.wysiwygFrame)</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="getOverlapRangeAtIndex"><span class="type-signature"></span>getOverlapRangeAtIndex<span
+                class="signature">(aStart, aEnd, bStart, bEnd)</span><span class="type-signature"> &rarr; {Number}</span>
+        </h4>
+        <div class="description">
+            It compares the start and end indexes of "a" and "b" and returns the number of overlapping indexes in the range.<br>
+            ex) 1, 5, 4, 6 => 2 (4 ~ 5)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>aStart</code></td>
+                <td class="type">
+                    <span class="param-type">Number</span>
+                </td>
+                <td class="description last">Start index of "a"</td>
+            </tr>
+            <tr>
+                <td class="name"><code>aEnd</code></td>
+                <td class="type">
+                    <span class="param-type">Number</span>
+                </td>
+                <td class="description last">End index of "a"</td>
+            </tr>
+            <tr>
+                <td class="name"><code>bStart</code></td>
+                <td class="type">
+                    <span class="param-type">Number</span>
+                </td>
+                <td class="description last">Start index of "b"</td>
+            </tr>
+            <tr>
+                <td class="name"><code>bEnd</code></td>
+                <td class="type">
+                    <span class="param-type">Number</span>
+                </td>
+                <td class="description last">End index of "b"</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="changeTxt"><span class="type-signature"></span>changeTxt<span class="signature">(element, txt)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Set the text content value of the argument value element
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Elements to replace text content</td>
+            </tr>
+            <tr>
+                <td class="name"><code>txt</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">Text to be applied</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="hasClass"><span class="type-signature"></span>hasClass<span class="signature">(element, className)</span>
+            <span class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Determine whether any of the matched elements are assigned the given class
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Elements to search class name</td>
+            </tr>
+            <tr>
+                <td class="name"><code>className</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">Class name to search for</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="addClass"><span class="type-signature"></span>addClass<span class="signature">(element, className)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Append the className value of the argument value element
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to add class name</td>
+            </tr>
+            <tr>
+                <td class="name"><code>className</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">Class name to be add</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="removeClass"><span class="type-signature"></span>removeClass<span class="signature">(element, className)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Delete the className value of the argument value element
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Elements to remove class name</td>
+            </tr>
+            <tr>
+                <td class="name"><code>className</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">Class name to be remove</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="toggleClass"><span class="type-signature"></span>toggleClass<span class="signature">(element, className)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Argument value If there is no class name, insert it and delete the class name if it exists
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Elements to replace class name</td>
+            </tr>
+            <tr>
+                <td class="name"><code>className</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">Class name to be change</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="removeItem"><span class="type-signature"></span>removeItem<span class="signature">(item)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Delete argumenu value element
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>item</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to be remove</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="removeItemAllParents"><span class="type-signature"></span>removeItemAllParents<span class="signature">(item, validation)</span><span
+            class="type-signature"> &rarr; {Object|null}</span></h4>
+        <div class="description">
+            Delete all parent nodes that match the condition.<br>
+            Returns an {sc: previousSibling, ec: nextSibling}(the deleted node reference) or null.
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>item</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to be remove</td>
+            </tr>
+            <tr>
+                <td class="name"><code>validation</code></td>
+                <td class="type">
+                    <span class="param-type">Function|null</span>
+                </td>
+                <td class="description last">Validation function. default(Deleted if it only have breakLine and blanks)</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="removeEmptyNode"><span class="type-signature"></span>removeEmptyNode<span class="signature">(element)</span><span
+                class="type-signature"></span></h4>
+        <div class="description">
+            Delete a empty child node of argument element
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element node</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="isIgnoreNodeChange"><span class="type-signature"></span>isIgnoreNodeChange<span class="signature">(element)</span><span
+                class="type-signature"> &rarr; {Boolean}</span></h4>
+        <div class="description">
+            Nodes that need to be added without modification when changing text nodes !(span|font|b|strong|var|i|em|u|ins|s|strike|del|sub|sup|mark)
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>element</code></td>
+                <td class="type">
+                    <span class="param-type">Element</span>
+                </td>
+                <td class="description last">Element to check</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+
+        <h4 class="name" id="cleanHTML"><span class="type-signature"></span>cleanHTML<span class="signature">(html)</span><span
+                class="type-signature"> &rarr; {String}</span></h4>
+        <div class="description">
+            Gets the clean HTML code for editor
+        </div>
+        <h5>Parameters:</h5>
+        <table class="params">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th class="last">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="name"><code>html</code></td>
+                <td class="type">
+                    <span class="param-type">String</span>
+                </td>
+                <td class="description last">HTML string</td>
+            </tr>
+            </tbody>
+        </table>
+        <dl class="details"></dl>
+
+        </article>
+    </section>
+</div>
+
+<nav>
+    <h2><a href="../../index.html">KothingEditor</a></h2>
+    <h3><a href="index.html">Index</a></h3>
+    <h3>util</h3>
+    <ul>
+        <li><b>Members</b></li>
+        <li><a href="document-util.html#zeroWidthSpace">zeroWidthSpace</a></li>
+        <li><b>Methods</b></li>
+        <li><a href="document-util.html#onlyZeroWidthSpace">onlyZeroWidthSpace</a></li>
+        <li><a href="document-util.html#getXMLHttpRequest">getXMLHttpRequest</a></li>
+        <li><a href="document-util.html#createElement">createElement</a></li>
+        <li><a href="document-util.html#createTextNode">createTextNode</a></li>
+        <li><a href="document-util.html#getIncludePath">getIncludePath</a></li>
+        <li><a href="document-util.html#getPageStyle">getPageStyle</a></li>
+        <li><a href="document-util.html#convertContentsForEditor">convertContentsForEditor</a></li>
+        <li><a href="document-util.html#convertHTMLForCodeView">convertHTMLForCodeView</a></li>
+        <li><a href="document-util.html#isWysiwygDiv">isWysiwygDiv</a></li>
+        <li><a href="document-util.html#isFormatElement">isFormatElement</a></li>
+        <li><a href="document-util.html#isRangeFormatElement">isRangeFormatElement</a></li>
+        <li><a href="document-util.html#isComponent">isComponent</a></li>
+        <li><a href="document-util.html#getFormatElement">getFormatElement</a></li>
+        <li><a href="document-util.html#getRangeFormatElement">getRangeFormatElement</a></li>
+        <li><a href="document-util.html#getArrayIndex">getArrayIndex</a></li>
+        <li><a href="document-util.html#nextIdx">nextIdx</a></li>
+        <li><a href="document-util.html#prevIdx">prevIdx</a></li>
+        <li><a href="document-util.html#getPositionIndex">getPositionIndex</a></li>
+        <li><a href="document-util.html#getNodePath">getNodePath</a></li>
+        <li><a href="document-util.html#getNodeFromPath">getNodeFromPath</a></li>
+        <li><a href="document-util.html#isList">isList</a></li>
+        <li><a href="document-util.html#isListCell">isListCell</a></li>
+        <li><a href="document-util.html#isTable">isTable</a></li>
+        <li><a href="document-util.html#isCell">isCell</a></li>
+        <li><a href="document-util.html#isBreak">isBreak</a></li>
+        <li><a href="document-util.html#getListChildren">getListChildren</a></li>
+        <li><a href="document-util.html#getListChildNodes">getListChildNodes</a></li>
+        <li><a href="document-util.html#getElementDepth">getElementDepth</a></li>
+        <li><a href="document-util.html#getParentElement">getParentElement</a></li>
+        <li><a href="document-util.html#getChildElement">getChildElement</a></li>
+        <li><a href="document-util.html#getEdgeChildNodes">getEdgeChildNodes</a></li>
+        <li><a href="document-util.html#getOffset">getOffset</a></li>
+        <li><a href="document-util.html#getOverlapRangeAtIndex">getOverlapRangeAtIndex</a></li>
+        <li><a href="document-util.html#changeTxt">changeTxt</a></li>
+        <li><a href="document-util.html#hasClass">hasClass</a></li>
+        <li><a href="document-util.html#addClass">addClass</a></li>
+        <li><a href="document-util.html#removeClass">removeClass</a></li>
+        <li><a href="document-util.html#toggleClass">toggleClass</a></li>
+        <li><a href="document-util.html#removeItem">removeItem</a></li>
+        <li><a href="document-util.html#removeItemAllParents">removeItemAllParents</a></li>
+        <li><a href="document-util.html#removeEmptyNode">removeEmptyNode</a></li>
+        <li><a href="document-util.html#isIgnoreNodeChange">isIgnoreNodeChange</a></li>
+        <li><a href="document-util.html#cleanHTML">cleanHTML</a></li>
+    </ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jan 28 2018 01:58:16
+    GMT+0900 (대한민국 표준시)
+</footer>
+
+</body>
+</html>

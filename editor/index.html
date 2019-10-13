@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="https://github.com/JiHong88" />
+    <meta name="keywords" content="wysiwyg,editor,javascript,keditor,wysiwyg eidtor,rich text editor,html editor,contenteditable,위지위그 에디터 웹에디터">
+    <meta name="description" content="Pure javascript wysiwyg web editor" />
+    <title>KothingEditor</title>
+    <!-- keditor -->
+    <link href="../dist/css/keditor.min.css" rel="stylesheet" type="text/css">
+    <!-- sample css -->
+    <link rel="stylesheet" href="./css/bootstrap.css" media="all">
+    <link rel="stylesheet" href="./css/sample.css" media="all">
+    <style>
+        .tab {
+            overflow: hidden;
+            color: #f4b124;
+            font-weight: bold;
+            border-bottom: 2px solid #f4b124;
+            border-radius: 2px;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            background-color: transparent;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 35px;
+            transition: 0.3s;
+            font-size: 16px;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+            margin: 0;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            color: #f5f5f5;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            color: #fff;
+            background-color: #f4b124;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+        }
+
+        /* inline editor */
+        .inline-margin {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" aria-expanded="false" onclick="buttonToggle()">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html" title="KothingEditor"><b>KothingEditor</b></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="html/getting-started.html" title="Getting started">Getting started</a></li>
+                <li><a href="html/examples.html" title="Examples">Examples</a></li>
+                <li><a href="html/options.html" title="Options">Options</a></li>
+                <li><a href="html/customPlugins.html" title="CustomPlugins">CustomPlugins</a></li>
+                <li><a href="html/document.html" title="Document">Document</a></li>
+                <li class="badge">
+                    <a href="https://www.producthunt.com/posts/keditor?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-keditor" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=160149&theme=light" alt="KothingEditor - Pure javascript based WYSIWYG editor, with no dependencies | Product Hunt Embed" style="width: 114px; height: auto;"/></a>
+                    <a href="https://github.com/kothing/kothing-Editor" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/jihong88/keditor.svg?style=social"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<div class="content" style="max-width: 1265px;">
+    <!-- Tab links -->
+    <div class="tab">
+        <button class="tablinks active" onclick="openTab(event, 'classic')">Classic</button>
+        <button class="tablinks" onclick="openTab(event, 'balloon')">Balloon</button>
+        <button class="tablinks" onclick="openTab(event, 'inline')">Inline</button>
+    </div>
+
+    <!-- Tab content -->
+    <div id="classic" class="tabcontent" style="display: block;">
+        <div class="inline-margin"></div>
+        <textarea id="editor_classic" style="display:none;">
+            <p><br></p>
+            <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/editor/docs/cat.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="640,426" data-origin="640,426" style="width: 640px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
+            <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
+            <pre><p>KothingEditor is a lightweight, flexible, customizable WYSIWYG text editor for your web applications.</p></pre>
+            <blockquote><p>Supports Chrome, Safari, Opeera, Firefox, Edge, IE11, Mobile web browser.</p></blockquote>
+            <p><strong><span style="color: rgb(255, 94, 0);">KothingEditor</span></strong> <em><span style="background-color: rgb(250, 237, 125);">distributed under</span></em>&nbsp;the<strong> </strong><a href="https://github.com/kothing/kothing-Editor/blob/master/LICENSE.txt" target="_blank">MIT</a><strong> </strong>license.</p>
+            <p><hr class="dashed"></p>
+            <p><span style="font-size: 16px;"><span style="font-family: Impact;">Table</span></span></p>
+            <table style="width: auto;"><thead><tr><th><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></th><th><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></th><th><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></th><th><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></th><th><div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div></th></tr></thead><tbody><tr><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td><td><br></td><td><br></td><td><br></td></tr></tbody></table>
+            <p><br></p>
+            <p><br></p>
+        </textarea>
+    </div>
+
+    <div id="balloon" class="tabcontent">
+        <div class="inline-margin"></div>
+        <textarea id="editor_balloon" style="display:none;">
+            <p><br></p>
+            <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/kothing-editor/docs/cat1.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="640,426" data-origin="640,426" style="width: 640px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
+            <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
+            <p>KothingEditor is a lightweight, flexible, customizable WYSIWYG text editor for your web applications.</p>
+            <pre><p>Supports Chrome, Safari, Opeera, Firefox, Edge, IE11, Mobile web browser.</p></pre>
+            <p>KothingEditor distributed under the <a href="https://github.com/kothing/kothing-Editor/blob/master/LICENSE.txt" target="_blank">MIT</a> license.</p>
+            <p><br></p>
+        </textarea>
+    </div>
+
+    <div id="inline" class="tabcontent">
+        <div class="inline-margin"></div>
+        <textarea id="editor_inline1" style="display:none;">
+            <p><br></p>
+            <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
+            <p>KothingEditor is a lightweight, flexible, customizable WYSIWYG text editor for your web applications.</p>
+            <p><br></p>
+        </textarea>
+
+        <div class="inline-margin"></div>
+        <textarea id="editor_inline2" style="display:none;">
+            <p><br></p>
+            <pre><p>Supports Chrome, Safari, Opeera, Firefox, Edge, IE11, Mobile web browser.</p></pre>
+            <p>KothingEditor distributed under the <a href="https://github.com/kothing/kothing-Editor/blob/master/LICENSE.txt" target="_blank">MIT</a> license.</p>
+            <p><br></p>
+        </textarea>
+
+        <div class="inline-margin"></div>
+        <textarea id="editor_inline3" style="display:none;">
+            <p><br></p>
+            <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/editor/docs/cat2.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="640,959" data-origin="640,959" style="width: 640px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
+            <p><br></p>
+        </textarea>
+    </div>
+
+    <footer>
+        <p>KothingEditor distributed under the MIT license.</p>
+        <p><a href="https://github.com/kothing/kothing-Editor" target="_blank" style="color:#f4b124;">Go to GitHub KothingEditor</a></p>
+    </footer>
+</div>
+
+<script src="js/common.js"></script>
+<script src="../dist/keditor.min.js"></script>
+<script>
+    KEDITOR.create('editor_classic', {
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        popupDisplay: 'full',
+        charCounter: true,
+        buttonList: [
+            ['undo', 'redo'],
+            ['font', 'fontSize', 'formatBlock'],
+            ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+            ['removeFormat'],
+            ['fontColor', 'hiliteColor'],
+            ['outdent', 'indent'],
+            ['align', 'horizontalRule', 'list', 'table'],
+            ['link', 'image', 'video'],
+            ['fullScreen', 'showBlocks', 'codeView'],
+            ['preview', 'print']
+        ]
+    });
+
+    KEDITOR.create('editor_balloon', {
+        mode: 'balloon',
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        popupDisplay: 'full',
+        buttonList: [
+            ['fontSize', 'fontColor', 'bold', 'align', 'horizontalRule', 'table']
+        ]
+    });
+
+    KEDITOR.create('editor_inline1', {
+        mode: 'inline',
+        display: 'block',
+        width: '100%',
+        height: '162',
+        popupDisplay: 'full',
+        buttonList: [
+            ['font', 'fontSize', 'formatBlock'],
+            ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript']
+        ]
+    });
+    KEDITOR.create('editor_inline2', {
+        mode: 'inline',
+        display: 'block',
+        width: '100%',
+        height: '204',
+        popupDisplay: 'full',
+        buttonList: [
+            ['bold', 'underline', 'align', 'horizontalRule', 'list', 'table']
+        ]
+    });
+    KEDITOR.create('editor_inline3', {
+        mode: 'inline',
+        display: 'block',
+        width: '100%',
+        height: 'auto',
+        popupDisplay: 'full',
+        buttonList: [
+            ['link', 'image', 'video']
+        ]
+    });
+
+
+    function openTab(evt, tabName) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+</body>
+</html>

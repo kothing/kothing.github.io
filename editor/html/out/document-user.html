@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JSDoc: KothingEditor</title>
+
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+    <!--<h1 class="page-title">Global</h1>-->
+    <section>
+        <header>
+            <h2></h2>
+        </header>
+        <article>
+            <div class="container-overview">
+                <dl class="details">
+                </dl>
+            </div>
+            <h3 class="subsection-title">Methods</h3>
+
+
+            <h4 class="name" id="setOptions"><span class="type-signature"></span>setOptions<span
+                    class="signature">(options)</span></h4>
+            <div class="description">
+                Add or reset option property.
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>options</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Options</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="noticeOpen"><span class="type-signature"></span>noticeOpen<span
+                    class="signature">(message)</span></h4>
+            <div class="description">
+                Open a notice area.
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>message</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Notice message</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="noticeClose"><span class="type-signature"></span>noticeClose<span
+                    class="signature">()</span></h4>
+            <div class="description">
+                Close a notice area.
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="save"><span class="type-signature"></span>save<span class="signature">()</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Copying the contents of the editor to the original textarea
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getContext"><span class="type-signature"></span>getContext<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Object}</span></h4>
+            <div class="description">
+                Gets the keditor's context object. Contains settings, plugins, and cached element objects.
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getContents"><span class="type-signature"></span>getContents<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {String}</span></h4>
+            <div class="description">
+                Gets the contents of the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="getImagesInfo"><span class="type-signature"></span>getImagesInfo<span
+                    class="signature">()</span><span class="type-signature"> &rarr; {Array}</span></h4>
+            <div class="description">
+                Gets uploaded images informations
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="insertImage"><span class="type-signature"></span>insertImage<span class="signature">(files)</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Upload images using image plugin
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>files</code></td>
+                    <td class="type">
+                        <span class="param-type">FileList</span>
+                    </td>
+                    <td class="description last">FileList</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="insertHTML"><span class="type-signature"></span>insertHTML<span class="signature">(html)</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Inserts an HTML element or HTML string or plain string at the current cursor position
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>html</code></td>
+                    <td class="type">
+                        <span class="param-type">Element|String</span>
+                    </td>
+                    <td class="description last">HTML Element or HTML string or plain string</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="setContents"><span class="type-signature"></span>setContents<span class="signature">(contents)</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Change the contents of the keditor
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>contents</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Contents to Input</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="appendContents"><span class="type-signature"></span>appendContents<span
+                    class="signature">(contents)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Add contents to the keditor
+            </div>
+            <h5>Parameters:</h5>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>contents</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Contents to Input</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="disabled"><span class="type-signature"></span>disabled<span class="signature">()</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Disable the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="enabled"><span class="type-signature"></span>enabled<span
+                    class="signature">()</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Enabled the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="show"><span class="type-signature"></span>show<span class="signature">()</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Show the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="hide"><span class="type-signature"></span>hide<span class="signature">()</span><span
+                    class="type-signature"></span></h4>
+            <div class="description">
+                Hide the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="destroy"><span class="type-signature"></span>destroy<span
+                    class="signature">()</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Destroy the keditor
+            </div>
+            <dl class="details"></dl>
+
+
+
+            <h3 class="subsection-title">Events</h3>
+            <div class="description">
+                It can be redefined by receiving event object as parameter.
+                It is not called in exceptional cases and is called after the default event function has finished.
+            </div>
+
+            <h4 class="name" id="onScroll"><span class="type-signature"></span>onScroll<span
+                    class="signature">(event)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Scroll event
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onClick"><span class="type-signature"></span>onClick<span
+                    class="signature">(event)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Click event
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onKeyDown"><span class="type-signature"></span>onKeyDown<span
+                    class="signature">(event)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                KeyDown event
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onKeyUp"><span class="type-signature"></span>onKeyUp<span
+                    class="signature">(event)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                KeyUp event
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onDrop"><span class="type-signature"></span>onDrop<span
+                    class="signature">(event)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Drop event
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onChange"><span class="type-signature"></span>onChange<span
+                    class="signature">(contents)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                When the contents change
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>contents</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">HTML string</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onPaste"><span class="type-signature"></span>onPaste<span
+                    class="signature">(event, cleanData, maxCharCount)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Paste event.<br>
+                Called before the editor's default event action.<br>
+                If it returns false, it stops without executing the rest of the action.
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>event</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Event Object</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>cleanData</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">HTML string modified for editor format</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>maxCharCount</code></td>
+                    <td class="type">
+                        <span class="param-type">Boolean</span>
+                    </td>
+                    <td class="description last">maxCharCount option (true if max character is exceeded)</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onImageUpload"><span class="type-signature"></span>onImageUpload<span
+                    class="signature">(targetImgElement, index, state, imageInfo, remainingFilesCount)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Called when the image is uploaded or the uploaded image is deleted
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>targetImgElement</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">Current img element</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>index</code></td>
+                    <td class="type">
+                        <span class="param-type">Number</span>
+                    </td>
+                    <td class="description last">Uploaded index (key value)</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>state</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Upload status ('create', 'update', 'delete')</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>imageInfo</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">
+                        <strong>src</strong>: imgage src<br>
+                        <strong>index</strong>: data index<br>
+                        <strong>name</strong>: file name<br>
+                        <strong>size</strong>: file size<br>
+                        <strong>select</strong>: select function<br>
+                        <strong>delete</strong>: delete function
+                    </td>
+                </tr>
+                <tr>
+                    <td class="name"><code>remainingFilesCount</code></td>
+                    <td class="type">
+                        <span class="param-type">Number</span>
+                    </td>
+                    <td class="description last">Count of remaining image files</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="onImageUploadError"><span class="type-signature"></span>onImageUploadError<span
+                    class="signature">(errorMessage, result)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Called when the image is uploaded or the uploaded image is deleted
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>errorMessage</code></td>
+                    <td class="type">
+                        <span class="param-type">String</span>
+                    </td>
+                    <td class="description last">Error message to show</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>result</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">Result object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+
+            <h4 class="name" id="showInline"><span class="type-signature"></span>showInline<span
+                    class="signature">(toolbar, context)</span><span class="type-signature"></span></h4>
+            <div class="description">
+                Paste event.<br>
+                Called before the editor's default event action.<br>
+                If it returns false, it stops without executing the rest of the action.
+            </div>
+            <table class="params">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th class="last">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="name"><code>toolbar</code></td>
+                    <td class="type">
+                        <span class="param-type">Element</span>
+                    </td>
+                    <td class="description last">Toolbar Element</td>
+                </tr>
+                <tr>
+                    <td class="name"><code>context</code></td>
+                    <td class="type">
+                        <span class="param-type">Object</span>
+                    </td>
+                    <td class="description last">The editor's context object</td>
+                </tr>
+                </tbody>
+            </table>
+            <dl class="details"></dl>
+
+        </article>
+    </section>
+</div>
+
+<nav>
+    <h2><a href="../../index.html">KothingEditor</a></h2>
+    <h3><a href="index.html">Index</a></h3>
+    <h3>KEDITOR.create -></h3>
+    <h3>{return functions}</h3>
+    <ul>
+        <li><a href="document-user.html#setOptions">setOptions</a></li>
+        <li><a href="document-user.html#noticeOpen">noticeOpen</a></li>
+        <li><a href="document-user.html#noticeClose">noticeClose</a></li>
+        <li><a href="document-user.html#save">save</a></li>
+        <li><a href="document-user.html#getContext">getContext</a></li>
+        <li><a href="document-user.html#getContents">getContents</a></li>
+        <li><a href="document-user.html#getImagesInfo">getImagesInfo</a></li>
+        <li><a href="document-user.html#insertImage">insertImage</a></li>
+        <li><a href="document-user.html#insertHTML">insertHTML</a></li>
+        <li><a href="document-user.html#setContents">setContents</a></li>
+        <li><a href="document-user.html#appendContents">appendContents</a></li>
+        <li><a href="document-user.html#disabled">disabled</a></li>
+        <li><a href="document-user.html#enabled">enabled</a></li>
+        <li><a href="document-user.html#show">show</a></li>
+        <li><a href="document-user.html#hide">hide</a></li>
+        <li><a href="document-user.html#destroy">destroy</a></li>
+    </ul>
+
+    <h3>Useable events</h3>
+    <ul>
+        <li><a href="document-user.html#onScroll">onScroll</a></li>
+        <li><a href="document-user.html#onClick">onClick</a></li>
+        <li><a href="document-user.html#onKeyDown">onKeyDown</a></li>
+        <li><a href="document-user.html#onKeyUp">onKeyUp</a></li>
+        <li><a href="document-user.html#onDrop">onDrop</a></li>
+        <li><a href="document-user.html#onChange">onChange</a></li>
+        <li><a href="document-user.html#onPaste">onPaste</a></li>
+        <li><a href="document-user.html#onImageUpload">onImageUpload</a></li>
+        <li><a href="document-user.html#onImageUploadError">onImageUploadError</a></li>
+        <li><a href="document-user.html#showInline">showInline</a></li>
+    </ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Sun Jan 28 2018 01:58:16
+    GMT+0900 (대한민국 표준시)
+</footer>
+
+</body>
+</html>
