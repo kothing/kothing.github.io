@@ -8,7 +8,7 @@
     <meta name="description" content="Pure javascript wysiwyg web editor" />
     <title>KothingEditor</title>
     <!-- keditor -->
-    <link href="../dist/css/keditor.min.css" rel="stylesheet" type="text/css">
+    <link href="../../build/css/keditor.min.css" rel="stylesheet" type="text/css">
     <!-- sample css -->
     <link rel="stylesheet" href="../css/bootstrap.css" media="all">
     <link rel="stylesheet" href="../css/sample.css" media="all">
@@ -127,7 +127,7 @@
             <div>&amp;lt;<span style="color: rgb(107, 153, 0);">script</span> <span style="color: rgb(61, 0, 153);">src</span>=<span style="color: rgb(0, 51, 153);">"https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/xml/xml.js"</span>&amp;gt;&amp;lt;/<span style="color: rgb(107, 153, 0);">script</span>&amp;gt;</div>
             <div>&amp;lt;<span style="color: rgb(107, 153, 0);">script</span> <span style="color: rgb(61, 0, 153);">src</span>=<span style="color: rgb(0, 51, 153);">"https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/css/css.js"</span>&amp;gt;&amp;lt;/<span style="color: rgb(107, 153, 0);">script</span>&amp;gt;</div>
             <div><br></div>
-            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">'keditor/dist/css/keditor.min.css'</span></div>
+            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">'keditor/build/css/keditor.min.css'</span></div>
             <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">keditor</span> <span style="color: rgb(255, 94, 0);">from</span> <span style="color: rgb(0, 51, 153);">'keditor'</span></div>
             <div><span style="color: rgb(189, 189, 189);">// Import codeMirror</span></div>
             <div><span style="color: rgb(255, 94, 0);">import</span> CodeMirror <span style="color: rgb(255, 94, 0);">from</span> 'codemirror'</div>
@@ -153,9 +153,9 @@
         <p></p>
         <textarea id="imageManagement" style="display: none;">
             <p>cat</p>
-            <div class="ke-component ke-image-container __se__float-none" contenteditable="false"><figure style="margin: 0px;"><img src="http://kothing.github.io/editor/docs/s-cat.jpg" data-align="none" alt="" data-rotate="" data-proportion="true" data-rotatex="" data-rotatey="" origin-size="300,199" data-origin="300,199" data-index="0" data-file-name="s-cat.jpg" data-file-size="40500" style="max-width: 100%; width: 100%; transform: rotate(0deg);"></figure></div>
+            <div class="ke-component ke-image-container __se__float-none" contenteditable="false"><figure style="margin: 0px;"><img src="http://kothing.github.io/editor/img/g1.jpg" data-align="none" alt="" data-rotate="" data-proportion="true" data-rotatex="" data-rotatey="" origin-size="300,199" data-origin="300,199" data-index="0" data-file-name="g1.jpg" data-file-size="40500" style="max-width: 100%; width: 100%; transform: rotate(0deg);"></figure></div>
             <p>cat1</p>
-            <div class="ke-component ke-image-container __se__float-none" contenteditable="false"><figure style="margin: 0px;"><img src="http://kothing.github.io/editor/docs/s-cat1.jpg" data-align="none" alt="" data-rotate="" data-proportion="true" data-rotatex="" data-rotatey="" origin-size="300,200" data-origin="300,200" data-index="1" data-file-name="s-cat1.jpg" data-file-size="52000" style="max-width: 100%; width: 100%; transform: rotate(0deg);"></figure></div>
+            <div class="ke-component ke-image-container __se__float-none" contenteditable="false"><figure style="margin: 0px;"><img src="http://kothing.github.io/editor/img/g1.jpg" data-align="none" alt="" data-rotate="" data-proportion="true" data-rotatex="" data-rotatey="" origin-size="300,200" data-origin="300,200" data-index="1" data-file-name="g2.jpg" data-file-size="52000" style="max-width: 100%; width: 100%; transform: rotate(0deg);"></figure></div>
             <p><br></p>
         </textarea>
         <div class="image-list">
@@ -479,7 +479,7 @@
 </div>
 
 <script src="../js/common.js"></script>
-<script src="../dist/keditor.min.js"></script>
+<script src="../../build/keditor.min.js"></script>
 <script>
     KEDITOR.create('exampleOptions',{
         font : [

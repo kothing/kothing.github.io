@@ -1,6 +1,6 @@
 /*
  * keditor.js
- * Copyright 2019 JiHong Lee.
+ * Copyright Kothing.
  * MIT license.
  */
 'use strict';
