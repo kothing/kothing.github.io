@@ -179,7 +179,7 @@ console.log(a) // 1
 console.log(b) // [2, 3]
 ```
 
-**(1) Rest 参数接受函数的多余参数，组成一个数组，放在形参的最后，形式如下：**
+**1. Rest 参数接受函数的多余参数，组成一个数组，放在形参的最后，形式如下：**
 ```js
 function func(a, b, ...theArgs){
     // ...
@@ -187,13 +187,13 @@ function func(a, b, ...theArgs){
 ```
 
 
-**(2) Rest参数和arguments对象的区别：**
+**1. Rest参数和arguments对象的区别：**
 rest参数只包括那些没有给出名称的参数，arguments包含所有参数
 arguments 对象不是真正的数组，而rest 参数是数组实例，可以直接应用sort, map, forEach, pop等方法
 arguments 对象拥有一些自己额外的功能
 
 
-**(3) 从 arguments 转向数组**
+**3. 从 arguments 转向数组**
 Rest 参数简化了使用 arguments 获取多余参数的方法
 ```js
 // arguments 方法
@@ -225,7 +225,7 @@ function func(a, ...b, c) {
 (function(a, b, ...c)).length   // 2
 ```
 
-**(4) Rest参数可以被结构(通俗一点，将rest参数的数据解析后一一对应)不要忘记参数用[]括起来，因为它是数组**
+**4. Rest参数可以被结构(通俗一点，将rest参数的数据解析后一一对应)不要忘记参数用[]括起来，因为它是数组**
 ```js
 function f(...[a, b, c]) {  
   return a + b + c;  
