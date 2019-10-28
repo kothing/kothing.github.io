@@ -7,22 +7,22 @@ Copyright: kothing, https://www.kothing.com
     .container {max-width:80%;}
 }
 .h1, h1 {
-    font-size: inherit;
+    font-size: 2.0rem;
 }
 .h2, h2 {
-    font-size: inherit;
+    font-size: 1.6rem;
 }
 .h3, h3 {
-    font-size: inherit;
+    font-size: 1.4rem;
 }
 .h4, h4 {
-    font-size: inherit;
+    font-size: 1.2rem;
 }
 .h5, h5 {
-    font-size: inherit;
+    font-size: 1rem;
 }
 .h6, h6 {
-    font-size: inherit;
+    font-size: 0.8rem;
 }
 
 a {
