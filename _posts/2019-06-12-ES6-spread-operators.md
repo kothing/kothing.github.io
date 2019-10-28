@@ -144,7 +144,7 @@ const [...a2] = a1;
 
 实现了 Iterator 接口的对象比如document.querySelectorAll('div')：
 ```js
-let nodeList = document.querySelectorAll('div'); // nodeList对象不是数组，而是一个类似数组的对象
+let nodeList = document.querySelectorAll('div'); // nodeList对象不是数组，而是一个类似数组对象
 let array = [...nodeList]; // 真正的数组
 ```
 
