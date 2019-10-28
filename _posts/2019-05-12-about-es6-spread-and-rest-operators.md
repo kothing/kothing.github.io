@@ -4,7 +4,7 @@ title:  "ES6扩展运算符与剩余操作符..."
 author: Kothing
 categories: [ Jekyll ]
 image: assets/images/2.jpg
-rating: 3
+rating: 5
 ---
 扩展运算符与剩余操作符都是以三点开头的操作符，二者长的很像，只是在用法上有些差别。它们已经被 ES6 数组支持，能解决很多之前 arguments 解决起来很麻烦的问题。
 
