@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "ES6的扩展运算符和剩余操作符的对比和应用"
+title:  "ES6扩展操作符和剩余操作符..."
 author: Kothing
 categories: [ javascript, ES6 ]
 image: assets/images/16.jpg
