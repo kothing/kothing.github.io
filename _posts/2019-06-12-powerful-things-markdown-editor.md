@@ -19,7 +19,7 @@ As with the last post about the editor, you'll want to be actually editing this 
 
 剩余操作符的核心就是2个字：打包。
 
-### 剩余操作符和扩展运算符在赋值方面的对比：**
+### 剩余操作符和扩展运算符在赋值方面的对比：
 剩余操作符是：表示剩下的**打包**，通常是只可能放在**变量名**前面；一定有赋值或者传值操作：
 ```
 let [a, ...b] = [1,2,3,4,5];
