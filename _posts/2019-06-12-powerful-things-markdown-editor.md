@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Powerful things you can do with the Markdown editor"
+title:  "ES6的扩展运算符和剩余操作符的对比和应用"
 author: Kothing
-categories: [ Jekyll, tutorial ]
+categories: [ javascript, ES6 ]
 image: assets/images/16.jpg
 rating: 4.5
 ---
@@ -11,24 +11,35 @@ There are lots of powerful things you can do with the Markdown editor. If you've
 As with the last post about the editor, you'll want to be actually editing this post as you read it so that you can see all the Markdown code we're using.
 
 
-## Special formatting
+## 扩展运算符
 
-As well as bold and italics, you can also use some other special formatting in Markdown when the need arises, for example:
+扩展运算符写法是三个点...，写法虽然跟剩余操作符一致，都是...，但是作用可以认为是相反的。
 
-+ ~~strike through~~
-+ ==highlight==
-+ \*escaped characters\*
+扩展运算符的核心就是2个字：打散。
+
+剩余操作符的核心就是2个字：打包。
+
+### 剩余操作符和扩展运算符在赋值方面的对比：**
+剩余操作符是：表示剩下的**打包**，通常是只可能放在**变量名**前面；一定有赋值或者传值操作：
+```
+let [a, ...b] = [1,2,3,4,5];
+b; // [2,3,4,5]
+```
+扩展运算符是：表示把打包好的**打散**，可能放在**变量名**前面，也可能放在**值**的前面；可能有赋值操作，也可能没有赋值操作：
+```
+let a = [1, ...[2,3,4]]; // 注意，既然是先打散然后赋值给一个变量，就需要用[]包起来形成数组
+a; // [1, 2, 3, 4]
+```
+```
+console.log(1, ...[2,3,4]); // 1, 2, 3, 4
+```
 
 
 ## Writing code blocks
 
 There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, `like this`. Larger snippets of code can be displayed across multiple lines using triple back ticks:
 
-```
-.my-link {
-    text-decoration: underline;
-}
-```
+
 
 #### HTML
 
