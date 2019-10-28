@@ -6,8 +6,23 @@ Copyright: kothing, https://www.kothing.com
     html { font-size:18px; } /* Increase the font size on higher resolutions */
     .container {max-width:80%;}
 }
-.mainheading {
-    padding: 1rem 0rem;
+.h1, h1 {
+    font-size: inherit;
+}
+.h2, h2 {
+    font-size: inherit;
+}
+.h3, h3 {
+    font-size: inherit;
+}
+.h4, h4 {
+    font-size: inherit;
+}
+.h5, h5 {
+    font-size: inherit;
+}
+.h6, h6 {
+    font-size: inherit;
 }
 
 a {
@@ -34,6 +49,10 @@ pre {
     line-height: 1.6;
     color: #333;
     margin-bottom: 0;
+}
+
+.mainheading {
+    padding: 1rem 0rem;
 }
 
 .mediumnavigation {
