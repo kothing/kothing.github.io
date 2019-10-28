@@ -170,7 +170,68 @@ const go = function*(){
 ```
 
 ### 剩余操作符的应用（核心就是打包）
-**一、解构再打包赋值**
+与扩展操作符相反，剩余操作符将多个值收集为一个变量，而扩展操作符是将一个数组扩展成多个值。
+
+```js
+const [a, ...b] = [1, 2, 3]
+
+console.log(a) // 1
+console.log(b) // [2, 3]
+```
+
+**(1) Rest 参数接受函数的多余参数，组成一个数组，放在形参的最后，形式如下：**
+```js
+function func(a, b, ...theArgs){
+    // ...
+}
+```
 
 
-**二、函数打包传参**
+**(2) Rest参数和arguments对象的区别：**
+rest参数只包括那些没有给出名称的参数，arguments包含所有参数
+arguments 对象不是真正的数组，而rest 参数是数组实例，可以直接应用sort, map, forEach, pop等方法
+arguments 对象拥有一些自己额外的功能
+
+
+**(3) 从 arguments 转向数组**
+Rest 参数简化了使用 arguments 获取多余参数的方法
+```js
+// arguments 方法
+function func(a, b){
+    var args = Array.prototype.slice.call(arguments);
+    console.log(args)
+}
+
+func(1,2)
+```
+```js
+// Rest 方法
+function func(a, b, ...args){
+    // ...
+}
+```
+注意，rest 参数之后不能再有其他参数(即，只能是最后一个参数)，否则会报错
+```js
+function func(a, ...b, c) {
+    // ...
+}
+// Rest parameter must be last formal parameter
+```
+
+函数的 length 属性，不包括rest参数
+```js
+(function(a) {}).length     // 1
+(function(...a) {}).length      // 0
+(function(a, b, ...c)).length   // 2
+```
+
+**(4) Rest参数可以被结构(通俗一点，将rest参数的数据解析后一一对应)不要忘记参数用[]括起来，因为它是数组**
+```js
+function f(...[a, b, c]) {  
+  return a + b + c;  
+}  
+  
+f(1)          //NaN 因为只传递一个值，其实需要三个值  
+f(1, 2, 3)    // 6  
+f(1, 2, 3, 4) // 6 (第四值没有与之对应的变量名)
+```
