@@ -102,6 +102,7 @@ function Example() {
 }
 ```
 useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。useState 方法的参数为初始值，返回值为 `当前 state` 以及`更新 state 的函数`。这就是我们写 const [count, setCount] = useState() 的原因，且需要成对的获取它们。**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
+
 你可能注意到我们用方括号定义了一个 state 变量，等号左边名字并不是 React API 的部分，你可以自己取名字：
 ```js
 const [fruit, setFruit] = useState('banana');
