@@ -141,12 +141,16 @@ import axios from 'axios';
 function App() {
   const [data, setData] = useState({ hits: [] });
 
-  useEffect(async () => {
-    const result = await axios(
-      'http://localhost/api/v1/search?query=redux',
-    );
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'http://localhost/api/v1/search?query=redux',
+      );
 
-    setData(result.data);
+      setData(result.data);
+    };
+
+    fetchData();
   });
 
   return (
@@ -171,13 +175,17 @@ import axios from 'axios';
 
 function App() {
   const [data, setData] = useState({ hits: [] });
+ 
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios(
+        'http://localhost/api/v1/search?query=redux',
+      );
 
-  useEffect(async () => {
-    const result = await axios(
-      'http://localhost/api/v1/search?query=redux',
-    );
+      setData(result.data);
+    };
 
-    setData(result.data);
+    fetchData();
   }, []);
 
   return (
