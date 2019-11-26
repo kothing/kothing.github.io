@@ -92,7 +92,7 @@ class Example extends React.Component {
   }
 ```
 
-在函数组件中，首先引入 React 中 useState 的 Hook，**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
+在函数组件中，首先引入 React 中 useState方法。`用方括号定义一个state变量名和用于更新state值的方法`，这种 JavaScript 语法叫数组解构。 useState 方法的返回值为 `当前 state` 以及`更新 state 的函数`。这就是我们写 const [count, setCount] = useState() 的原因，且需要成对的获取它们。**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
 ```js
 import React, { useState } from 'react';
 
@@ -106,7 +106,7 @@ useState 是一种新方法，它与 class 里面的 this.state 提供的功能�
 ```js
 const [fruit, setFruit] = useState('banana');
 ```
-useState 方法的返回值为：当前 state 以及更新 state 的函数。这就是我们写 const [count, setCount] = useState() 的原因，需要成对的获取它们(count和setCount)。
+
 
 **声明多个 state 变量**
 ```js
