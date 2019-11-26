@@ -4,6 +4,7 @@ title:  "React Hook - State Hook示例详解"
 author: Kothing
 categories: [ Javascript, React ]
 image: "https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a20c472bc23308e390c8ffae3dd90c60&auto=format&fit=crop&w=750&q=80"
+rating: 4.5
 ---
 Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 
 
