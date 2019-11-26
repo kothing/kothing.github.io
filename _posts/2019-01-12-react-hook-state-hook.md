@@ -38,7 +38,6 @@ function Example() {
 声明一个叫 "count" 初始值为0 的 state 变量, 和一个用于更新 "count" 值的 "setCount" 的函数，当用户点击按钮后，我们通过调用 `setCount` 来增加 `count`的state值。
 
 **等价的 class 示例**
-如果你之前在 React 中使用过 class，这段代码看起来应该很熟悉：
 ```js
 class Example extends React.Component {
   constructor(props) {
