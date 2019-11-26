@@ -25,4 +25,27 @@ function Example() {
   );
 }
 ```
+### 等价的 class 示例
+如果你之前在 React 中使用过 class，这段代码看起来应该很熟悉：
+```
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+}
+```
 
