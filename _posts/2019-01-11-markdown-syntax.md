@@ -2,10 +2,10 @@
 layout: post
 title:  "Markdown语法"
 author: kothing
-categories: [ Jekyll, Blog ]
+categories: [ Markdown ]
 tags: [red, yellow]
 image: assets/images/11.jpg
-description: "My review of Inception movie. Acting, plot and something else in this short description."
+description: "Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版"
 featured: true
 hidden: true
 rating: 4.5
