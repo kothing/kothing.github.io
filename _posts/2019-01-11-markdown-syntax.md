@@ -145,9 +145,6 @@ title可加可不加
 //图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加  
 ```
 
-示例：<br/>
-![图片示例](https://mi-kit.github.io/media/markdown-syntax-img-demo.png '图片示例')
-
 #### 10. 表格
 
 语法：
