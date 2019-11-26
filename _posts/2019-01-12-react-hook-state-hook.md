@@ -48,4 +48,4 @@ class Example extends React.Component {
   }
 }
 ```
-state 初始值为 { count: 0 } ，当用户点击按钮后，我们通过调用 this.setState() 来增加 state.count。整个章节中都将使用该 class 的代码片段做示例。
+state 初始值为 `{ count: 0 }` ，当用户点击按钮后，我们通过调用 `this.setState()` 来增加 `state.count`。整个章节中都将使用该 class 的代码片段做示例。
