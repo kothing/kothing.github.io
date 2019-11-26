@@ -92,16 +92,16 @@ class Example extends React.Component {
   }
 ```
 
-在函数组件中，首先引入 React 中 useState方法。`用方括号定义一个state变量名和用于更新state值的方法`，这种 JavaScript 语法叫数组解构。 useState 方法的返回值为 `当前 state` 以及`更新 state 的函数`。这就是我们写 const [count, setCount] = useState() 的原因，且需要成对的获取它们。**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
+在函数组件中，首先引入 React 中 useState方法。`用数组解构的方式定义一个state变量和用于更新state值的方法，useState()的参数是state的初始值`。
 ```js
 import React, { useState } from 'react';
 
 function Example() {
   // 声明一个叫 "count" 的 state 变量, 和一个用于更新 "count" 值的 "setCount" 的函数
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);//useState()的参数是state的初始值
 }
 ```
-useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。
+useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。useState 方法的参数为初始值，返回值为 `当前 state` 以及`更新 state 的函数`。这就是我们写 const [count, setCount] = useState() 的原因，且需要成对的获取它们。**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
 你可能注意到我们用方括号定义了一个 state 变量，等号左边名字并不是 React API 的部分，你可以自己取名字：
 ```js
 const [fruit, setFruit] = useState('banana');
