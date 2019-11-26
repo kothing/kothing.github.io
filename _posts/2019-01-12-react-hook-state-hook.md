@@ -8,7 +8,7 @@ rating: 4.5
 ---
 
 ### Hook 是什么？
-Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 
+Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 Hook 例子介绍：
 ```js
 import React, { useState } from 'react';
@@ -19,7 +19,9 @@ function Example() {
 
   return (
     <div>
+      // 直接使用 "count", 不能使用this
       <p>You clicked {count} times</p>
+      // 通过setCount()函数来更新count的state值
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
