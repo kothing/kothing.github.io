@@ -14,7 +14,7 @@ Hook 例子介绍：
 import React, { useState } from 'react';
 
 function Example() {
-  // 声明一个叫 "count" 的 state 变量
+  // 声明一个叫 "count" 的 state 变量, 和一个用于更新 "count" 值的 "setCount" 的函数
   const [count, setCount] = useState(0);
 
   return (
@@ -51,7 +51,7 @@ class Example extends React.Component {
   }
 }
 ```
-state 初始值为 `{ count: 0 }` ，当用户点击按钮后，我们通过调用 `this.setState()` 来增加 `state.count`。整个章节中都将使用该 class 的代码片段做示例。
+state 初始值为 `{ count: 0 }` ，当用户点击按钮后，我们通过调用 `this.setState()` 来增加 `state.count`。
 
 ### Hook和函数组件
 React的函数组件是这样的：
@@ -71,14 +71,6 @@ function Example(props) {
 你可能把它们叫做“无状态组件”，我们更喜欢叫它”函数组件”。
 
 `Hook 在 class 内部是不起作用的`。但你可以使用它们来取代 class 。
-
-
-
-
-
-
-
-
 
 
 ### Hook 是什么？
@@ -111,16 +103,21 @@ class Example extends React.Component {
 import React, { useState } from 'react';
 
 function Example() {
-  // 声明一个叫 “count” 的 state 变量
+  // 声明一个叫 "count" 的 state 变量, 和一个用于更新 "count" 值的 "setCount" 的函数
   const [count, setCount] = useState(0);
 }
 ```
+useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。
+你可能注意到我们用方括号定义了一个 state 变量，等号左边名字并不是 React API 的部分，你可以自己取名字：
+```js
+const [fruit, setFruit] = useState('banana');
+```
+useState 方法的返回值为：当前 state 以及更新 state 的函数。这就是我们写 const [count, setCount] = useState() 的原因，需要成对的获取它们(count和setCount)。如果我们想要在 state 中存储两个不同的变量，只需调用 useState() 两次即可。
+```js
+const [count1, setCount1] = useState(0);
+const [count2, setCount2] = useState(1);
+```
 
-useState 是一种新方法，它与 class 里面的 this.state 提供的功能完全相同。一般来说，在函数退出后变量就就会”消失”，而 state 中的变量会被 React 保留。
-
-useState 需要哪些参数？ useState() 方法里面唯一的参数就是初始 state。不同于 class 的是，我们可以按照需要使用数字或字符串对其进行赋值，而不一定是对象。在示例中，只需使用数字来记录用户点击次数，所以我们传了 0 作为变量的初始 state。（如果我们想要在 state 中存储两个不同的变量，只需调用 useState() 两次即可。）
-
-useState 方法的返回值是什么？ 返回值为：当前 state 以及更新 state 的函数。这就是我们写 const [count, setCount] = useState() 的原因。这与 class 里面 this.state.count 和 this.setState 类似，唯一区别就是你需要成对的获取它们。
 
 ### 读取 State
 当我们想在 class组件 中显示当前的 count，我们读取 this.state.count：
