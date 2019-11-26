@@ -92,7 +92,7 @@ class Example extends React.Component {
   }
 ```
 
-在函数组建中，首先引入 React 中 useState 的 Hook，**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
+在函数组件中，首先引入 React 中 useState 的 Hook，**在函数组件中，没有 this**，所以我们不能分配或读取 this.state。
 ```js
 import React, { useState } from 'react';
 
