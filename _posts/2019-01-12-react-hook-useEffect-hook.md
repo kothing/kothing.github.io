@@ -98,6 +98,22 @@ function FriendStatus(props) {
 **React 何时清除 effect？** React 会在组件卸载的时候执行清除操作。正如之前学到的，effect 在每次渲染的时候都会执行。这就是为什么 React 会在执行当前 effect 之前对上一个 effect 进行清除。我们稍后将讨论为什么这将助于避免 bug以及如何在遇到性能问题时跳过此行为。
 
 
+**提示: 通过跳过 Effect 进行性能优化**
+在某些情况下，每次渲染后都执行清理或者执行 effect 可能会导致性能问题，或者出现无限循环更新的问题。在 class 组件中，我们可以通过在 componentDidUpdate 中添加对 prevProps 或 prevState 的比较逻辑解决：
+```js
+componentDidUpdate(prevProps, prevState) {
+  if (prevState.count !== this.state.count) {
+    document.title = `You clicked ${this.state.count} times`;
+  }
+}
+```
+如果某些特定值在两次重渲染之间没有发生变化，你可以通知 React 跳过对 effect 的调用，**`只要传递数组作为 useEffect 的第二个可选参数即可`**：
+```js
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // 仅在 count 更改时更新
+```
+
 ## 实例
 ```js
 import React, { useState, useEffect } from 'react';
