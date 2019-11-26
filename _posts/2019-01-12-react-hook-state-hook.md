@@ -11,7 +11,8 @@ rating: 4.5
 Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
 Hook 是一个特殊的函数，它可以让你“钩入” React 的特性。例如，useState 是允许你在 React 函数组件中添加 state 的 Hook。
 
-## 什么时候我会用 Hook？
+
+## 什么时候用 Hook？
 如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其它转化为 class。现在你可以在现有的函数组件中使用 Hook。
 
 **Hook 示例**
@@ -81,6 +82,7 @@ function Example(props) {
 `Hook 在 class 内部是不起作用的`。但你可以使用它们来取代 class 。
 
 
+
 ## 声明 State 变量
 在 class 中，我们通过在构造函数中设置 `this.state` 为 `{ count: 0 }` 来初始化 `count` state 为 `0`：
 ```js
@@ -117,6 +119,7 @@ const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 ```
 
 
+
 ## 读取 State
 当我们想在 class组件 中显示当前的 count，我们读取 this.state.count：
 ```js
@@ -127,6 +130,8 @@ const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 ```js
 <p>You clicked {count} times</p>
 ```
+
+
 
 ## 更新 State
 在 class 中，我们需要调用 this.setState() 来更新 count 值：
