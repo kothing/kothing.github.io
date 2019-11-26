@@ -114,10 +114,13 @@ useState 是一种新方法，它与 class 里面的 this.state 提供的功能�
 ```js
 const [fruit, setFruit] = useState('banana');
 ```
-useState 方法的返回值为：当前 state 以及更新 state 的函数。这就是我们写 const [count, setCount] = useState() 的原因，需要成对的获取它们(count和setCount)。如果我们想要在 state 中存储两个不同的变量，只需调用 useState() 两次即可。
+useState 方法的返回值为：当前 state 以及更新 state 的函数。这就是我们写 const [count, setCount] = useState() 的原因，需要成对的获取它们(count和setCount)。
+
+**声明多个 state 变量**
 ```js
-const [count1, setCount1] = useState(0);
-const [count2, setCount2] = useState(1);
+const [age, setAge] = useState(42);
+const [fruit, setFruit] = useState('banana');
+const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 ```
 
 
