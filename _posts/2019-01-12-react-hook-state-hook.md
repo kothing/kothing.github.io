@@ -9,7 +9,7 @@ rating: 4.5
 Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 
 
 Hook 例子介绍了：
-```
+```js
 import React, { useState } from 'react';
 
 function Example() {
@@ -28,7 +28,7 @@ function Example() {
 ```
 ### 等价的 class 示例
 如果你之前在 React 中使用过 class，这段代码看起来应该很熟悉：
-```
+```js
 class Example extends React.Component {
   constructor(props) {
     super(props);
