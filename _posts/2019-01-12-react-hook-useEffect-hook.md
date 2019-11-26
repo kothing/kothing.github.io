@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "React Hook - Effect Hook示例详解"
+title:  "React Hook - Effect Hook 示例详解"
 author: Kothing
 categories: [ Javascript, React, tutorial ]
 image: assets/images/1.jpg
