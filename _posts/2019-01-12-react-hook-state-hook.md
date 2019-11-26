@@ -136,11 +136,11 @@ const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 ```js
 <button onClick={() => this.setState({ count: this.state.count + 1 })}>
     Click me
-  </button>
+</button>
 ```
 在函数组件中，我们已经有了 setCount函数 和 count 变量，所以我们不需要 this:
 ```js
 <button onClick={() => setCount(count + 1)}>
     Click me
-  </button>
+</button>
 ```
