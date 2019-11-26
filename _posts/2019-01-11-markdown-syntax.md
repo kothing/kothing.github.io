@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Inception Movie"
+title:  "Markdown语法"
 author: john
 categories: [ Jekyll, Blog ]
 tags: [red, yellow]
