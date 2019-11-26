@@ -7,9 +7,14 @@ image: "https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?ixlib=rb-0.
 rating: 4.5
 ---
 
-### Hook 是什么？
+## Hook 是什么？
 Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。
-Hook 例子介绍：
+Hook 是一个特殊的函数，它可以让你“钩入” React 的特性。例如，useState 是允许你在 React 函数组件中添加 state 的 Hook。
+
+## 什么时候我会用 Hook？
+如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其它转化为 class。现在你可以在现有的函数组件中使用 Hook。
+
+**Hook 示例**
 ```js
 import React, { useState } from 'react';
 
@@ -29,8 +34,9 @@ function Example() {
   );
 }
 ```
+声明一个叫 "count" 初始值为0 的 state 变量, 和一个用于更新 "count" 值的 "setCount" 的函数，当用户点击按钮后，我们通过调用 `setCount` 来增加 `count`的state值。
 
-### 等价的 class 示例
+**等价的 class 示例**
 如果你之前在 React 中使用过 class，这段代码看起来应该很熟悉：
 ```js
 class Example extends React.Component {
@@ -75,20 +81,7 @@ function Example(props) {
 `Hook 在 class 内部是不起作用的`。但你可以使用它们来取代 class 。
 
 
-### Hook 是什么？
-在新示例中，首先引入 React 中 useState 的 Hook
-```js
-import React, { useState } from 'react';
-
-function Example() {
-  // ...
-}
-```
-**Hook 是什么？** Hook 是一个特殊的函数，它可以让你“钩入” React 的特性。例如，useState 是允许你在 React 函数组件中添加 state 的 Hook。
-
-**什么时候我会用 Hook？** 如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其它转化为 class。现在你可以在现有的函数组件中使用 Hook。
-
-### 声明 State 变量
+## 声明 State 变量
 在 class 中，我们通过在构造函数中设置 `this.state` 为 `{ count: 0 }` 来初始化 `count` state 为 `0`：
 ```js
 class Example extends React.Component {
@@ -124,7 +117,7 @@ const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 ```
 
 
-### 读取 State
+## 读取 State
 当我们想在 class组件 中显示当前的 count，我们读取 this.state.count：
 ```js
 <p>You clicked {this.state.count} times</p>
@@ -135,7 +128,7 @@ const [todos, setTodos] = useState([{ text: '学习 Hook' }]);
 <p>You clicked {count} times</p>
 ```
 
-### 更新 State
+## 更新 State
 在 class 中，我们需要调用 this.setState() 来更新 count 值：
 ```js
 <button onClick={() => this.setState({ count: this.state.count + 1 })}>
