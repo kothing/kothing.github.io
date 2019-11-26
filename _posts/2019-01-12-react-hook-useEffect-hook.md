@@ -32,3 +32,34 @@ function Example() {
 
 **useEffect具体上面作用呢？**  
 如果你熟悉 React class 的生命周期函数，你可以把 useEffect Hook 看做 componentDidMount，componentDidUpdate 和 componentWillUnmount 这三个函数的组合。`就是当组件加载完成(componentDidMount)、组件state状态值更新(componentDidUpdate)、组件卸载(componentWillUnmount)时候都会执行的副作用函数。`
+
+
+简单示例
+```js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function App() {
+  const [data, setData] = useState({ hits: [] });
+
+  useEffect(async () => {
+    const result = await axios(
+      'http://localhost/api/v1/search?query=redux',
+    );
+
+    setData(result.data);
+  });
+
+  return (
+    <ul>
+      {data.hits.map(item => (
+        <li key={item.objectID}>
+          <a href={item.url}>{item.title}</a>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default App;
+```
