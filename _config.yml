@@ -14,18 +14,18 @@ authors:
   Kothing:
     name: Kothing
     display_name: Kothing
-    gravatar: e56154546cf4be74e393c62d1ae9f9d4
-    email: ''
+    gravatar: 2c8b65b07e824ea91b649a8c57af8a28
+    email: 'kothing@outlook.com'
     web: https://www.kothing.com
     twitter: ''
     description: "Author of Kothing, a Bootstrap Medium styled template available for WordPress, HTML, Ghost and Jekyll. You are currently previewing Jekyll template demo."
-  john:
-    name: John
-    display_name: John    
+  Lyove:
+    name: Lyove
+    display_name: Lyove    
     avatar: 'assets/images/avatar.png'
-    gravatar: b1cc14991db7a456fcd761680bbc8f81
-    email: ''
-    web: https://www.kothing.com
+    gravatar: 8d1f1b3a0bd5557ee60cb3277f1c0497
+    email: 'lyove@outlook.com'
+    web: https://www.lyove.com
     twitter: ''
     description: "This is the author box. Write a short description of the author here. You are currently previewing Kothing demo, a Jekyll template compatible with Github pages."
 
