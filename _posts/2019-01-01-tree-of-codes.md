@@ -4,7 +4,7 @@ title:  "Tree of Codes"
 author: Kothing
 categories: [ Jekyll, tutorial ]
 featured: true
-rating: 5.0
+rating: 4.5
 image: assets/images/9.jpg
 ---
 
