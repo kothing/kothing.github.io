@@ -3,6 +3,8 @@ layout: post
 title:  "Tree of Codes"
 author: Kothing
 categories: [ Jekyll, tutorial ]
+featured: true
+rating: 5.0
 image: assets/images/9.jpg
 ---
 ## Writing code blocks
