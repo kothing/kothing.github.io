@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Never stopped worrying or loving the bomb"
+title:  "React Hook 规则"
 author: Kothing
 categories: [ Javascript, React, tutorial ]
 image: assets/images/14.jpg
