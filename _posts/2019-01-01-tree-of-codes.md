@@ -7,6 +7,9 @@ featured: true
 rating: 5.0
 image: assets/images/9.jpg
 ---
+
+Kothing bloggers. Review products, books, movies, restaurant and anything you like on your blog with Kothing
+
 ## Writing code blocks
 
 There are two types of code elements which can be inserted in Markdown, the first is inline, and the other is block. Inline code is formatted by wrapping any word or words in back-ticks, `like this`. Larger snippets of code can be displayed across multiple lines using triple back ticks:
