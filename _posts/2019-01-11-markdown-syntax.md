@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Markdown语法"
-author: kothing
+author: Kothing
 categories: [ Markdown ]
 tags: [red, yellow]
 image: assets/images/11.jpg
