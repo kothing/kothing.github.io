@@ -7,7 +7,7 @@ Copyright: kothing, https://www.kothing.com
         font-size: 16px;
     } /* Increase the font size on higher resolutions */
     .container {
-        max-width:80%;
+        max-width: 80%;
     }
 }
 .h1, h1 {
