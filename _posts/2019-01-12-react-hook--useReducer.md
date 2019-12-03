@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Options for creating a new site with Jekyll"
+title:  "React Hook - useReducer示例详解"
 author: john
-categories: [ Jekyll, tutorial ]
+categories: [ React, tutorial ]
 image: assets/images/13.jpg
 ---
 
-`jekyll new <PATH>` installs a new Jekyll site at the path specified (relative to current directory). In this case, Jekyll will be installed in a directory called `myblog`. Here are some additional details:
+`useReducer` 是React提供的一个高级Hook，它不像useEffect、useState、useRef等必须hook一样，没有它我们也可以正常完成需求的开发，但useReducer可以使我们的代码具有更好的可读性、可维护性、可预测性。
 
 - To install the Jekyll site into the directory you're currently in, run `jekyll new` . If the existing directory isn't empty, you can pass the --force option with jekyll new . --force.
 - `jekyll new` automatically initiates `bundle install` to install the dependencies required. (If you don't want Bundler to install the gems, use `jekyll new myblog --skip-bundle`.)
