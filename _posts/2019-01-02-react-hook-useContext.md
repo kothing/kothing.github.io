@@ -5,6 +5,7 @@ author: Kothing
 categories: [ Jekyll, Blog, tutorial ]
 image: assets/images/12.jpg
 ---
+`useContext`从名字上就可以看出，它是以Hook的方式使用React Context（上下文）。先简单介绍Context的概念和使用方式，更多Context的知识可以[参考官方文档](https://zh-hans.reactjs.org/docs/hooks-reference.html#usecontext, useContext)。
 Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.
 
 Education must also train one for quick, **resolute and effective thinking**. To think incisively and to think for one's self is very difficult. 
