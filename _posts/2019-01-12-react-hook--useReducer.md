@@ -44,3 +44,22 @@ expect(countReducer(1, { type: 'add' })).equal(2); // 成功
 expect(countReducer(1, { type: 'add' })).equal(2); // 成功
 expect(countReducer(1, { type: 'sub' })).equal(0); // 成功
 ```
+
+
+### state 和 newState
+`state`是当前应用状态对象，可以理解就是我们熟知的React里面的state。
+
+在上面的例子中state是一个基础数据类型，但很多时候state可能会是一个复杂的JavaScript对象，如上例中count有可能只是 state中的一个属性。针对这种场景我们可以使用ES6的结构赋值：
+```js
+// 返回一个 newState (newObject)
+function countReducer(state, action) {
+    switch(action.type) {
+        case 'add':
+            return { ...state, count: state.count + 1; }
+        case 'sub':
+            return { ...state, count: state.count - 1; }
+        default: 
+            return count;
+    }
+}
+```
