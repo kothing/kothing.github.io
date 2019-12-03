@@ -37,3 +37,11 @@ function countReducer(count, action) {
     }
 }
 ```
+
+**reducer 的幂等性**
+从上面的示例可以看到reducer本质是一个纯函数，没有任何UI和副作用。这意味着相同的输入（state、action），reducer函数无论执行多少遍始终会返回相同的输出（newState）。因此通过reducer函数很容易推测state的变化，并且也更加容易单元测试。
+```js
+expect(countReducer(1, { type: 'add' })).equal(2); // 成功
+expect(countReducer(1, { type: 'add' })).equal(2); // 成功
+expect(countReducer(1, { type: 'sub' })).equal(0); // 成功
+```
