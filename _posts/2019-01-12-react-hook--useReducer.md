@@ -67,3 +67,24 @@ function countReducer(state, action) {
 
 + reducer处理的state对象必须是immutable，这意味着永远不要直接修改参数中的state对象，reducer函数应该每次都返回一个新的state object。
 + 既然reducer要求每次都返回一个新的对象，我们可以使用ES6中的解构赋值方式去创建一个新对象，并复写我们需要改变的state属性，如上例。
+
+如果state是多层嵌套，解构赋值实现就非常复杂：
+```js
+function bookReducer(state, action) {
+    switch(action.type) {
+        // 添加一本书
+        case 'addBook':
+            return {
+                ...state,
+                books: {
+                    ...state.books,
+                    [bookId]: book,
+                }
+            };
+        case 'sub':
+            // ....
+        default: 
+            return state;
+    }
+}
+```
