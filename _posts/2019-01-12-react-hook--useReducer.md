@@ -201,7 +201,8 @@ function LoginPage() {
 ```
 上面Demo我们定义了5个state来描述页面的状态，在login函数中当登录成功、失败时进行了一系列复杂的state设置。可以想象随着需求越来越复杂更多的state加入到页面，更多的setState分散在各处，很容易设置错误或者遗漏。
 
-`useReducer`实现方式
+
+`useReducer`实现方式：
 ```js
 const initState = {
     name: '',
