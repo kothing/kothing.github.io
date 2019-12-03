@@ -168,7 +168,7 @@ payload： 提供操作附带的数据信息
 
 这里使用Login登陆为示例
 
-`seState`的实现方式：
+`seState`实现方式：
 ```js
 function LoginPage() {
     const [name, setName] = useState(''); // 用户名
