@@ -6,7 +6,7 @@ categories: [ React, tutorial ]
 image: assets/images/13.jpg
 ---
 
-`useReducer` 是React提供的一个高级Hook，它不像useEffect、useState、useRef等必须hook一样，没有它我们也可以正常完成需求的开发，但useReducer可以使我们的代码具有更好的可读性、可维护性、可预测性。
+`useReducer` 它接收一个形如 (state, action) => newState 的 reducer，并返回当前的 state 以及与其配套的 dispatch 方法。useState 的替代方案。
 
 ## reducer概念
 
