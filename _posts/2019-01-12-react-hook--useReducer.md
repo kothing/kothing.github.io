@@ -10,9 +10,8 @@ image: assets/images/13.jpg
 
 **什么是reducer**
 `reducer`的概念是伴随着Redux的出现逐渐在JavaScript中流行起来。但我们并不需要学习Redux去了解Reducer。简单来说 reducer是一个函数(state, action) => newState：接收当前应用的state和触发的动作action，计算并返回最新的state。下面是一段伪代码：
-
-// 举个栗子 计算器reducer，根据state（当前状态）和action（触发的动作加、减）参数，计算返回newState
 ```js
+//计算器reducer，根据state（当前状态）和action（触发的动作加、减）参数，计算返回newState
 function countReducer(state, action) {
     switch(action.type) {
         case 'add':
