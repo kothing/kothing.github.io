@@ -161,3 +161,38 @@ payload： 提供操作附带的数据信息
 
 
 ## reducer示例
+
+**useState VS useReducer** 
+这里使用Login登陆为示例：
+`seState`的实现方式：
+```js
+function LoginPage() {
+    const [name, setName] = useState(''); // 用户名
+    const [pwd, setPwd] = useState(''); // 密码
+    const [isLoading, setIsLoading] = useState(false); // 是否展示loading，发送请求中
+    const [error, setError] = useState(''); // 错误信息
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // 是否登录
+
+    const login = (event) => {
+        event.preventDefault();
+        setError('');
+        setIsLoading(true);
+        login({ name, pwd })
+            .then(() => {
+                setIsLoggedIn(true);
+                setIsLoading(false);
+            })
+            .catch((error) => {
+                // 登录失败: 显示错误信息、清空输入框用户名、密码、清除loading标识
+                setError(error.message);
+                setName('');
+                setPwd('');
+                setIsLoading(false);
+            });
+    }
+    return ( 
+        //  返回页面JSX Element
+    )
+}
+```
+
