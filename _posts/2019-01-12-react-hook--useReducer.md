@@ -259,3 +259,12 @@ function LoginPage() {
     )
 }
 ```
+乍一看`useReducer`改造后的代码反而更长了，但很明显第二版有更好的可读性，我们也能更清晰的了解state的变化逻辑。
+
+可以看到login函数现在更清晰的表达了用户的意图，开始登录login、登录success、登录error。LoginPage不需要关心如何处理这几种行为，那是loginReducer需要关心的，表现和业务分离。
+
+另一个好处是所有的state处理都集中到了一起，使得我们对state的变化更有掌控力，同时也更容易复用state逻辑变化代码，比如在其他函数中也需要触发登录error状态，只需要`dispatch({ type: 'error' })`。
+
+`useReducer`可以让我们将what和how分开。比如点击了登录按钮，我们要做的就是发起登陆操作`dispatch({ type: 'login' })`，点击退出按钮就发起退出操作`dispatch({ type: 'logout' })`，所有和how相关的代码都在reducer中维护，组件中只需要思考What，让我们的代码可以像用户的行为一样，更加清晰。
+
+除此之外还有一个好处，我们在前文提过Reducer其实一个UI无关的纯函数，useReducer的方案是的我们更容易构建自动化测试用例。
