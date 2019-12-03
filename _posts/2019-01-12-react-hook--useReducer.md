@@ -7,36 +7,51 @@ image: assets/images/13.jpg
 ---
 
 `useReducer` 它接收一个形如 (state, action) => newState 的 reducer，并返回当前的 state 以及与其配套的 dispatch 方法。useState 的替代方案。
+在某些场景下，useReducer 会比 useState 更适用，例如 state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等。并且，使用 useReducer 还能给那些会触发深更新的组件做性能优化，因为你可以向子组件传递 dispatch 而不是回调函数 。
 
 ## reducer概念
 
 ### 什么是reducer
-`reducer`的概念是伴随着Redux的出现逐渐在JavaScript中流行起来。但我们并不需要学习Redux去了解Reducer。简单来说 reducer是一个函数(state, action) => newState：接收当前应用的state和触发的动作action，计算并返回最新的state。下面是一段伪代码：
+`reducer`的概念是伴随着Redux的出现逐渐在JavaScript中流行起来。但我们并不需要学习Redux去了解Reducer。简单来说 reducer是一个函数(state, action) => newState：接收当前应用的state和触发的动作action，计算并返回最新的state。以下是用 reducer 重写 useState 一节的计数器示例：
 ```js
-//计算器reducer，根据state（当前状态）和action（触发的动作加、减）参数，计算返回newState
-function countReducer(state, action) {
-    switch(action.type) {
-        case 'add':
-            return state + 1;
-        case 'sub':
-            return state - 1;
-        default: 
-            return state;
-    }
+const initialState = {count: 0};
+
+//根据state（当前状态）和action（触发的动作加、减）参数，计算返回newState
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: state.count + 1};
+    case 'decrement':
+      return {count: state.count - 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+  return (
+    <>
+      Count: {state.count}
+      <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+      <button onClick={() => dispatch({type: 'increment'})}>+</button>
+    </>
+  );
 }
 ```
-上面例子：state是一个number类型的数值，reducer根据action的类型（加、减）对应的修改state，并返回最终的state。为了刚接触到reducer概念的小伙伴更容易理解，可以将state改为count，但请始终牢记count仍然是state。
+上面例子：state是一个number类型的数值，reducer根据action的类型（加、减）对应的修改state，并返回最终的state。为了刚接触到reducer概念的小伙伴更容易理解，可以将state改为myState，但请始终牢记count仍然是state。
 ```js
-function countReducer(count, action) {
-    switch(action.type) {
-        case 'add':
-            return count + 1;
-        case 'sub':
-            return count - 1;
-        default: 
-            return count;
-    }
+function reducer(myState, action) {
+  switch (action.type) {
+    case 'increment':
+      return {count: myState.count + 1};
+    case 'decrement':
+      return {count: myState.count - 1};
+    default:
+      throw new Error();
+  }
 }
+...
 ```
 
 ### reducer 的幂等性
