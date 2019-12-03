@@ -137,7 +137,7 @@ function bookReducer(state, action) {
 }
 ```
 **总结**：
-reducer是一个利用action提供的信息，将state从A转换到B的一个纯函数，具有一下几个特点：
+reducer是一个利用action提供的信息，将state从A转换到B的一个纯函数，具有一下几个特点：  
 语法：(state, action) => newState  
 Immutable：每次都返回一个newState， 永远不要直接修改state对象  
 Action：一个常规的Action对象通常有type和payload（可选）组成  
