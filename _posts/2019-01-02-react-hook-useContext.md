@@ -44,6 +44,85 @@ function ThemedButton(props) {
 ```
 关于`Context`还有一个比较重要的点是：当Context Provider的value发生变化是，他的所有子级消费者都会rerender。
 
+
 **useContext实现login**  
+
 [useReducer示例详解](https://kothing.github.io/react-hook-useReducer/)文章结尾提到过使用useReducer，可以帮助我们集中式的处理复杂的state管理。但如果我们的页面很复杂，拆分成了多层多个组件，我们如何在子组件触发这些state变化呢，比如在LoginButton触发登录失败操作？
-思考如何利用context去解决我们问中开头提到的子孙类组件触发reducer状态变化。没错，就是将dispatch函数作为context的value，共享给页面的子组件。
+思考如何利用context将dispatch函数作为context的value，共享给页面的子组件。
+```js
+// 定义初始化值
+const initState = {
+    name: '',
+    pwd: '',
+    isLoading: false,
+    error: '',
+    isLoggedIn: false,
+}
+// 定义state[业务]处理逻辑 reducer函数
+function loginReducer(state, action) {
+    switch(action.type) {
+        case 'login':
+            return {
+                ...state,
+                isLoading: true,
+                error: '',
+            }
+        case 'success':
+            return {
+                ...state,
+                isLoggedIn: true,
+                isLoading: false,
+            }
+        case 'error':
+            return {
+                ...state,
+                error: action.payload.error,
+                name: '',
+                pwd: '',
+                isLoading: false,
+            }
+        default: 
+            return state;
+    }
+}
+// 定义 context函数
+const LoginContext = React.createContext();
+function LoginPage() {
+    const [state, dispatch] = useReducer(loginReducer, initState);
+    const { name, pwd, isLoading, error, isLoggedIn } = state;
+    const login = (event) => {
+        event.preventDefault();
+        dispatch({ type: 'login' });
+        login({ name, pwd })
+            .then(() => {
+                dispatch({ type: 'success' });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: 'error'
+                    payload: { error: error.message }
+                });
+            });
+    }
+    // 利用 context 共享dispatch
+    return ( 
+        <LoginContext.Provider value={{dispatch}}>
+            <...>
+            <LoginButton />
+        </LoginContext.Provider>
+    )
+}
+function LoginButton() {
+    // 子组件中直接通过context拿到dispatch，出发reducer操作state
+    const dispatch = useContext(LoginContext);
+    const click = () => {
+        if (error) {
+            // 子组件可以直接 dispatch action
+            dispatch({
+                type: 'error'
+                payload: { error: error.message }
+            });
+        }
+    }
+}
+```
