@@ -5,12 +5,13 @@ author: Kothing
 categories: [ Jekyll, Blog, tutorial ]
 image: assets/images/12.jpg
 ---
-`useContext`从名字上就可以看出，它是以Hook的方式使用React Context（上下文）。先简单介绍Context的概念和使用方式，更多Context的知识可以[参考官方文档](https://zh-hans.reactjs.org/docs/hooks-reference.html#usecontext, useContext)。
-Even the press, the classroom, the platform, and the pulpit in many instances do not give us objective and unbiased truths. To save man from the morass of propaganda, in my opinion, is one of the chief aims of education. Education must enable one to sift and weigh evidence, to discern the true from the false, the real from the unreal, and the facts from the fiction.
+`useContext`从名字上就可以看出，它是以Hook的方式使用React Context（上下文）。先简单介绍Context的概念和使用方式，更多Context的知识可以[参考官方文档](https://zh-hans.reactjs.org/docs/hooks-reference.html#usecontext, "useContext")。
 
-Education must also train one for quick, **resolute and effective thinking**. To think incisively and to think for one's self is very difficult. 
+## context 介绍
+官方文档
+> Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language.
 
-> We are prone to let our mental life become invaded by legions of half truths, prejudices, and propaganda. At this point, I often wonder whether or not education is fulfilling its purpose. A great majority of the so-called educated people do not think logically and scientifically. 
+
 
 
 The function of education, therefore, is to teach one to think intensively and to think critically. But education which stops with efficiency may prove the greatest menace to society. The most dangerous criminal may be the man gifted with reason, but with no morals.
