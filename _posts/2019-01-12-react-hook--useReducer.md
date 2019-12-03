@@ -97,3 +97,40 @@ function bookReducer(state, action) {
 + React中的state比较方案 
 React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会出发组件的rerender。
 可以参考官方文档bailing-out-of-a-dispatch。
+
+
+### action 理解
+action：用来表示触发的行为。
+
+用type来表示具体的行为类型(登录、登出、添加用户、删除用户等)
+用payload携带的数据（如增加书籍，可以携带具体的book信息），我们用上面addBook的action为例：
+```js
+const action = {
+    type: 'addBook',
+    payload: {
+        book: {
+            bookId,
+            bookName,
+            author,
+        }
+    }
+}
+function bookReducer(state, action) {
+    switch(action.type) {
+        // 添加一本书
+        case 'addBook':
+            const { book } = action.payload;
+            return {
+                ...state,
+                books: {
+                    ...state.books,
+                    [book.bookId]: book,
+                }
+            };
+        case 'sub':
+            // ....
+        default: 
+            return state;
+    }
+}
+```
