@@ -44,3 +44,6 @@ function ThemedButton(props) {
 ```
 关于`Context`还有一个比较重要的点是：当Context Provider的value发生变化是，他的所有子级消费者都会rerender。
 
+**useContext实现login**  
+[useReducer示例详解](https://kothing.github.io/react-hook-useReducer/)文章结尾提到过使用useReducer，可以帮助我们集中式的处理复杂的state管理。但如果我们的页面很复杂，拆分成了多层多个组件，我们如何在子组件触发这些state变化呢，比如在LoginButton触发登录失败操作？
+思考如何利用context去解决我们问中开头提到的子孙类组件触发reducer状态变化。没错，就是将dispatch函数作为context的value，共享给页面的子组件。
