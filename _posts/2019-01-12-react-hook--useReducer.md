@@ -89,3 +89,11 @@ function bookReducer(state, action) {
 }
 ```
 对于这种复杂state的场景推荐使用[immer](https://github.com/immerjs/immer "immer")等immutable库解决。
+
+### state为什么需要immutable？
++ reducer的幂等性 
+我们上文提到过reducer需要保持幂等性，更加可预测、可测试。如果每次返回同一个state，就无法保证无论执行多少次都是相同的结果
+
++ React中的state比较方案 
+React在比较oldState和newState的时候是使用Object.is函数，如果是同一个对象则不会出发组件的rerender。
+可以参考官方文档bailing-out-of-a-dispatch。
