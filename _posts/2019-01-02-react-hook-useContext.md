@@ -124,3 +124,10 @@ function LoginButton() {
     }
 }
 ```
+可以看到在useReducer结合useContext，通过context把dispatch函数提供给组件树中的所有组件使用，而不用通过props添加回调函数的方式一层层传递。
+
+**使用Context相比回调函数的优势：**
+
+- 对比回调函数的自定义命名，Context的Api更加明确，我们可以更清晰的知道哪些组件使用了dispatch、应用中的数据流动和变化。这也是React一直以来单向数据流的优势。 
+
+- 更好的性能：如果使用回调函数作为参数传递的话，因为每次render函数都会变化，也会导致子组件rerender。当然我们可以使用useCallback解决这个问题，但相比useCallbackReact官方更推荐使用useReducer，因为React会保证dispatch始终是不变的，不会引起consumer组件的rerender。 
