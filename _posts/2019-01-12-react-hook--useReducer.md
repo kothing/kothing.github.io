@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "React Hook - useReducer示例详解"
-author: john
+author: Kothing
 categories: [ React, tutorial ]
 image: assets/images/13.jpg
 ---
