@@ -116,13 +116,11 @@ function LoginButton() {
     // 子组件中直接通过context拿到dispatch，出发reducer操作state
     const dispatch = useContext(LoginContext);
     const click = () => {
-        if (error) {
-            // 子组件可以直接 dispatch action
-            dispatch({
-                type: 'error'
-                payload: { error: error.message }
-            });
-        }
+        // 子组件可以直接 dispatch action
+        dispatch({
+            type: 'error'
+            payload: { error: error.message }
+        });
     }
 }
 ```
