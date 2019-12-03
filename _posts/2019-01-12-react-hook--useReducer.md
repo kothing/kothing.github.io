@@ -88,3 +88,4 @@ function bookReducer(state, action) {
     }
 }
 ```
+对于这种复杂state的场景推荐使用[immer](https://github.com/immerjs/immer "immer")等immutable库解决。
