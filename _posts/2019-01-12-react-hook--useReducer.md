@@ -202,4 +202,59 @@ function LoginPage() {
 上面Demo我们定义了5个state来描述页面的状态，在login函数中当登录成功、失败时进行了一系列复杂的state设置。可以想象随着需求越来越复杂更多的state加入到页面，更多的setState分散在各处，很容易设置错误或者遗漏。
 
 `useReducer`实现方式
-
+```js
+const initState = {
+    name: '',
+    pwd: '',
+    isLoading: false,
+    error: '',
+    isLoggedIn: false,
+}
+function loginReducer(state, action) {
+    switch(action.type) {
+        case 'login':
+            return {
+                ...state,
+                isLoading: true,
+                error: '',
+            }
+        case 'success':
+            return {
+                ...state,
+                isLoggedIn: true,
+                isLoading: false,
+            }
+        case 'error':
+            return {
+                ...state,
+                error: action.payload.error,
+                name: '',
+                pwd: '',
+                isLoading: false,
+            }
+        default: 
+            return state;
+    }
+}
+function LoginPage() {
+    const [state, dispatch] = useReducer(loginReducer, initState);
+    const { name, pwd, isLoading, error, isLoggedIn } = state;
+    const login = (event) => {
+        event.preventDefault();
+        dispatch({ type: 'login' });
+        login({ name, pwd })
+            .then(() => {
+                dispatch({ type: 'success' });
+            })
+            .catch((error) => {
+                dispatch({
+                    type: 'error'
+                    payload: { error: error.message }
+                });
+            });
+    }
+    return ( 
+        //  返回页面JSX Element
+    )
+}
+```
