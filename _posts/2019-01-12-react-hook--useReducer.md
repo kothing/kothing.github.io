@@ -8,6 +8,8 @@ image: assets/images/13.jpg
 
 `useReducer` 是React提供的一个高级Hook，它不像useEffect、useState、useRef等必须hook一样，没有它我们也可以正常完成需求的开发，但useReducer可以使我们的代码具有更好的可读性、可维护性、可预测性。
 
+## reducer概念
+
 ### 什么是reducer
 `reducer`的概念是伴随着Redux的出现逐渐在JavaScript中流行起来。但我们并不需要学习Redux去了解Reducer。简单来说 reducer是一个函数(state, action) => newState：接收当前应用的state和触发的动作action，计算并返回最新的state。下面是一段伪代码：
 ```js
@@ -134,3 +136,6 @@ function bookReducer(state, action) {
     }
 }
 ```
+
+
+## reducer示例
