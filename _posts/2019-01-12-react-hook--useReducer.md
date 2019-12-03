@@ -162,9 +162,8 @@ payload： 提供操作附带的数据信息
 
 ## reducer示例
 
-**useState VS useReducer**   
+这里使用Login登陆为示例
 
-这里使用Login登陆为示例：
 `seState`的实现方式：
 ```js
 function LoginPage() {
