@@ -6,10 +6,14 @@ categories: [ React, tutorial ]
 image: assets/images/13.jpg
 ---
 
-`useReducer` 它接收一个形如 (state, action) => newState 的 reducer，并返回当前的 state 以及与其配套的 dispatch 方法。useState 的替代方案。
+`useReducer` 它接收一个形如 (state, action) => newState 的 reducer方法，并返回当前的 state 以及与其配套的 dispatch 方法。useState 的替代方案。
 在某些场景下，useReducer 会比 useState 更适用，例如 state 逻辑较复杂且包含多个子值，或者下一个 state 依赖于之前的 state 等。并且，使用 useReducer 还能给那些会触发深更新的组件做性能优化，因为你可以向子组件传递 dispatch 而不是回调函数 。
 
 ## reducer概念
+语法：
+```js
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+```
 
 ### 什么是reducer
 `reducer`的概念是伴随着Redux的出现逐渐在JavaScript中流行起来。但我们并不需要学习Redux去了解Reducer。简单来说 reducer是一个函数(state, action) => newState：接收当前应用的state和触发的动作action，计算并返回最新的state。以下是用 reducer 重写 useState 一节的计数器示例：
@@ -196,3 +200,6 @@ function LoginPage() {
 }
 ```
 上面Demo我们定义了5个state来描述页面的状态，在login函数中当登录成功、失败时进行了一系列复杂的state设置。可以想象随着需求越来越复杂更多的state加入到页面，更多的setState分散在各处，很容易设置错误或者遗漏。
+
+`useReducer`实现方式
+
