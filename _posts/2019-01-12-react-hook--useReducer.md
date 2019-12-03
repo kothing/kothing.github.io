@@ -25,3 +25,15 @@ function countReducer(state, action) {
 }
 ```
 上面例子：state是一个number类型的数值，reducer根据action的类型（加、减）对应的修改state，并返回最终的state。为了刚接触到reducer概念的小伙伴更容易理解，可以将state改为count，但请始终牢记count仍然是state。
+```js
+function countReducer(count, action) {
+    switch(action.type) {
+        case 'add':
+            return count + 1;
+        case 'sub':
+            return count - 1;
+        default: 
+            return count;
+    }
+}
+```
