@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Front end level"
+title:  "前端职位等级及描述"
 author: Kothing
 categories: [ Javascript, Front ]
 image: assets/images/15.jpg
