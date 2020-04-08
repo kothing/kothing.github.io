@@ -29,27 +29,27 @@ image: assets/images/15.jpg
                     </td>
                     <td style="width: 17%">
                         <p>
-                            <strong>P5</strong>
+                            <strong>L1</strong>
                         </p>
                     </td>
                     <td style="width: 17%">
                         <p>
-                            <strong>P6</strong>
+                            <strong>L2</strong>
                         </p>
                     </td>
                     <td style="width: 17%">
                         <p>
-                            <strong>P7</strong>
+                            <strong>L3</strong>
                         </p>
                     </td>
                     <td style="width: 17%">
                         <p>
-                            <strong>P8</strong>
+                            <strong>L4</strong>
                         </p>
                     </td>
                     <td style="width: 17%">
                         <p>
-                            <strong>P9</strong>
+                            <strong>L5</strong>
                         </p>
                     </td>
                 </tr>
