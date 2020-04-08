@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Accumulated experience of social living"
+title:  "Front end level"
 author: Kothing
-categories: [ Jekyll, tutorial ]
+categories: [ Javascript, Front ]
 image: assets/images/15.jpg
 ---
 <div class="markdown-body">
