@@ -2,8 +2,8 @@
 layout: post
 title:  "Markdown语法"
 author: Kothing
-categories: [ Markdown ]
-tags: [red, yellow]
+categories: [ Web ]
+tags: [Markdown]
 image: assets/images/11.jpg
 description: "Markdown是一种轻量级标记语言，排版语法简洁，让人们更多地关注内容本身而非排版"
 rating: 4.5
