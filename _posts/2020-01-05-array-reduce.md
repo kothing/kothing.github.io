@@ -10,6 +10,8 @@ reduce()方法是数组的一个实例方法（共有方法），可以被数组
 ```js
 arr.reduce([callback, initialValue])
 ```
+
+
 **案例1：字母游戏**
 ```js
 const anagrams = str => {
