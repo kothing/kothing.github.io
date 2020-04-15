@@ -2,7 +2,7 @@
 layout: post
 title:  "React Hook - useReducer示例详解"
 author: Kothing
-categories: [ React, tutorial ]
+categories: [ Javascript, React ]
 image: assets/images/13.jpg
 ---
 
