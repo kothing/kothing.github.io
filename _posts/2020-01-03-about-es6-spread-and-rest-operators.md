@@ -2,7 +2,7 @@
 layout: post
 title:  "ES6扩展运算符与剩余操作符..."
 author: Kothing
-categories: [ Javascript ]
+categories: [ Javascript, ES6]
 image: assets/images/2.jpg
 rating: 5
 ---
