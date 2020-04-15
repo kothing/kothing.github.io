@@ -2,7 +2,7 @@
 layout: post
 title:  "ES6扩展操作符和剩余操作符区别和应用"
 author: Kothing
-categories: [ javascript, ES6 ]
+categories: [ Javascript ]
 image: assets/images/16.jpg
 rating: 4.5
 ---
