@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "js数组方法reduce()的使用案例"
-author: john
+author: Kothing
 categories: [ Javascript ]
 image: assets/images/5.jpg
 rating: 5
