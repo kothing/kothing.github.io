@@ -2,7 +2,7 @@
 layout: post
 title:  "React Hook - useContext示例详解"
 author: Kothing
-categories: [ React, tutorial ]
+categories: [ Javascript, React ]
 image: assets/images/12.jpg
 ---
 `useContext`从名字上就可以看出，它是以Hook的方式使用React Context（上下文）。先简单介绍Context的概念和使用方式，更多Context的知识可以[参考官方文档](https://zh-hans.reactjs.org/docs/hooks-reference.html#usecontext, "useContext")。
