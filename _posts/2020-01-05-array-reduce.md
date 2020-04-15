@@ -4,7 +4,7 @@ title:  "js数组方法reduce()的使用案例"
 author: john
 categories: [ Javascript ]
 image: assets/images/5.jpg
-rating: .5
+rating: 5
 ---
 reduce()方法是数组的一个实例方法（共有方法），可以被数组的实例对象调用。reduce() 方法接收一个函数作为累加器（accumulator），数组中的每个值（从左到右）开始缩减，最终为一个值。
 ```js
