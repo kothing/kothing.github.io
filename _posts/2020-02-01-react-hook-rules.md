@@ -2,7 +2,7 @@
 layout: post
 title:  "React Hook 规则"
 author: Kothing
-categories: [ Javascript, React, tutorial ]
+categories: [ Javascript, React ]
 image: assets/images/14.jpg
 rating: 4.5
 ---
