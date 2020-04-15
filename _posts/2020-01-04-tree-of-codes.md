@@ -2,7 +2,8 @@
 layout: post
 title:  "Tree of Codes"
 author: Kothing
-categories: [ Jekyll, tutorial ]
+categories: [ Blog ]
+tag: [ Jekyll, tutorial ]
 featured: true
 rating: 5
 image: assets/images/9.jpg
