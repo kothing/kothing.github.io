@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linux常用目录及详细使用说明"
-author: john
+author: Kothing
 categories: [ Tutorial ]
 tags: [ Linux ]
 image: assets/images/3.jpg
