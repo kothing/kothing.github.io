@@ -2,7 +2,7 @@
 layout: post
 title:  "React Hook - ueseEffect Hook 示例详解"
 author: Kothing
-categories: [ Javascript, React, tutorial ]
+categories: [ Javascript, React ]
 image: assets/images/1.jpg
 ---
 Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 Hook 是一个特殊的函数，它可以让你"钩入" React 的特性。Effect Hook 可以让你在函数组件中执行副作用操作。
