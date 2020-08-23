@@ -1,53 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="https://github.com/kothing" />
-    <meta name="keywords" content="wysiwyg,editor,javascript,keditor,wysiwyg eidtor,rich text editor,html editor,contenteditable,위지위그 에디터 웹에디터">
+    <meta
+      name="keywords"
+      content="wysiwyg,editor,javascript,kothing-editor,wysiwyg eidtor,rich text editor,html editor,contenteditable,위지위그 에디터 웹에디터"
+    />
     <meta name="description" content="Pure javascript wysiwyg web editor" />
     <title>KothingEditor</title>
-    <!-- keditor -->
-    <link href="../build/css/keditor.min.css" rel="stylesheet" type="text/css">
+    <!-- kothing-editor -->
+    <link
+      href="../../build/css/kothing-editor.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- sample css -->
-    <link rel="stylesheet" href="../css/bootstrap.css" media="all">
-    <link rel="stylesheet" href="../css/sample.css" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
-</head>
-<body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <link rel="stylesheet" href="../css/bootstrap.css" media="all" />
+    <link rel="stylesheet" href="../css/sample.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" aria-expanded="false" onclick="buttonToggle()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html" title="KothingEditor"><b>KothingEditor</b></a>
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            aria-expanded="false"
+            onclick="buttonToggle()"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html" title="KothingEditor"
+            ><b>KothingEditor</b></a
+          >
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="getting-started.html" title="Getting started">Getting started</a></li>
-                <li><a href="examples.html" title="Examples">Examples</a></li>
-                <li><a href="options.html" title="Options">Options</a></li>
-                <li><a href="customPlugins.html" style="color:#fff;" title="CustomPlugins">CustomPlugins</a></li>
-                <li><a href="document.html" title="Document">Document</a></li>
-                <li class="badge">
-                    <a href="https://github.com/kothing/kothing-Editor" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/kothing-editor/kothing-editor.svg?style=social"></a>
-                </li>
-            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="getting-started.html" title="Getting started"
+                >Getting started</a
+              >
+            </li>
+            <li><a href="examples.html" title="Examples">Examples</a></li>
+            <li><a href="options.html" title="Options">Options</a></li>
+            <li>
+              <a
+                href="customPlugins.html"
+                style="color:#fff;"
+                title="CustomPlugins"
+                >CustomPlugins</a
+              >
+            </li>
+            <li><a href="document.html" title="Document">Document</a></li>
+            <li class="badge">
+              <a
+                href="https://github.com/kothing/kothing-Editor"
+                target="_blank"
+                ><img
+                  alt="GitHub stars"
+                  src="https://img.shields.io/github/stars/kothing-editor/kothing-editor.svg?style=social"
+              /></a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<div class="content">
-    <article class="markdown-body entry-content">
-
+    <div class="content">
+      <article class="markdown-body entry-content">
         <h4 class="sub-title">Add new plugin</h4>
         <div class="highlight highlight-text-html-basic">
-        <pre><ol>
+          <pre><ol>
             <li class="pl-0">dialog : It is a plugin in the form of a dialog
             <img src="../img/example_dialog.png" width="400px" height="200px"></li>
             <li class="pl-0">submenu : It is a plugin in the form of a submenu
@@ -55,8 +88,11 @@
         </ol></pre>
         </div>
 
-        <a id="submenu" href="#submenu"><h4 class="sub-title">1. submenu plugin</h4></a>
-        <div class="highlight highlight-source-js"><pre><span class="pl-c"><span class="pl-c">//</span> ex) A submenu plugin that appends the contents of the input element to the editor</span>
+        <a id="submenu" href="#submenu"
+          ><h4 class="sub-title">1. submenu plugin</h4></a
+        >
+        <div class="highlight highlight-source-js">
+          <pre><span class="pl-c"><span class="pl-c">//</span> ex) A submenu plugin that appends the contents of the input element to the editor</span>
 <span class="pl-k">export</span> <span class="pl-c1">default</span> {
     <span class="pl-c"><span class="pl-c">//</span> plugin name (Required)</span>
     name<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>custom_plugin_submenu<span class="pl-pds">'</span></span>,
@@ -129,12 +165,14 @@
         <span class="pl-c"><span class="pl-c">//</span> focus</span>
         <span class="pl-c1">this</span>.<span class="pl-en">focus</span>();
     }
-}</pre></div>
+}</pre>
+        </div>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">keditor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>../src/keditor<span class="pl-pds">'</span></span>
+        <div class="highlight highlight-source-js">
+          <pre><span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>../src/editor<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">custom_plugin_submenu</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>../test/custom_plugin_submenu<span class="pl-pds">'</span></span>
 
-<span class="pl-smi">keditor</span>.<span class="pl-en">create</span>(<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>ex_submenu<span class="pl-pds">'</span></span>), {
+<span class="pl-smi">kothing-editor</span>.<span class="pl-en">create</span>(<span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>ex_submenu<span class="pl-pds">'</span></span>), {
     plugins<span class="pl-k">:</span> [<span class="pl-smi">custom_plugin_submenu</span>],
     buttonList<span class="pl-k">:</span> [
         [<span class="pl-s"><span class="pl-pds">'</span>undo<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>redo<span class="pl-pds">'</span></span>],
@@ -158,93 +196,109 @@
         ]
     ]
 });
-</pre></div>
+</pre>
+        </div>
 
-        <textarea id="ex_submenu" style="width: 1080px; height: 150px;"></textarea>
+        <textarea
+          id="ex_submenu"
+          style="width: 1080px; height: 150px;"
+        ></textarea>
 
+        <a id="submenu" href="#submenu"
+          ><h4 class="sub-title">2. dialog plugin</h4></a
+        >
+      </article>
 
-        <a id="submenu" href="#submenu"><h4 class="sub-title">2. dialog plugin</h4></a>
-
-    </article>
-
-    <footer>
+      <footer>
         <p>KothingEditor distributed under the MIT license.</p>
-        <p><a href="https://github.com/kothing/kothing-Editor" target="_blank" style="color:#f4b124;">Go to GitHub KothingEditor</a></p>
-    </footer>
-</div>
+        <p>
+          <a
+            href="https://github.com/kothing/kothing-Editor"
+            target="_blank"
+            style="color:#f4b124;"
+            >Go to GitHub KothingEditor</a
+          >
+        </p>
+      </footer>
+    </div>
 
-<script src="../js/common.js"></script>
-<script src="../build/keditor.min.js"></script>
-<script>
-    var pluginObject = {
-        name: 'custom_plugin_submenu',
-        add: function (core, targetElement) {
+    <script src="../js/common.js"></script>
+    <script src="../../build/kothing-editor.min.js"></script>
+    <script>
+      var pluginObject = {
+        name: "custom_plugin_submenu",
+        add: function(core, targetElement) {
+          const context = core.context;
+          context.custom = {
+            textElement: null,
+          };
 
-            const context = core.context;
-            context.custom = {
-                textElement: null
-            };
+          let listDiv = this.setSubmenu.call(core);
 
-            let listDiv = this.setSubmenu.call(core);
+          context.custom.textElement = listDiv.getElementsByTagName("INPUT")[0];
 
-            context.custom.textElement = listDiv.getElementsByTagName('INPUT')[0];
+          listDiv
+            .getElementsByTagName("BUTTON")[0]
+            .addEventListener("click", this.onClick.bind(core));
+          context.custom.textElement.addEventListener(
+            "mousedown",
+            function() {}
+          );
 
-            listDiv.getElementsByTagName('BUTTON')[0].addEventListener('click', this.onClick.bind(core));
-            context.custom.textElement.addEventListener('mousedown', function () {
-
-            });
-
-            targetElement.parentNode.appendChild(listDiv);
+          targetElement.parentNode.appendChild(listDiv);
         },
-        setSubmenu: function () {
-            const listDiv = this.util.createElement('DIV');
+        setSubmenu: function() {
+          const listDiv = this.util.createElement("DIV");
 
-            listDiv.className = 'ke-submenu ke-list-layer';
-            listDiv.innerHTML = '' +
-                '<div class="ke-list-inner ke-list-align">' +
-                '   <ul class="ke-list-basic">' +
-                '       <li><input class="ke-input-form" type="text" placeholder="insert text" style="width: 100%; border: 1px solid #CCC;" /></li>' +
-                '       <li><button type="button" class="ke-btn ke-tooltip">' +
-                '               <span>OK</span>' +
-                '               <span class="ke-tooltip-inner">' +
-                '                   <span class="ke-tooltip-text">Append text</span>' +
-                '               </span>' +
-                '       </button></li>' +
-                '   </ul>' +
-                '</div>';
+          listDiv.className = "ke-submenu ke-list-layer";
+          listDiv.innerHTML =
+            "" +
+            '<div class="ke-list-inner ke-list-align">' +
+            '   <ul class="ke-list-basic">' +
+            '       <li><input class="ke-input-form" type="text" placeholder="insert text" style="width: 100%; border: 1px solid #CCC;" /></li>' +
+            '       <li><button type="button" class="ke-btn ke-tooltip">' +
+            "               <span>OK</span>" +
+            '               <span class="ke-tooltip-inner">' +
+            '                   <span class="ke-tooltip-text">Append text</span>' +
+            "               </span>" +
+            "       </button></li>" +
+            "   </ul>" +
+            "</div>";
 
-            return listDiv;
+          return listDiv;
         },
-        on: function () {
-            this.context.custom.textElement.focus();
+        on: function() {
+          this.context.custom.textElement.focus();
         },
-        onClick: function () {
-            const value = this.util.createTextNode(this.context.custom.textElement.value);
+        onClick: function() {
+          const value = this.util.createTextNode(
+            this.context.custom.textElement.value
+          );
 
-            this.insertNode(value);
-            this.setRange(value, value.length, value, value.length);
+          this.insertNode(value);
+          this.setRange(value, value.length, value, value.length);
 
-            this.submenuOff();
-            this.focus();
-        }
-    };
+          this.submenuOff();
+          this.focus();
+        },
+      };
 
-    KEDITOR.create(document.getElementById('ex_submenu'), {
+      KothingEditor.create(document.getElementById("ex_submenu"), {
         plugins: [pluginObject],
         buttonList: [
-            ['undo', 'redo'],
-            [
-                {
-                    name: 'custom_plugin_submenu', 
-                    dataCommand: 'custom_plugin_submenu',
-                    buttonClass:'', 
-                    title:'Custom plugin of the submenu', 
-                    dataDisplay:'submenu',
-                    innerHTML:'<i class="ke-icon-add"></i>'
-                }
-            ]
-        ]
-    });
-</script>
-</body>
+          ["undo", "redo"],
+          [
+            {
+              name: "custom_plugin_submenu",
+              dataCommand: "custom_plugin_submenu",
+              buttonClass: "",
+              title: "Custom plugin of the submenu",
+              dataDisplay: "submenu",
+              innerHTML: '<i class="ke-icon-add"></i>',
+            },
+          ],
+        ],
+      });
+    </script>
+  </body>
 </html>

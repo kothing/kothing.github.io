@@ -1,57 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="https://github.com/kothing" />
-    <meta name="keywords" content="wysiwyg,editor,javascript,keditor,wysiwyg eidtor,rich text editor,html editor,contenteditable,위지위그 에디터 웹에디터">
+    <meta
+      name="keywords"
+      content="wysiwyg,editor,javascript,kothing-editor,wysiwyg eidtor,rich text editor,html editor,contenteditable,위지위그 에디터 웹에디터"
+    />
     <meta name="description" content="Pure javascript wysiwyg web editor" />
     <title>KothingEditor</title>
-    <!-- keditor -->
-    <link href="../build/css/keditor.min.css" rel="stylesheet" type="text/css">
+    <!-- kothing-editor -->
+    <link
+      href="../../build/css/kothing-editor.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- sample css -->
-    <link rel="stylesheet" href="../css/bootstrap.css" media="all">
-    <link rel="stylesheet" href="../css/sample.css" media="all">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css" media="all" />
+    <link rel="stylesheet" href="../css/sample.css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css"
+    />
     <!-- codeMirror -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/htmlmixed/htmlmixed.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/xml/xml.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/css/css.js"></script>
-</head>
-<body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" aria-expanded="false" onclick="buttonToggle()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html" title="KothingEditor"><b>KothingEditor</b></a>
+          <button
+            type="button"
+            class="navbar-toggle collapsed"
+            aria-expanded="false"
+            onclick="buttonToggle()"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html" title="KothingEditor"
+            ><b>KothingEditor</b></a
+          >
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="getting-started.html" title="Getting started">Getting started</a></li>
-                <li><a href="examples.html" style="color:#fff;" title="Examples">Examples</a></li>
-                <li><a href="options.html" title="Options">Options</a></li>
-                <li><a href="customPlugins.html" title="Customize">CustomPlugins</a></li>
-                <li><a href="document.html" title="Document">Document</a></li>
-                <li class="badge">
-                    <a href="https://github.com/kothing/kothing-Editor" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/kothing-editor/kothing-editor.svg?style=social"></a>
-                </li>
-            </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="getting-started.html" title="Getting started"
+                >Getting started</a
+              >
+            </li>
+            <li>
+              <a href="examples.html" style="color:#fff;" title="Examples"
+                >Examples</a
+              >
+            </li>
+            <li><a href="options.html" title="Options">Options</a></li>
+            <li>
+              <a href="customPlugins.html" title="Customize">CustomPlugins</a>
+            </li>
+            <li><a href="document.html" title="Document">Document</a></li>
+            <li class="badge">
+              <a
+                href="https://github.com/kothing/kothing-Editor"
+                target="_blank"
+                ><img
+                  alt="GitHub stars"
+                  src="https://img.shields.io/github/stars/kothing-editor/kothing-editor.svg?style=social"
+              /></a>
+            </li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-<div class="content">
-    <article class="markdown-body entry-content" itemprop="text">
+    <div class="content">
+      <article class="markdown-body entry-content" itemprop="text">
         <!-- menu item -->
-        <a id="setting" href="#setting"><h4 class="sub-title">Defining menu items</h4></a>
+        <a id="setting" href="#setting"
+          ><h4 class="sub-title">Defining menu items</h4></a
+        >
         <p></p>
         <textarea id="exampleOptions" style="width:100%; height:200px;">
             <div><span style="color: rgb(0, 130, 153);"><b>KothingEditor</b></span><b>.<span style="color: rgb(61, 0, 153);">create</span></b>(<span style="color: rgb(152, 0, 0);">'exampleOptions'</span>, {</div>
@@ -89,10 +127,14 @@
         </textarea>
 
         <!-- char count, button groups -->
-        <a id="groups" href="#groups"><h4 class="sub-title" style="margin-top: 60px;">Char count, Button groups</h4></a>
+        <a id="groups" href="#groups"
+          ><h4 class="sub-title" style="margin-top: 60px;">
+            Char count, Button groups
+          </h4></a
+        >
         <p></p>
         <textarea id="lineBreak" style="width:100%; height:100px;">
-            <div><span style="font-weight: bold;"><span style="color: rgb(0, 130, 153);">KEDITOR</span>.<span style="color: rgb(61, 0, 153);">create</span></span>(<span style="color: rgb(152, 0, 0);">'lineBreak'</span>, {</div>
+            <div><span style="font-weight: bold;"><span style="color: rgb(0, 130, 153);">KothingEditor</span>.<span style="color: rgb(61, 0, 153);">create</span></span>(<span style="color: rgb(152, 0, 0);">'lineBreak'</span>, {</div>
             <div>&nbsp; &nbsp; showPathLabel : <span style="color: rgb(0, 130, 153);">false</span>,</div>
             <div>&nbsp; &nbsp; charCounter : <span style="color: rgb(0, 130, 153);">true</span>,</div>
             <div>&nbsp; &nbsp; maxCharCount : <span style="color: rgb(0, 51, 153);">720</span>,</div>
@@ -115,7 +157,9 @@
         </textarea>
 
         <!-- Iframe, fullPage and use CodeMirror -->
-        <a id="CodeMirror" href="#CodeMirror"><h4 class="sub-title">Iframe, fullPage and use CodeMirror</h4></a>
+        <a id="CodeMirror" href="#CodeMirror"
+          ><h4 class="sub-title">Iframe, fullPage and use CodeMirror</h4></a
+        >
         <p></p>
         <textarea id="useCodeMirror">
             <div><span style="color: rgb(189, 189, 189);"></span></div>
@@ -126,14 +170,14 @@
             <div>&amp;lt;<span style="color: rgb(107, 153, 0);">script</span> <span style="color: rgb(61, 0, 153);">src</span>=<span style="color: rgb(0, 51, 153);">"https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/xml/xml.js"</span>&amp;gt;&amp;lt;/<span style="color: rgb(107, 153, 0);">script</span>&amp;gt;</div>
             <div>&amp;lt;<span style="color: rgb(107, 153, 0);">script</span> <span style="color: rgb(61, 0, 153);">src</span>=<span style="color: rgb(0, 51, 153);">"https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/css/css.js"</span>&amp;gt;&amp;lt;/<span style="color: rgb(107, 153, 0);">script</span>&amp;gt;</div>
             <div><br></div>
-            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">'keditor/build/css/keditor.min.css'</span></div>
-            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">keditor</span> <span style="color: rgb(255, 94, 0);">from</span> <span style="color: rgb(0, 51, 153);">'keditor'</span></div>
+            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">'kothing-editor/build/css/kothing-editor.min.css'</span></div>
+            <div><span style="color: rgb(255, 94, 0);">import</span> <span style="color: rgb(0, 51, 153);">kothing-editor</span> <span style="color: rgb(255, 94, 0);">from</span> <span style="color: rgb(0, 51, 153);">'kothing-editor'</span></div>
             <div><span style="color: rgb(189, 189, 189);">// Import codeMirror</span></div>
             <div><span style="color: rgb(255, 94, 0);">import</span> CodeMirror <span style="color: rgb(255, 94, 0);">from</span> 'codemirror'</div>
             <div><span style="color: rgb(255, 94, 0);">import</span> 'codemirror/mode/htmlmixed/htmlmixed'</div>
             <div><span style="color: rgb(255, 94, 0);">import</span> 'codemirror/lib/codemirror.css'</div>
             <div><br></div>
-            <div>keditor.<span style="color: rgb(61, 0, 153);">create</span>(<span style="color: rgb(0, 51, 153);">'sample'</span>, {</div>
+            <div>kothing-editor.<span style="color: rgb(61, 0, 153);">create</span>(<span style="color: rgb(0, 51, 153);">'sample'</span>, {</div>
             <div>    &nbsp;&nbsp;&nbsp;&nbsp;codeMirror<span style="color: rgb(255, 94, 0);">:</span> <span style="color: rgb(107, 153, 0);">CodeMirror</span>,</div>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;    <span style="color: rgb(189, 189, 189);">// Set options</span></div>
             <div>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: rgb(189, 189, 189);">    // codeMirror: {</span></div>
@@ -148,7 +192,11 @@
         </textarea>
 
         <!-- image management editor-->
-        <a id="image" href="#image"><h4 class="sub-title" style="margin-top: 60px;">Image management</h4></a>
+        <a id="image" href="#image"
+          ><h4 class="sub-title" style="margin-top: 60px;">
+            Image management
+          </h4></a
+        >
         <p></p>
         <textarea id="imageManagement" style="display: none;">
             <p>cat</p>
@@ -158,23 +206,36 @@
             <p><br></p>
         </textarea>
         <div class="image-list">
-            <div class="file-list-info">
-                <span>Attached files</span>
-                <span class="xefu-btn">
-                    <span class="files-text">Attach image</span>
-                </span>
-                <input type="file" id="files_upload" accept="image/*" multiple="multiple" class="files-text files-input" />
-                <span id="image_size" class="total-size text-small-2">0KB</span>
-                <button class="btn btn-md btn-danger" id="image_remove" disabled onclick="deleteCheckedImages()">Remove</button>
-            </div>
-            <div class="file-list">
-                <ul id="image_list">
-                </ul>
-            </div>
+          <div class="file-list-info">
+            <span>Attached files</span>
+            <span class="xefu-btn">
+              <span class="files-text">Attach image</span>
+            </span>
+            <input
+              type="file"
+              id="files_upload"
+              accept="image/*"
+              multiple="multiple"
+              class="files-text files-input"
+            />
+            <span id="image_size" class="total-size text-small-2">0KB</span>
+            <button
+              class="btn btn-md btn-danger"
+              id="image_remove"
+              disabled
+              onclick="deleteCheckedImages()"
+            >
+              Remove
+            </button>
+          </div>
+          <div class="file-list">
+            <ul id="image_list"></ul>
+          </div>
         </div>
 
-<!-- image management html-->
-<div class="highlight highlight-text-html-basic"><pre>&amp;lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>image_wrapper<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>image-list<span class="pl-pds">"</span></span>&amp;gt;
+        <!-- image management html-->
+        <div class="highlight highlight-text-html-basic">
+          <pre>&amp;lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>image_wrapper<span class="pl-pds">"</span></span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>image-list<span class="pl-pds">"</span></span>&amp;gt;
     &amp;lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>file-list-info<span class="pl-pds">"</span></span>&amp;gt;
         &amp;lt;<span class="pl-ent">span</span>&amp;gt;Attached files&amp;lt;/<span class="pl-ent">span</span>&amp;gt;
         &amp;lt;<span class="pl-ent">span</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>xefu-btn<span class="pl-pds">"</span></span>&amp;gt;
@@ -188,10 +249,12 @@
         &amp;lt;<span class="pl-ent">ul</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>image_list<span class="pl-pds">"</span></span>&amp;gt;
         &amp;lt;/<span class="pl-ent">ul</span>&amp;gt;
     &amp;lt;/<span class="pl-ent">div</span>&amp;gt;
-&amp;lt;/<span class="pl-ent">div</span>&amp;gt;</pre></div>
+&amp;lt;/<span class="pl-ent">div</span>&amp;gt;</pre>
+        </div>
 
-<!-- image management js-->
-<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">imageWrapper</span> <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>image_wrapper<span class="pl-pds">'</span></span>);
+        <!-- image management js-->
+        <div class="highlight highlight-source-js">
+          <pre><span class="pl-k">const</span> <span class="pl-c1">imageWrapper</span> <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>image_wrapper<span class="pl-pds">'</span></span>);
 <span class="pl-k">const</span> <span class="pl-c1">imageSize</span> <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>image_size<span class="pl-pds">'</span></span>);
 <span class="pl-k">const</span> <span class="pl-c1">imageRemove</span> <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>image_remove<span class="pl-pds">'</span></span>);
 <span class="pl-k">const</span> <span class="pl-c1">imageTable</span> <span class="pl-k">=</span> <span class="pl-c1">document</span>.<span class="pl-c1">getElementById</span>(<span class="pl-s"><span class="pl-pds">'</span>image_list<span class="pl-pds">'</span></span>);
@@ -199,7 +262,7 @@
 <span class="pl-k">let</span> imageList <span class="pl-k">=</span> [];
 <span class="pl-k">let</span> selectedImages <span class="pl-k">=</span> [];
 
-<span class="pl-k">const</span> <span class="pl-c1">editorImageSample</span> <span class="pl-k">=</span> <span class="pl-c1">KEDITOR</span>.<span class="pl-en">create</span>(<span class="pl-s"><span class="pl-pds">'</span>imageManagement<span class="pl-pds">'</span></span>, {
+<span class="pl-k">const</span> <span class="pl-c1">editorImageSample</span> <span class="pl-k">=</span> <span class="pl-c1">KothingEditor</span>.<span class="pl-en">create</span>(<span class="pl-s"><span class="pl-pds">'</span>imageManagement<span class="pl-pds">'</span></span>, {
     buttonList<span class="pl-k">:</span> [
         [<span class="pl-s"><span class="pl-pds">'</span>undo<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>redo<span class="pl-pds">'</span></span>],
         [<span class="pl-s"><span class="pl-pds">'</span>formatBlock<span class="pl-pds">'</span></span>],
@@ -308,49 +371,171 @@
     }
 
     selectedImages <span class="pl-k">=</span> []
-}</pre></div>
+}</pre>
+        </div>
 
+        <!-- user function -->
+        <a id="functions" href="#functions"
+          ><h4 class="sub-title" style="margin-top: 60px;">
+            User Functions
+          </h4></a
+        >
 
-<!-- user function -->
-<a id="functions" href="#functions"><h4 class="sub-title" style="margin-top: 60px;">User Functions</h4></a>
-
-<form id="frm" name="frm">
-    <textarea id="exampleFunction" style="width:100%; height:250px;">
+        <form id="frm" name="frm">
+          <textarea id="exampleFunction" style="width:100%; height:250px;">
         <p>User Function Test</p>
         <p><br></p>
         <p><br></p>
         <p><br></p>
         <p><br></p>
         <p><br></p>
-    </textarea>
-    <p></p>
-    <button type="button" class="btn btn-md btn-default" onclick="ke_setOptions()" id="opt1">setOptions</button>
-    <button type="button" class="btn btn-md btn-default" onclick="ke_replaceOptions()" id="opt2" style="display: none;">replaceOptions</button>
-    <button type="button" class="btn btn-md btn-danger" onclick="ke_noticeOpen('test notice')">noticeOpen</button>
-    <button type="button" class="btn btn-md btn-danger" onclick="ke_noticeClose()">noticeClose</button>
-    <button type="button" class="btn btn-md btn-success" onclick="ke_save()">save</button>
-    <button type="button" class="btn btn-md btn-success" onclick="ke_getContext()">getContext</button>
-    <button type="button" class="btn btn-md btn-success" onclick="ke_getContents()">getContents</button>
-    <button type="button" class="btn btn-md btn-success" onclick="ke_getImagesInfo()">getImagesInfo</button>
-    <div>
-        <input type="file" id="example_files_input" accept="image/*" multiple="multiple" style="display: inline-block; background: #fff;"/>
-        <button type="button" class="btn btn-md btn-success" onclick="ke_insertImage()">insertImage</button>
-    </div>
-    <button type="button" class="btn btn-md btn-warning" onclick="ke_insertHTML('<img src=\'http://kothing.github.io/editor/sample/img/sunset.jpg\' style=\'width:115px; height:64px;\'>')">insertHTML</button>
-    <button type="button" class="btn btn-md btn-warning" onclick="ke_setContents('set contents')">setContents</button>
-    <button type="button" class="btn btn-md btn-warning" onclick="ke_appendContents('append contents')">AppendContents</button>
-    <button type="button" class="btn btn-md btn-primary" onclick="ke_disabled()">Disabled</button>
-    <button type="button" class="btn btn-md btn-primary" onclick="ke_enabled()">Enabled</button>
-    <button type="button" class="btn btn-md btn-primary" onclick="ke_hide()">Hide</button>
-    <button type="button" class="btn btn-md btn-primary" onclick="ke_show()">Show</button>
-    <button type="button" class="btn btn-md btn-default" onclick="ke_destroy()">Destroy</button>
-    <button type="button" class="btn btn-md btn-default" onclick="ke_create()">Create</button>
-</form>
+    </textarea
+          >
+          <p></p>
+          <button
+            type="button"
+            class="btn btn-md btn-default"
+            onclick="ke_setOptions()"
+            id="opt1"
+          >
+            setOptions
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-default"
+            onclick="ke_replaceOptions()"
+            id="opt2"
+            style="display: none;"
+          >
+            replaceOptions
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-danger"
+            onclick="ke_noticeOpen('test notice')"
+          >
+            noticeOpen
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-danger"
+            onclick="ke_noticeClose()"
+          >
+            noticeClose
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-success"
+            onclick="ke_save()"
+          >
+            save
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-success"
+            onclick="ke_getContext()"
+          >
+            getContext
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-success"
+            onclick="ke_getContents()"
+          >
+            getContents
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-success"
+            onclick="ke_getImagesInfo()"
+          >
+            getImagesInfo
+          </button>
+          <div>
+            <input
+              type="file"
+              id="example_files_input"
+              accept="image/*"
+              multiple="multiple"
+              style="display: inline-block; background: #fff;"
+            />
+            <button
+              type="button"
+              class="btn btn-md btn-success"
+              onclick="ke_insertImage()"
+            >
+              insertImage
+            </button>
+          </div>
+          <button
+            type="button"
+            class="btn btn-md btn-warning"
+            onclick="ke_insertHTML('<img src=\'http://kothing.github.io/editor/sample/img/sunset.jpg\' style=\'width:115px; height:64px;\'>')"
+          >
+            insertHTML
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-warning"
+            onclick="ke_setContents('set contents')"
+          >
+            setContents
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-warning"
+            onclick="ke_appendContents('append contents')"
+          >
+            AppendContents
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-primary"
+            onclick="ke_disabled()"
+          >
+            Disabled
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-primary"
+            onclick="ke_enabled()"
+          >
+            Enabled
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-primary"
+            onclick="ke_hide()"
+          >
+            Hide
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-primary"
+            onclick="ke_show()"
+          >
+            Show
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-default"
+            onclick="ke_destroy()"
+          >
+            Destroy
+          </button>
+          <button
+            type="button"
+            class="btn btn-md btn-default"
+            onclick="ke_create()"
+          >
+            Create
+          </button>
+        </form>
 
-<div class="highlight highlight-source-js">
-<pre><span class="pl-k">import</span> <span class="pl-smi">keditor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>keditor<span class="pl-pds">'</span></span>
+        <div class="highlight highlight-source-js">
+          <pre><span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor<span class="pl-pds">'</span></span>
 
-<span class="pl-k">const</span> <span class="pl-c1">editor</span> <span class="pl-k">=</span> <span class="pl-smi">keditor</span>.<span class="pl-en">create</span>(<span class="pl-s"><span class="pl-pds">'</span>exampleFunction<span class="pl-pds">'</span></span>);
+<span class="pl-k">const</span> <span class="pl-c1">editor</span> <span class="pl-k">=</span> <span class="pl-smi">kothing-editor</span>.<span class="pl-en">create</span>(<span class="pl-s"><span class="pl-pds">'</span>exampleFunction<span class="pl-pds">'</span></span>);
 
 <span class="pl-c"><span class="pl-c">//</span> Add or reset option property</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">setOptions</span>({
@@ -383,13 +568,13 @@
 <span class="pl-c"><span class="pl-c">//</span> Close a notice area</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">noticeClose</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Copies the contents of the keditor into a [textarea]</span>
+<span class="pl-c"><span class="pl-c">//</span> Copies the contents of the kothing-editor into a [textarea]</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">save</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Gets the keditor's context object. Contains settings, plugins, and cached element objects</span>
+<span class="pl-c"><span class="pl-c">//</span> Gets the kothing-editor's context object. Contains settings, plugins, and cached element objects</span>
 <span class="pl-smi">editor</span>.<span class="pl-c1">getContext</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Gets the contents of the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Gets the contents of the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">getContents</span>();
 
 <span class="pl-c"><span class="pl-c">//</span> Gets a list of images uploaded to the editor</span>
@@ -412,25 +597,25 @@
 <span class="pl-c"><span class="pl-c">//</span> Inserts an HTML element or HTML string or plain string at the current cursor position</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">insertHTML</span>(<span class="pl-s"><span class="pl-pds">'</span>&amp;lt;img src="http://kothing.github.io/editor/sample/img/sunset.jpg"&amp;gt;<span class="pl-pds">'</span></span>);
 
-<span class="pl-c"><span class="pl-c">//</span> Change the contents of the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Change the contents of the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">setContents</span>(<span class="pl-s"><span class="pl-pds">'</span>set contents<span class="pl-pds">'</span></span>);
 
-<span class="pl-c"><span class="pl-c">//</span> Add content to the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Add content to the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">appendContents</span>(<span class="pl-s"><span class="pl-pds">'</span>append contents<span class="pl-pds">'</span></span>);
 
-<span class="pl-c"><span class="pl-c">//</span> Disable the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Disable the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-c1">disabled</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Enabled the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Enabled the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">enabled</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Hide the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Hide the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">hide</span>();
 
-<span class="pl-c"><span class="pl-c">//</span> Show the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Show the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">show</span>();
     
-<span class="pl-c"><span class="pl-c">//</span> Destroy the keditor</span>
+<span class="pl-c"><span class="pl-c">//</span> Destroy the kothing-editor</span>
 <span class="pl-smi">editor</span>.<span class="pl-en">destroy</span>();
 
 <span class="pl-c"><span class="pl-c">//</span> Event functions</span>
@@ -467,230 +652,319 @@
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>toolbar<span class="pl-pds">'</span></span>, toolbar)
     <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>context<span class="pl-pds">'</span></span>, context)
 }</pre>
-</div>
-        
-    </article>
+        </div>
+      </article>
 
-    <footer>
+      <footer>
         <p>KothingEditor distributed under the MIT license.</p>
-        <p><a href="https://github.com/kothing/kothing-Editor" target="_blank" style="color:#f4b124;">Go to GitHub KothingEditor</a></p>
-    </footer>
-</div>
+        <p>
+          <a
+            href="https://github.com/kothing/kothing-Editor"
+            target="_blank"
+            style="color:#f4b124;"
+            >Go to GitHub KothingEditor</a
+          >
+        </p>
+      </footer>
+    </div>
 
-<script src="../js/common.js"></script>
-<script src="../build/keditor.min.js"></script>
-<script>
-    KEDITOR.create('exampleOptions',{
-        font : [
-            'Arial',
-            'tahoma',
-            'Courier New,Courier'
-        ],
-        fontSize : [
-            8, 10, 14, 18, 24, 36
-        ],
+    <script src="../js/common.js"></script>
+    <script src="../../build/kothing-editor.min.js"></script>
+    <script>
+      KothingEditor.create("exampleOptions", {
+        font: ["Arial", "tahoma", "Courier New,Courier"],
+        fontSize: [8, 10, 14, 18, 24, 36],
         colorList: [
-            ['#ccc', '#dedede', 'OrangeRed', 'Orange', 'RoyalBlue', 'SaddleBrown'],
-            ['SlateGray', 'BurlyWood', 'DeepPink', 'FireBrick', 'Gold', 'SeaGreen']
+          [
+            "#ccc",
+            "#dedede",
+            "OrangeRed",
+            "Orange",
+            "RoyalBlue",
+            "SaddleBrown",
+          ],
+          [
+            "SlateGray",
+            "BurlyWood",
+            "DeepPink",
+            "FireBrick",
+            "Gold",
+            "SeaGreen",
+          ],
         ],
-        width: '100%',
-        maxWidth: '600px',
+        width: "100%",
+        maxWidth: "600px",
         minWidth: 400,
-        height : 'auto',
-        videoWidth : 360,
-        videoHeight : 115,
-        youtubeQuery : 'autoplay=1&mute=1&enablejsapi=1',
-        imageWidth : 150,
-        popupDisplay: 'local',
+        height: "auto",
+        videoWidth: 360,
+        videoHeight: 115,
+        youtubeQuery: "autoplay=1&mute=1&enablejsapi=1",
+        imageWidth: 150,
+        popupDisplay: "local",
         resizingBar: false,
-        buttonList : [
-            ['font', 'fontSize',
-            'fontColor', 'hiliteColor', 'video',
-            'fullScreen', 'codeView',
-            'preview', 'save']
+        buttonList: [
+          [
+            "font",
+            "fontSize",
+            "fontColor",
+            "hiliteColor",
+            "video",
+            "fullScreen",
+            "codeView",
+            "preview",
+            "save",
+          ],
         ],
-        callBackSave: function (contents) {
-            alert(contents);
-        }
-    });
-    
-    KEDITOR.create('lineBreak', {
+        callBackSave: function(contents) {
+          alert(contents);
+        },
+      });
+
+      KothingEditor.create("lineBreak", {
         showPathLabel: false,
         charCounter: true,
         maxCharCount: 720,
-        maxWidth: '700px',
-        width: 'auto',
-        height: 'auto',
-        minHeight : '100px',
-        maxHeight : '270px',
+        maxWidth: "700px",
+        width: "auto",
+        height: "auto",
+        minHeight: "100px",
+        maxHeight: "270px",
         buttonList: [
-            ['undo', 'redo', 'font', 'fontSize', 'formatBlock'],
-            ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript', 'removeFormat'],
-            '/', //Line break
-            ['fontColor', 'hiliteColor', 'outdent', 'indent', 'align', 'horizontalRule', 'list', 'table'],
-            ['link', 'image', 'video', 'fullScreen', 'showBlocks', 'codeView', 'preview', 'print', 'save']
+          ["undo", "redo", "font", "fontSize", "formatBlock"],
+          [
+            "bold",
+            "underline",
+            "italic",
+            "strike",
+            "subscript",
+            "superscript",
+            "removeFormat",
+          ],
+          "/", //Line break
+          [
+            "fontColor",
+            "hiliteColor",
+            "outdent",
+            "indent",
+            "align",
+            "horizontalRule",
+            "list",
+            "table",
+          ],
+          [
+            "link",
+            "image",
+            "video",
+            "fullScreen",
+            "showBlocks",
+            "codeView",
+            "preview",
+            "print",
+            "save",
+          ],
         ],
-        callBackSave: function (contents) {
-            console.log(contents)
-        }
-    });
+        callBackSave: function(contents) {
+          console.log(contents);
+        },
+      });
 
-    KEDITOR.create('useCodeMirror', {
+      KothingEditor.create("useCodeMirror", {
         codeMirror: CodeMirror,
-        buttonList: [
-            ['codeView']
-        ],
+        buttonList: [["codeView"]],
         height: 330,
-        width: 'auto',
+        width: "auto",
         fullPage: true,
-    });
+      });
 
-    editorImageSample = KEDITOR.create('imageManagement', {
+      editorImageSample = KothingEditor.create("imageManagement", {
         buttonList: [
-            ['undo', 'redo'],
-            ['formatBlock'],
-            ['horizontalRule', 'list', 'table'],
-            ['image', 'video'],
-            ['showBlocks', 'fullScreen', 'preview', 'print']
+          ["undo", "redo"],
+          ["formatBlock"],
+          ["horizontalRule", "list", "table"],
+          ["image", "video"],
+          ["showBlocks", "fullScreen", "preview", "print"],
         ],
-    })
+      });
 
-    editorImageSample.onImageUpload = imageUpload;
+      editorImageSample.onImageUpload = imageUpload;
 
-    // user function
-    var keditor = null;
-    var opt1 = document.getElementById('opt1');
-    var opt2 = document.getElementById('opt2');
+      // user function
+      var KothingEditor = null;
+      var opt1 = document.getElementById("opt1");
+      var opt2 = document.getElementById("opt2");
 
-    var options = {
+      var options = {
         buttonList: [
-            ['undo', 'redo'],
-            ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
-            ['removeFormat'],
-            ['outdent', 'indent'],
-            ['fullScreen', 'showBlocks', 'codeView'],
-            ['preview', 'print'],
-            ['image']
+          ["undo", "redo"],
+          ["bold", "underline", "italic", "strike", "subscript", "superscript"],
+          ["removeFormat"],
+          ["outdent", "indent"],
+          ["fullScreen", "showBlocks", "codeView"],
+          ["preview", "print"],
+          ["image"],
         ],
-        width: '100%'
-    }
+        width: "100%",
+      };
 
-    function ke_setOptions() {
-        keditor.setOptions({
-            mode: 'inline',
-            minHeight: '300px',
-            colorList: [
-                ['#ccc', '#dedede', 'OrangeRed', 'Orange', 'RoyalBlue', 'SaddleBrown']
+      function ke_setOptions() {
+        KothingEditor.setOptions({
+          mode: "inline",
+          minHeight: "300px",
+          colorList: [
+            [
+              "#ccc",
+              "#dedede",
+              "OrangeRed",
+              "Orange",
+              "RoyalBlue",
+              "SaddleBrown",
             ],
-            buttonList: [
-                ['fontColor', 'hiliteColor']
-            ]
+          ],
+          buttonList: [["fontColor", "hiliteColor"]],
         });
 
-        opt1.style.display = 'none';
-        opt2.style.display = 'inline-block';
-    }
+        opt1.style.display = "none";
+        opt2.style.display = "inline-block";
+      }
 
-    function ke_replaceOptions() {
-        keditor.setOptions({
-            mode: 'classic',
-            minHeight: null,
-            colorList: null,
-            buttonList: [
-                ['undo', 'redo'],
-                ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
-                ['removeFormat'],
-                ['outdent', 'indent'],
-                ['fullScreen', 'showBlocks', 'codeView'],
-                ['preview', 'print'],
-                ['image']
+      function ke_replaceOptions() {
+        KothingEditor.setOptions({
+          mode: "classic",
+          minHeight: null,
+          colorList: null,
+          buttonList: [
+            ["undo", "redo"],
+            [
+              "bold",
+              "underline",
+              "italic",
+              "strike",
+              "subscript",
+              "superscript",
             ],
+            ["removeFormat"],
+            ["outdent", "indent"],
+            ["fullScreen", "showBlocks", "codeView"],
+            ["preview", "print"],
+            ["image"],
+          ],
         });
 
-        opt1.style.display = 'inline-block';
-        opt2.style.display = 'none';
-    }
+        opt1.style.display = "inline-block";
+        opt2.style.display = "none";
+      }
 
-    function ke_noticeOpen(message) {
-        keditor.noticeOpen(message);
-    }
+      function ke_noticeOpen(message) {
+        KothingEditor.noticeOpen(message);
+      }
 
-    function ke_noticeClose() {
-        keditor.noticeClose();
-    }
-    
-    function ke_save() {
-        keditor.save();
-    }
+      function ke_noticeClose() {
+        KothingEditor.noticeClose();
+      }
 
-    function ke_getContext() {
-        console.log(keditor.getContext());
-    }
+      function ke_save() {
+        KothingEditor.save();
+      }
 
-    function ke_getContents() {
-        alert(keditor.getContents());
-    }
+      function ke_getContext() {
+        console.log(KothingEditor.getContext());
+      }
 
-    function ke_getImagesInfo() {
-        console.log(keditor.getImagesInfo());
-    }
+      function ke_getContents() {
+        alert(KothingEditor.getContents());
+      }
 
-    function ke_insertImage() {
-        keditor.insertImage(document.getElementById('example_files_input').files);
-    }
+      function ke_getImagesInfo() {
+        console.log(KothingEditor.getImagesInfo());
+      }
 
-    function ke_insertHTML(html) {
-        keditor.insertHTML(html);
-    }
+      function ke_insertImage() {
+        KothingEditor.insertImage(
+          document.getElementById("example_files_input").files
+        );
+      }
 
-    function ke_setContents(content) {
-        keditor.setContents(content);
-    }
+      function ke_insertHTML(html) {
+        KothingEditor.insertHTML(html);
+      }
 
-    function ke_appendContents(content) {
-        keditor.appendContents(content);
-    }
+      function ke_setContents(content) {
+        KothingEditor.setContents(content);
+      }
 
-    function ke_disabled() {
-        keditor.disabled();
-    }
+      function ke_appendContents(content) {
+        KothingEditor.appendContents(content);
+      }
 
-    function ke_enabled() {
-        keditor.enabled();
-    }
+      function ke_disabled() {
+        KothingEditor.disabled();
+      }
 
-    function ke_show() {
-        keditor.show();
-    }
+      function ke_enabled() {
+        KothingEditor.enabled();
+      }
 
-    function ke_hide() {
-        keditor.hide();
-    }
+      function ke_show() {
+        KothingEditor.show();
+      }
 
-    function ke_destroy() {
-        keditor.destroy();
-        keditor = null;
-    }
+      function ke_hide() {
+        KothingEditor.hide();
+      }
 
-    function ke_create() {
-        keditor = KEDITOR.create('exampleFunction', options);
+      function ke_destroy() {
+        KothingEditor.destroy();
+        KothingEditor = null;
+      }
 
-        keditor.onScroll = function (e) { console.log('onScroll', e); }
-        keditor.onClick = function (e) { console.log('onClick', e) }
-        keditor.onKeyDown = function (e) { console.log('onKeyDown', e) }
-        keditor.onKeyUp = function (e) { console.log('onKeyUp', e) }
-        keditor.onDrop = function (e) { console.log('onDrop', e) }
-        keditor.onChange = function (contents) { console.log('onChange', contents) }
-        keditor.onImageUpload = function (targetImgElement, index, state, imageInfo, remainingFilesCount) { 
-            console.log('targetImgElement:' + targetImgElement + ', index:' + index + ', state("create","update","delete"):' + state + ', imageInfo:' + imageInfo + ', remainingFilesCount:' + remainingFilesCount)
-        }
-        keditor.showInline = function (toolbar, context) {
-            console.log('toolbar', toolbar);
-            console.log('context', context);
-        }
-    }
+      function ke_create() {
+        KothingEditor = KothingEditor.create("exampleFunction", options);
 
-    ke_create();
-</script>
-</body>
+        KothingEditor.onScroll = function(e) {
+          console.log("onScroll", e);
+        };
+        KothingEditor.onClick = function(e) {
+          console.log("onClick", e);
+        };
+        KothingEditor.onKeyDown = function(e) {
+          console.log("onKeyDown", e);
+        };
+        KothingEditor.onKeyUp = function(e) {
+          console.log("onKeyUp", e);
+        };
+        KothingEditor.onDrop = function(e) {
+          console.log("onDrop", e);
+        };
+        KothingEditor.onChange = function(contents) {
+          console.log("onChange", contents);
+        };
+        KothingEditor.onImageUpload = function(
+          targetImgElement,
+          index,
+          state,
+          imageInfo,
+          remainingFilesCount
+        ) {
+          console.log(
+            "targetImgElement:" +
+              targetImgElement +
+              ", index:" +
+              index +
+              ', state("create","update","delete"):' +
+              state +
+              ", imageInfo:" +
+              imageInfo +
+              ", remainingFilesCount:" +
+              remainingFilesCount
+          );
+        };
+        KothingEditor.showInline = function(toolbar, context) {
+          console.log("toolbar", toolbar);
+          console.log("context", context);
+        };
+      }
+
+      ke_create();
+    </script>
+  </body>
 </html>
