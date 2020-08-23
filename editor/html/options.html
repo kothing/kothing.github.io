@@ -501,10 +501,37 @@
 
     <script src="../js/common.js"></script>
     <script src="../build/kothing-editor.min.js"></script>
+    <!-- codeMirror -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/xml/xml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/css/css.js"></script>
+    <!-- code mirror options display -->
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/edit/matchbrackets.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/edit/closebrackets.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/lint/lint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/lint/json-lint.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/mode/javascript/javascript.js"></script>
+    <!-- KaTeX -->
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
+    <style>
+    .CodeMirror {
+        font-family: monospace;
+        font-size: 13px;
+    }
+    </style>
     <script src="../lang/en.js"></script>
     <script src="../lang/zh_cn.js"></script>
     <script>
-      var optionDisplay = document.getElementById("option_display");
+      var optionDisplay = CodeMirror.fromTextArea(document.getElementById('option_display'), {
+        mode: 'application/ld+json',
+        lineNumbers: true,
+        lineWrapping: false,
+        autoCloseBrackets: true,
+        matchbrackets: true,
+        readOnly: true
+      });
+      optionDisplay.setSize('100%', '500px');
       var langSelect = document.getElementById("language");
       var modeSelect = document.getElementById("mode");
 
