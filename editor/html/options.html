@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="../css/sample.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
     <!-- kothing-editor -->
-    <link href="../../build/css/kothing-editor.min.css" rel="stylesheet">
+    <link href="../build/css/kothing-editor.min.css" rel="stylesheet">
     <!-- codeMirror -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/lint/lint.css">
     <!-- KaTeX -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
     <style>
-        .sun-editor-editable .__se__customClass, .sun-editor .__se__customClass {
+        .kothing-editor-editable .__se__customClass, .kothing-editor .__se__customClass {
             border: 1px solid #b1b1b1;
             padding: 4px;
         }
@@ -345,7 +345,7 @@
         
         <button type="button" class="btn btn-md btn-primary" onclick="ke_create()">Create</button>
         <textarea id="sample_editor" style="display: none;"></textarea>
-        <div id="custom_toolbar" class="sun-editor" style="margin-top: 20px;"></div>
+        <div id="custom_toolbar" class="kothing-editor" style="margin-top: 20px;"></div>
 
         <div class="component-list">
             <div class="file-list-info">
@@ -480,7 +480,6 @@ function ke_create () {
         imageUploadUrl: document.getElementById('imageUploadUrl').checked ? document.getElementById('imageUploadUrl_value').value : undefined,
         imageMultipleFile: document.getElementById('imageMultipleFile').checked ? true : undefined,
         imageUploadSizeLimit: document.getElementById('imageUploadSizeLimit').checked ? document.getElementById('imageUploadSizeLimit_value').value : undefined,
-        imageGalleryUrl: document.getElementById('imageGalleryUrl').checked ? document.getElementById('imageGalleryUrl_value').value : undefined,
         videoResizing: document.getElementById('videoResizing').checked ? undefined : false,
         videoHeightShow: document.getElementById('videoHeightShow').checked ? undefined : false,
         videoFileInput: document.getElementById('videoFileInput').checked ? undefined : false,
