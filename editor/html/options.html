@@ -12,7 +12,7 @@
     <title>KothingEditor</title>
     <!-- kothing-editor -->
     <link
-      href="../../build/css/kothing-editor.min.css"
+      href="../build/css/kothing-editor.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -62,7 +62,7 @@
             </li>
             <li><a href="examples.html" title="Examples">Examples</a></li>
             <li>
-              <a href="options.html" style="color:#fff;" title="Options"
+              <a href="options.html" style="color: #fff;" title="Options"
                 >Options</a
               >
             </li>
@@ -329,7 +329,7 @@
             type="text"
             id="imageWidth_value"
             placeholder="Number"
-            style="width: 200px"
+            style="width: 200px;"
           />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <br /><br />
@@ -355,7 +355,7 @@
             type="text"
             id="imageUploadUrl_value"
             placeholder="Server upload URL"
-            style="width: 200px"
+            style="width: 200px;"
           />
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           <label
@@ -368,7 +368,7 @@
             type="text"
             id="imageUploadSizeLimit_value"
             placeholder="Number(Byte)"
-            style="width: 200px"
+            style="width: 200px;"
           />
 
           <br />
@@ -492,7 +492,7 @@
           <a
             href="https://github.com/kothing/kothing-Editor"
             target="_blank"
-            style="color:#f4b124;"
+            style="color: #f4b124;"
             >Go to GitHub KothingEditor</a
           >
         </p>
@@ -500,9 +500,9 @@
     </div>
 
     <script src="../js/common.js"></script>
-    <script src="../../build/kothing-editor.min.js"></script>
-    <script src="../../src/lang/en.js"></script>
-    <script src="../../src/lang/zh_cn.js"></script>
+    <script src="../build/kothing-editor.min.js"></script>
+    <script src="../lang/en.js"></script>
+    <script src="../lang/zh_cn.js"></script>
     <script>
       var optionDisplay = document.getElementById("option_display");
       var langSelect = document.getElementById("language");
@@ -609,7 +609,7 @@
             ? document.getElementById("youtubeQuery_value").value
             : null,
           callBackSave: document.getElementById("callBackSave").checked
-            ? function(contents) {
+            ? function (contents) {
                 alert(contents);
               }
             : null,
@@ -663,9 +663,18 @@
         editorImageSample.onImageUpload = imageUpload;
 
         // option string
+        var languageCode = langSelect.options[langSelect.selectedIndex].value;
         JSONstringify(
           options,
           langSelect.options[langSelect.selectedIndex].value
+        );
+        optionDisplay.setValue(
+          json
+            .replace(/\%c/g, "")
+            .replace(
+              /"KothingEditor_LANG\..+"/,
+              "KothingEditor_LANG." + languageCode
+            )
         );
       }
 
