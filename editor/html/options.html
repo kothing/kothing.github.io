@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/sample.css" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/3.0.1/github-markdown.min.css">
     <!-- kothing-editor -->
-    <link href="../../dist/css/kothing-editor.min.css" rel="stylesheet">
+    <link href="../../build/css/kothing-editor.min.css" rel="stylesheet">
     <!-- codeMirror -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/lib/codemirror.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/codemirror@5.49.0/addon/lint/lint.css">
@@ -85,18 +85,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <label>Language&nbsp;&nbsp;</label>
             <select id="language">
-                <option value="da">da</option>
-                <option value="de">de</option>
                 <option value="en" selected>en</option>
-                <option value="es">es</option>
-                <option value="fr">fr</option>
-                <option value="it">it</option>
-                <option value="ja">ja</option>
-                <option value="ko">ko</option>
-                <option value="pl">pl</option>
-                <option value="pt_br">pt_br</option>
-                <option value="ro">ro</option>
-                <option value="ru">ru</option>
                 <option value="zh_cn">zh_cn</option>
             </select>
             <br><br>
@@ -354,7 +343,7 @@
         </div>
         <br>
         
-        <button type="button" class="btn btn-md btn-primary" onclick="sun_create()">Create</button>
+        <button type="button" class="btn btn-md btn-primary" onclick="ke_create()">Create</button>
         <textarea id="sample_editor" style="display: none;"></textarea>
         <div id="custom_toolbar" class="sun-editor" style="margin-top: 20px;"></div>
 
@@ -383,7 +372,7 @@
 
     <footer>
         <p>KothingEditor distributed under the MIT license.</p>
-        <p><a href="https://github.com/kothing/Kothing-Editor" target="_blank" style="color:#f4b124;">Go to GitHub SunEditor</a></p>
+        <p><a href="https://github.com/kothing/Kothing-Editor" target="_blank" style="color:#f4b124;">Go to GitHub KothingEditor</a></p>
     </footer>
 </div>
 
@@ -426,7 +415,7 @@ var optionDisplay = CodeMirror.fromTextArea(document.getElementById('option_disp
 });
 optionDisplay.setSize('100%', '500px');
 
-function sun_create () {
+function ke_create () {
     if (editorImageSample && editorImageSample.destroy) editorImageSample.destroy();
 
     imageTable.innerHTML = '';
@@ -559,7 +548,7 @@ function sun_create () {
     optionDisplay.setValue(json.replace(/\%c/g, '').replace(/"KothingEditor_LANG\..+"/, 'KothingEditor_LANG.' + languageCode));
 }
 
-sun_create();
+ke_create();
 </script>
 </body>
 </html>
