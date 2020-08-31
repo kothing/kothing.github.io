@@ -4,13 +4,8 @@
 }
 
 footer {
-    color: #ffebc1;
     bottom: 0;
     margin-top: 38px;
-}
-
-.content .sub-title {
-    color: #f4b124;
 }
 
 .content button {
@@ -21,15 +16,15 @@ footer {
 .badge {
     padding: 10px 0;
     background-color: inherit;
- }
+}
 
  .badge > * {
     float: left;
     padding: 0 0 0 10px !important;
- }
+}
 
  /** image list */
- .image-list {
+.image-list {
     display: flex;
     box-sizing: border-box;
     position: relative;
