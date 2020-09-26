@@ -77,8 +77,8 @@
         <div class="highlight highlight-text-html-basic">
           <pre><span class="pl-c"><span class="pl-c">&lt;!--</span> &lt;link href="../src/assets/css/kothing-editor.css" rel="stylesheet"&gt; <span class="pl-c">--&gt;</span></span>
 <span class="pl-c"><span class="pl-c">&lt;!--</span> &lt;link href="../src/assets/css/kothing-editor-contents.css" rel="stylesheet"&gt; <span class="pl-c">--&gt;</span></span>
-&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>../build/css/kothing-editor.min.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../build/kothing-editor.min.js<span class="pl-pds">"</span></span>&gt;<span class="pl-s1">&lt;</span>/<span class="pl-ent">script</span>&gt;
+&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>../dist/css/kothing-editor.min.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt;
+&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../dist/kothing-editor.min.js<span class="pl-pds">"</span></span>&gt;<span class="pl-s1">&lt;</span>/<span class="pl-ent">script</span>&gt;
 &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>../src/lang/zh_cn.js<span class="pl-pds">"</span></span>&gt;<span class="pl-s1">&lt;</span>/<span class="pl-ent">script</span>&gt;</pre>
         </div>
 
@@ -124,7 +124,7 @@ In "kothing-editor-contents.css", you can define the style of all the tags creat
           ><h4 class="sub-title">1. Load only what you want</h4></a
         >
         <div class="highlight highlight-source-js">
-          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/build/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
+          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/dist/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> {<span class="pl-smi">font</span>, <span class="pl-smi">fontSize</span>, <span class="pl-smi">fontColor</span>, <span class="pl-smi">horizontalRule</span>, <span class="pl-smi">list</span>, <span class="pl-smi">image</span>} <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/src/plugins<span class="pl-pds">'</span></span>
 <span class="pl-c"><span class="pl-c">//</span> How to import language files (default: en)</span>
@@ -154,7 +154,7 @@ In "kothing-editor-contents.css", you can define the style of all the tags creat
           ><h4 class="sub-title">2. Load all plugins</h4></a
         >
         <div class="highlight highlight-source-js">
-          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/build/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
+          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/dist/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">plugins</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/src/plugins<span class="pl-pds">'</span></span>
 
@@ -196,7 +196,7 @@ In "kothing-editor-contents.css", you can define the style of all the tags creat
           </h4></a
         >
         <div class="highlight highlight-source-js">
-          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/build/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
+          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/dist/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> {<span class="pl-smi">align</span>, <span class="pl-smi">font</span>, <span class="pl-smi">fontSize</span>, <span class="pl-smi">fontColor</span>, <span class="pl-smi">hiliteColor</span>, <span class="pl-smi">horizontalRule</span>,
         <span class="pl-smi">list</span>, <span class="pl-smi">table</span>, <span class="pl-smi">template</span>, <span class="pl-smi">formatBlock</span>, <span class="pl-smi">link</span>, <span class="pl-smi">image</span>, <span class="pl-smi">video</span>} <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/src/plugins<span class="pl-pds">'</span></span>
@@ -227,7 +227,7 @@ In "kothing-editor-contents.css", you can define the style of all the tags creat
 The value of the option argument put in the "create" function call takes precedence
 </code></pre>
         <div class="highlight highlight-source-js">
-          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/build/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
+          <pre><span class="pl-k">import</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/dist/css/kothing-editor.min.css<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">kothing-editor</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor<span class="pl-pds">'</span></span>
 <span class="pl-k">import</span> <span class="pl-smi">plugins</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>kothing-editor/src/plugins<span class="pl-pds">'</span></span>
 

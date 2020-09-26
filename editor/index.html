@@ -12,7 +12,7 @@
     <title>KothingEditor</title>
     <!-- KothingEditor -->
     <link
-      href="./build/css/kothing-editor.min.css"
+      href="./dist/css/kothing-editor.min.css"
       rel="stylesheet"
       type="text/css"
     />
@@ -64,6 +64,11 @@
         margin-top: 10px;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script>
   </head>
   <body>
     <nav class="navbar navbar-inverse">
@@ -114,7 +119,7 @@
       </div>
     </nav>
 
-    <div class="content" style="max-width: 1265px;">
+    <div class="content" style="max-width: 1265px">
       <!-- Tab links -->
       <div class="tab">
         <button class="tablinks active" onclick="openTab(event, 'classic')">
@@ -129,9 +134,9 @@
       </div>
 
       <!-- Tab content -->
-      <div id="classic" class="tabcontent" style="display: block;">
+      <div id="classic" class="tabcontent" style="display: block">
         <div class="inline-margin"></div>
-        <textarea id="editor_classic" style="display:none;">
+        <textarea id="editor_classic" style="display: none">
             <p><br></p>
             <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/editor/img/beauty.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="640,400" data-origin="640,400" style="width: 640px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
             <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
@@ -148,7 +153,7 @@
 
       <div id="balloon" class="tabcontent">
         <div class="inline-margin"></div>
-        <textarea id="editor_balloon" style="display:none;">
+        <textarea id="editor_balloon" style="display: none">
             <p><br></p>
             <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/editor/img/g1.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="640,400" data-origin="640,400" style="width: 640px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
             <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
@@ -161,7 +166,7 @@
 
       <div id="inline" class="tabcontent">
         <div class="inline-margin"></div>
-        <textarea id="editor_inline1" style="display:none;">
+        <textarea id="editor_inline1" style="display: none">
             <p><br></p>
             <h3>The KothingEditor is based on pure JavaScript, with no dependencies.</h3>
             <p>KothingEditor is a lightweight, flexible, customizable WYSIWYG text editor for your web applications.</p>
@@ -169,7 +174,7 @@
         </textarea>
 
         <div class="inline-margin"></div>
-        <textarea id="editor_inline2" style="display:none;">
+        <textarea id="editor_inline2" style="display: none">
             <p><br></p>
             <pre><p>Supports Chrome, Safari, Opeera, Firefox, Edge, IE11, Mobile web browser.</p></pre>
             <p>KothingEditor distributed under the <a href="https://github.com/kothing/kothing-Editor/blob/master/LICENSE.txt" target="_blank">MIT</a> license.</p>
@@ -177,7 +182,7 @@
         </textarea>
 
         <div class="inline-margin"></div>
-        <textarea id="editor_inline3" style="display:none;">
+        <textarea id="editor_inline3" style="display: none">
             <p><br></p>
             <div class="ke-component ke-image-container __se__float-right" contenteditable="false"><figure style="margin: auto;"><img src="http://kothing.github.io/editor/img/g2.jpg" data-align="right" alt="Sunset image" data-rotate="" data-proportion="false" data-rotatex="" data-rotatey="" origin-size="525,350" data-origin="525,350" style="width: 525px; max-width: 100%;"><figcaption contenteditable="true" style="margin-top: 0px;"><p>Insert description</p></figcaption></figure></div>
             <p><br></p>
@@ -190,7 +195,7 @@
           <a
             href="https://github.com/kothing/kothing-Editor"
             target="_blank"
-            style="color:#f4b124;"
+            style="color: #f4b124"
             >Go to GitHub KothingEditor</a
           >
         </p>
@@ -198,88 +203,109 @@
     </div>
 
     <script src="js/common.js"></script>
-    <script src="./build/kothing-editor.min.js"></script>
+    <script src="./dist/kothing-editor.min.js"></script>
     <script>
-      KothingEditor.create('editor_classic', {
-        display: 'block',
-        width: '100%',
-        height: 'auto',
-        popupDisplay: 'full',
+      KothingEditor.create("editor_classic", {
+        display: "block",
+        width: "100%",
+        height: "auto",
+        popupDisplay: "full",
+        katex: katex,
+        toolbarItem: [
+          ["undo", "redo"],
+          ["font", "fontSize", "formatBlock"],
+          [
+            "bold",
+            "underline",
+            "italic",
+            "strike",
+            "subscript",
+            "superscript",
+            "fontColor",
+            "hiliteColor",
+          ],
+          ["outdent", "indent", "align", "list", "horizontalRule"],
+          ["link", "table", "image", "audio", "video"],
+          ["lineHeight", "paragraphStyle", "textStyle"],
+          ["showBlocks", "codeView"],
+          ["math"],
+          ["preview", "print", "fullScreen"],
+          ["save", "template"],
+          ["removeFormat"],
+        ],
+        templates: [
+          {
+            name: "Template-1",
+            html: "<p>HTML source1</p>",
+          },
+          {
+            name: "Template-2",
+            html: "<p>HTML source2</p>",
+          },
+        ],
         charCounter: true,
-        buttonList: [
-          ['undo', 'redo'],
-          ['font', 'fontSize', 'formatBlock'],
-          ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
-          ['removeFormat'],
-          ['fontColor', 'hiliteColor'],
-          ['outdent', 'indent'],
-          ['align', 'horizontalRule', 'list', 'table'],
-          ['link', 'image', 'video'],
-          ['fullScreen', 'showBlocks', 'codeView'],
-          ['preview', 'print'],
-        ],
-      })
+      });
 
-      KothingEditor.create('editor_balloon', {
-        mode: 'balloon',
-        display: 'block',
-        width: '100%',
-        height: 'auto',
-        popupDisplay: 'full',
+      KothingEditor.create("editor_balloon", {
+        mode: "balloon",
+        display: "block",
+        width: "100%",
+        height: "auto",
+        popupDisplay: "full",
         buttonList: [
-          ['fontSize', 'fontColor', 'bold', 'align', 'horizontalRule', 'table'],
+          ["fontSize", "fontColor", "bold", "align", "horizontalRule", "table"],
         ],
-      })
+      });
 
-      KothingEditor.create('editor_inline1', {
-        mode: 'inline',
-        display: 'block',
-        width: '100%',
-        height: '162',
-        popupDisplay: 'full',
+      KothingEditor.create("editor_inline1", {
+        mode: "inline",
+        display: "block",
+        width: "100%",
+        height: "162",
+        popupDisplay: "full",
         buttonList: [
-          ['font', 'fontSize', 'formatBlock'],
-          ['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+          ["font", "fontSize", "formatBlock"],
+          ["bold", "underline", "italic", "strike", "subscript", "superscript"],
         ],
-      })
-      KothingEditor.create('editor_inline2', {
-        mode: 'inline',
-        display: 'block',
-        width: '100%',
-        height: '204',
-        popupDisplay: 'full',
+      });
+      KothingEditor.create("editor_inline2", {
+        mode: "inline",
+        display: "block",
+        width: "100%",
+        height: "204",
+        popupDisplay: "full",
         buttonList: [
-          ['bold', 'underline', 'align', 'horizontalRule', 'list', 'table'],
+          ["bold", "underline", "align", "horizontalRule", "list", "table"],
         ],
-      })
-      KothingEditor.create('editor_inline3', {
-        mode: 'inline',
-        display: 'block',
-        width: '100%',
-        height: 'auto',
-        popupDisplay: 'full',
-        buttonList: [['link', 'image', 'video']],
-      })
+      });
+      KothingEditor.create("editor_inline3", {
+        mode: "inline",
+        display: "block",
+        width: "100%",
+        height: "auto",
+        popupDisplay: "full",
+        buttonList: [["link", "image", "video"]],
+      });
 
       function openTab(evt, tabName) {
         // Declare all variables
-        var i, tabcontent, tablinks
+        var i, tabcontent, tablinks;
 
         // Get all elements with class="tabcontent" and hide them
-        tabcontent = document.getElementsByClassName('tabcontent')
+        tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = 'none'
+          tabcontent[i].style.display = "none";
         }
 
         // Get all elements with class="tablinks" and remove the class "active"
-        tablinks = document.getElementsByClassName('tablinks')
+        tablinks = document.getElementsByClassName("tablinks");
         for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(' active', '')
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
         }
 
         // Show the current tab, and add an "active" class to the button that opened the tab
-        document.getElementById(tabName).style.display = 'block'
-        evt.currentTarget.className += ' active'
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
       }
     </script>
   </body>
