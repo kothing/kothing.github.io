@@ -84,4 +84,18 @@ const observer = new IntersectionObserver((changes) => {
 
 observer.observe(img)
 ```
+当然，`IntersectionObserver` 除了给图片做懒加载外，还可以对单页应用资源做预加载。
+如在 next.js v9 中，会对视口内的资源做预加载，可以参考  [next 9 production optimizations](https://nextjs.org/blog/next-9#production-optimizations "next 9 production optimizations")
+```html
+<Link href="/about">
+  <a>关于山月</a>
+</Link>
+```
 
+## 方案四
+
+部分浏览器本身支持图延迟加载的功能，开发者加个属性就好了。
+```html
+<img src="shanyue.jpg" loading="lazy">
+```
+不过目前浏览器兼容性不太好，关于 loading 属性的文章也可以查看 [Native image lazy-loading for the web!](https://addyosmani.com/blog/lazy-loading/ "Native image lazy-loading for the web!")
