@@ -125,6 +125,7 @@ IE、Safari、Chrome、Mozilla Firefox、Opera
 ### 1.4 HTTP
 
 + 1.4.1 http状态码
+
    以 2xx 为开头的都表示请求成功响应.  
 
    | 状态码        | 含义  |
@@ -161,7 +162,9 @@ IE、Safari、Chrome、Mozilla Firefox、Opera
    |500	         |该状态码表明服务器端在执行请求时发生了错误 |
    | 503	         |该状态码表明服务器暂时处于超负载或正在进行停机维护，现在无法处理请求 |
 
-+ 1.4.2 URL和URI有什么区别？
+
++ 1.4.2 URL和URI有什么区别？ 
+
    URI是统一资源标识符，相当于一个人身份证号码  
    Web上可用的每种资源如HTML文档、图像、视频片段、程序等都是一个来URI来定位的 
    URI一般由三部组成： 
@@ -176,7 +179,9 @@ IE、Safari、Chrome、Mozilla Firefox、Opera
    - 存有该资源的主机IP地址(有时也包括端口号)
    - 主机资源的具体地址。如目录和文件名等
 
+
 + 1.4.3 HTTP和HTTPS的区别
+
    HTTPS 协议需要到 CA （Certificate Authority，证书颁发机构）申请证书，一般免费证书较少，因而需要一定费用  
    HTTP 是超文本传输协议，信息是明文传输，HTTPS 则是具有安全性的 SSL 加密传输协议。  
    HTTP 和 HTTPS 使用的是完全不同的连接方式，用的端口也不一样，前者是80，后者是443。  
