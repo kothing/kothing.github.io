@@ -208,39 +208,38 @@ IE、Safari、Chrome、Mozilla Firefox、Opera
 
 ### 2.2 说说你对语义化的理解？
 
-语义化的优点有:
+   语义化的优点有:
 
-+ 代码结构清晰，易于阅读，利于开发和维护
-+ 提高用于体验，在样式加载失败时，页面结构清晰
-+ 方便其他设备解析（如屏幕阅读器）根据语义渲染网页。
-+ 有利于搜索引擎优化（SEO），搜索引擎爬虫会根据不同的标签来赋予不同的权重
+    + 代码结构清晰，易于阅读，利于开发和维护
+    + 提高用于体验，在样式加载失败时，页面结构清晰
+    + 方便其他设备解析（如屏幕阅读器）根据语义渲染网页。
+    + 有利于搜索引擎优化（SEO），搜索引擎爬虫会根据不同的标签来赋予不同的权重
 
-语义化标签主要有   
-title,header,nav,main,article,h1~h6,ul,ol,address,canvas,dialog,aside,section,figure,details,mark
+    语义化标签主要有：title,header,nav,main,article,h1~h6,ul,ol,address,canvas,dialog,aside,section,figure,details,mark
 
 
 ### 2.3 HTML与XHTML有什么区别?
 
-其基础语言不同
-1、XHTML是基于du可扩展标记语言（XML）。
-2、HTML是基于标准通用标记语言（SGML）。
+  其基础语言不同
+  1、XHTML是基于du可扩展标记语言（XML）。
+  2、HTML是基于标准通用标记语言（SGML）。
 
-语法严格程度不同
-1、XHTML语法比较严格，存在DTD定义规则。
-2、HTML语法要求比较松散，这样对网页编写者来说，比较方便。
+  语法严格程度不同
+  1、XHTML语法比较严格，存在DTD定义规则。
+  2、HTML语法要求比较松散，这样对网页编写者来说，比较方便。
 
-可混合应用不同
-1、XHTML可以混合各种XML应用，比如MathML、SVG。
-2、HTML不能混合其它XML应用。
+  可混合应用不同
+  1、XHTML可以混合各种XML应用，比如MathML、SVG。
+  2、HTML不能混合其它XML应用。
 
 大小写敏感度不同
-1、XHTML对大小写敏感，标准的XHTML标签应该使用小写。
-2、HTML对大小写不敏感。
+  1、XHTML对大小写敏感，标准的XHTML标签应该使用小写。
+  2、HTML对大小写不敏感。
 
 公布时间不同
-1、XHTML是2000年W3C公布发行的。
-2、HTML4.01是1999年W3C推荐标准。
-2.4 页面导入样式时，使用link和@import有什么区别？
+  1、XHTML是2000年W3C公布发行的。
+  2、HTML4.01是1999年W3C推荐标准。
+  2.4 页面导入样式时，使用link和@import有什么区别？
 
 1 属性差别。link属于XHTML标签，而@import完全是CSS提供的语法规则。
 link标签除了可以加载CSS外，还可以做很多其它的事情，比如定义RSS，定义rel连接属性等，@import就只能加载CSS了。
@@ -248,7 +247,7 @@ link标签除了可以加载CSS外，还可以做很多其它的事情，比如�
 3 兼容性的差别。由于@import是CSS2.1提出的所以老的浏览器不支持，@import只有在IE5以上的才能识别，而link标签无此问题。
 4 使用dom控制样式时的差别。当使用javascript控制dom去改变样式的时候，只能使用link标签，因为@import不是dom可以控制的。
 
-2.5 HTML5有哪些新特性？
+## 2.5 HTML5有哪些新特性？
 
 语义化标签
 语义化标签使得页面的内容结构化，见名知义
