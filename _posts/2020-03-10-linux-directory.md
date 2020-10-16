@@ -5,9 +5,10 @@ author: Kothing
 categories: [ Tutorial ]
 tags: [ Linux ]
 image: assets/images/3.jpg
-beforetoc: "Linux常用目录及详细使用说明"
-toc: true
+description: "Linux常用目录及详细使用说明"
+rating: 4.5
 ---
+
 Linux常用目录及详细使用说明
 
 
