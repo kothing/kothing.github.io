@@ -4,7 +4,7 @@ title:  "Front-end knowledge2"
 author: Kothing
 categories: [ Web ]
 tags: [Javascript]
-image: assets/images/12.jpg
+image: assets/images/13.jpg
 description: "Front-end knowledge2 前端工程化 / 前端设计模式 / 前端安全性问题 "
 rating: 5
 ---
