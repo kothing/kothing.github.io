@@ -4,7 +4,7 @@ title:  "Front-end design pattern"
 author: Kothing
 categories: [ Web ]
 tags: [Javascript]
-image: assets/images/11.jpg
+image: http://lc-3Cv4Lgro.cn-n1.lcfile.com/c1af7a4c1b765d6fb777/banner.png
 description: "Front-end design pattern"
 rating: 5
 ---
