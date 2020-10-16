@@ -13,7 +13,7 @@ rating: 5
 
 **一、利用ES6 Set去重（ES6中最常用）**
 
-```
+```js
 function unique (arr) {
   return Array.from(new Set(arr))
 }
@@ -26,7 +26,7 @@ console.log(unique(arr))
 
 **二、利用for嵌套for，然后splice去重（ES5中最常用）**
 
-```
+```js
 function unique(arr){            
         for(var i=0; i<arr.length; i++){
             for(var j=i+1; j<arr.length; j++){
@@ -47,7 +47,7 @@ var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, n
 
 **三、利用indexOf去重**
 
-```
+```js
 function unique(arr) {
     if (!Array.isArray(arr)) {
         console.log('type error!')
@@ -70,7 +70,7 @@ console.log(unique(arr))
 
 **四、利用sort()**
 
-```
+```js
 function unique(arr) {
     if (!Array.isArray(arr)) {
         console.log('type error!')
@@ -94,7 +94,7 @@ function unique(arr) {
 
 **五、利用includes**
 
-```
+```js
 function unique(arr) {
     if (!Array.isArray(arr)) {
         console.log('type error!')
@@ -116,7 +116,7 @@ var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, n
 
 **六、利用hasOwnProperty**
 
-```
+```js
 function unique(arr) {
     var obj = {};
     return arr.filter(function(item, index, arr){
@@ -131,7 +131,7 @@ function unique(arr) {
 
 **七、利用filter**
 
-```
+```js
 function unique(arr) {
   return arr.filter(function(item, index, arr) {
     //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素
@@ -146,7 +146,7 @@ function unique(arr) {
 
 **八、利用递归去重**
 
-```
+```js
 function unique(arr) {
         var array= arr;
         var len = array.length;
@@ -173,7 +173,7 @@ console.log(unique(arr))
 
 **九、利用Map数据结构去重**
 
-```
+```js
 function arrayNonRepeatfy(arr) {
   let map = new Map();
   let array = new Array();  // 数组用于返回结果
@@ -195,7 +195,7 @@ function arrayNonRepeatfy(arr) {
 
 **十、利用reduce + includes**
 
-```
+```js
 function unique(arr){
     return arr.reduce((prev,cur) => prev.includes(cur) ? prev : [...prev,cur],[]);
 }
@@ -207,7 +207,7 @@ console.log(unique(arr));
 
 **十一、[...new Set(arr)]**
 
-```
+```js
 [...new Set(arr)] 
 //第一种方法来说只是简化了代码
 ```
