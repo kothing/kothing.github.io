@@ -5,6 +5,8 @@ author: Kothing
 categories: [ Web ]
 tags: [ blog ]
 image: assets/images/15.jpg
+description: "前端职位等级及描述"
+rating: 4.5
 ---
 
 前端职位等级及描述
