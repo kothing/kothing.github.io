@@ -4,7 +4,7 @@ title:  "Typescript高级用法"
 author: Kothing
 categories: [ Web ]
 tags: [Typescript]
-image: assets/images/11.jpg
+image: assets/images/5.jpg
 description: "Typescript高级用法"
 rating: 4.5
 ---
