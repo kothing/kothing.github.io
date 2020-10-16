@@ -79,11 +79,11 @@ IE、Safari、Chrome、Mozilla Firefox、Opera
 + 1、Trident内核 
 代表产品为Internet Explorer，又称其为IE内核。Trident（又称为MSHTML），是微软开发的一种排版引擎 。
 + 2、Gecko内核 
-代表作品为Mozilla Firefox。Gecko是一套开放源代码的、以C++编写的网页排版引擎，是最流行的排版引擎之一，仅次于Trident。使用它的最著名浏览器有Firefox。
+代表产品为Mozilla Firefox。Gecko是一套开放源代码的、以C++编写的网页排版引擎，是最流行的排版引擎之一，仅次于Trident。使用它的最著名浏览器有Firefox。
 + 3、WebKit内核 
-代表作品有Safari、Chrome。WebKit是一个开源项目，主要用于Mac OS系统，它的特点在于源码结构清晰、渲染速度极快。缺点是对网页代码的兼容性不高，导致一些编写不标准的网页无法正常显示。
+代表产品有Safari、Chrome。WebKit是一个开源项目，主要用于Mac OS系统，它的特点在于源码结构清晰、渲染速度极快。缺点是对网页代码的兼容性不高，导致一些编写不标准的网页无法正常显示。
 + 4、Presto内核 
-代表作品Opera。Presto是由Opera Software开发的浏览器排版引擎，供Opera 7.0及以上使用。
+代表产品Opera。Presto是由Opera Software开发的浏览器排版引擎，供Opera 7.0及以上使用。
 
 ### 1.2 一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？
 1. 浏览器根据请求的URL交给DNS域名解析，找到真实IP
