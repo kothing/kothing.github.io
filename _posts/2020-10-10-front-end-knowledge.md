@@ -359,16 +359,16 @@ alt是img必要的属性，而title不是；
 
 ### 3.7 说说你对BFC规范的理解？
 
-一、什么是BFC？  
+一、什么是BFC ？  
 　　BFC全称：块级格式化上下文（block formatting context），简单来说它就是一种属性，这种属性会影响元素与元素之间的位置、间距等
   
-二、形成BFC的条件 
+二、形成BFC的条件   
 　　1. float：给元素添加浮动（属性值为left、right，但none除外） 
 　　2. position：给元素添加定位（属性值为absolute或fixed） 
 　　3. display：给元素添加display属性（属性值为 inline-block、table-cell或table-caption） 
 　　4. overflow：给元素添加overflow 属性（属性值为hidden、auto或scroll，但visible除外） 
   
-三、BFC形成后出现的常见问题 
+三、BFC形成后出现的常见问题  
 　　1. margin重叠问题 
 　　2. 浮动相关问题 
 
