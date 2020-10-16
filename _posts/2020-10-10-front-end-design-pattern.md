@@ -5,7 +5,7 @@ author: Kothing
 categories: [ Web ]
 tags: [Javascript]
 image: http://lc-3Cv4Lgro.cn-n1.lcfile.com/c1af7a4c1b765d6fb777/banner.png
-description: "Front-end design pattern"
+description: "设计模式是对软件设计开发过程中反复出现的某类问题的通用解决方案。设计模式更多的是指导思想和方法论，而不是现成的代码，当然每种设计模式都有每种语言中的具体实现方式。学习设计模式更多的是理解各种模式的内在思想和解决的问题，毕竟这是前人无数经验总结成的最佳实践，而代码实现则是对加深理解的辅助。"
 rating: 5
 ---
 
