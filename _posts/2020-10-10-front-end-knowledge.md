@@ -251,18 +251,20 @@ link标签除了可以加载CSS外，还可以做很多其它的事情，比如�
 
 ## 2.5 HTML5有哪些新特性？
 
-语义化标签
-语义化标签使得页面的内容结构化，见名知义
-标签	描述
-<header></header>	定义了文档的头部区域
-<footer></footer>	定义了文档的尾部区域
-<nav></nav>	定义文档的导航
-<section></section>	定义文档中的节（section、区段）
-<article></article>	定义页面独立的内容区域
-<aside></aside>	定义页面的侧边栏内容
-<detailes></detailes>	用于描述文档或文档某个部分的细节
-<summary></summary>	标签包含 details 元素的标题
-<dialog></dialog>	定义对话框，比如提示框
+语义化标签  
+语义化标签使得页面的内容结构化，见名知义  
+| 标签 | 描述 |
+| :-----	    | :---- |
+| <header></header> | 定义了文档的头部区域 |
+| <footer></footer> | 定义了文档的尾部区域 |
+| <nav></nav>	    | 定义文档的导航 |
+| <section></section>| 定义文档中的节（section、区段） |
+| <article></article>| 定义页面独立的内容区域 |
+| <aside></aside>    | 定义页面的侧边栏内容 |
+| <detailes></detailes>| 用于描述文档或文档某个部分的细节 |
+| <summary></summary>| 标签包含 details 元素的标题 |
+| <dialog></dialog>  | 定义对话框，比如提示框 |
+
 增强型表单
 新增表单 Input 输入类型。这些新特性提供了更好的输入控制和验证。
 输入类型	描述
