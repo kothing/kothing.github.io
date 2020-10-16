@@ -6,7 +6,7 @@ categories: [ Web ]
 tags: [Javascript]
 image: assets/images/11.jpg
 description: "Front-end knowledge"
-rating: 5.0
+rating: 5
 ---
 
 Front-end knowledge
