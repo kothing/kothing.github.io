@@ -38,6 +38,10 @@ rating: 4.5
 
 
 ## 方案二
+如何判断图片出现在了当前视口
+引入一个新的 API， `Element.getBoundingClientRect()` 方法返回元素的大小及其相对于视口的位置。
+![getBoundingClientRect()](https://mdn.mozillademos.org/files/15087/rect.png 'getBoundingClientRect()')  
+
 
 
 ## 方案三
