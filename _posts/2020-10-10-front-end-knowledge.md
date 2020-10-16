@@ -41,3 +41,9 @@ Front-end knowledge
 https://www.cnblogs.com/tugenhua0707/p/5198407.html
 
 也可参考 [前端设计模式https://kothing.github.io/front-end-design-pattern/](https://kothing.github.io/front-end-design-pattern/)
+
+### 前端安全性问题
++ xss跨站脚本攻击（原理、如何进行的、防御手段是什么）
++ CSRF跨站请求伪造（如何伪造法？怎么防御？）
++ sql脚本注入（注入方式，防御方式）
++ 上传漏洞 （防御方式）
