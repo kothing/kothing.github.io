@@ -39,4 +39,4 @@ Front-end knowledge
 + 发布--订阅模式
 + 中介者模式
 
-也可参考 [前端设计模式](https://kothing.github.io/front-end-design-pattern/)
+也可参考 [前端设计模式https://kothing.github.io/front-end-design-pattern/](https://kothing.github.io/front-end-design-pattern/)
