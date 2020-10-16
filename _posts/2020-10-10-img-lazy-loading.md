@@ -54,7 +54,7 @@ img.getBoundingClientRect().top < document.documentElement.clientHeight;
 ```
 _.throttle(func, [wait=0], [options={}])
 ```
-参考 [什么是防抖和节流，他们的应用场景有哪些] (https://kothing.github.io/debounce-throttle/ "什么是防抖和节流，他们的应用场景有哪些")
+参考 [什么是防抖和节流，他们的应用场景有哪些](https://kothing.github.io/debounce-throttle/ "什么是防抖和节流，他们的应用场景有哪些")
 
 
 ## 方案三
