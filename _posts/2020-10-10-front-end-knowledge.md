@@ -359,7 +359,7 @@ alt是img必要的属性，而title不是；
 
 ### 3.7 说说你对BFC规范的理解？
 
-+ BFC 
++ BFC   
    BFC全称：块级格式化上下文（block formatting context），简单来说它就是一种属性，这种属性会影响元素与元素之间的位置、间距等
   
 + 形成BFC的条件   
