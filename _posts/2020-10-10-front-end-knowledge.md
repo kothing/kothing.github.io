@@ -28,4 +28,15 @@ Front-end knowledge
 简单描述：前端工程化不单单包括前端的模块化、组件化、自动化，还包括前端性能优化，前端目录规划，前端规范化，自动化测试，发布等等一系列知识。详情可参考https://github.com/fouber/blog/issues/10
 
 ## 前端设计模式
-详情可参考 https://kothing.github.io/front-end-design-pattern/
++ 工厂模式
++ 单体模式
++ 模块模式
++ 代理模式
++ 职责链模式
++ 命令模式
++ 模板方法模式
++ 策略模式
++ 发布--订阅模式
++ 中介者模式
+
+也可参考 https://kothing.github.io/front-end-design-pattern/
