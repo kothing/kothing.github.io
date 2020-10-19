@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "网站开发中，如何实现图片的懒加载"
+title:  "网站开发中，如何实现图片的延迟加载"
 author: Kothing
 categories: [ Web ]
 tags: [Web, Javascript]
@@ -9,7 +9,7 @@ description: "网站开发中，如何实现图片的懒加载"
 rating: 4.5
 ---
 
-懒加载，顾名思义，在当前网页，滑动页面到能看到图片的时候再加载图片
+延迟加载，顾名思义，在当前网页，滑动页面到能看到图片的时候再加载图片
 
 故问题拆分成两个：
 
