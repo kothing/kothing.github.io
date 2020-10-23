@@ -66,6 +66,9 @@
     .vi { color: #008080 } /* Name.Variable.Instance */
     .il { color: #009999 } /* Literal.Number.Integer.Long */
 }
+pre.highlight {
+    padding: 0;
+}
 table.rouge-table {
     border: #E3EDF3 1px solid;
 }
