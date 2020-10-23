@@ -166,8 +166,8 @@ function _Promise(resolver) {
 }
 ```
 此构造函数的属性作用
-`resolver`: 作为构造函数的参数传进来的 `resolver`，它是一个函数 ，当 `_Promise`被实例化的时候， `resolver`  函数会立即执行，它接受两个参数，分别是 `resolve` 和 `reject`。
-`resolve`: 执行成功和执行失败的函数  
-`reject`: 执行失败的函数  
-`this._status`: 是 `_Promise` 的内部状态，初始化为 `pending`，resolve 函数执行的时候 会把它的值 从 `pending` 变成`fullfilled`，这也就是说 `_Promise` 执行成功，反之，`reject`函数会把它的值 从 `pending` 变成 `rejected`。一旦 `this._status` 的值发生发生了改变之后，它的值就会保持不变，也就是说，它的值会一直保持在 `fullfilled` 或 `rejected` 状态 。  
-`this._result`: 是在 roslve 或者 reject 的时候 需要传递给 then 函数的值。
++ `resolver`: 作为构造函数的参数传进来的 `resolver`，它是一个函数 ，当 `_Promise`被实例化的时候， `resolver`  函数会立即执行，它接受两个参数，分别是 `resolve` 和 `reject`。
++ `resolve`: 执行成功和执行失败的函数  
++ `reject`: 执行失败的函数  
++ `this._status`: 是 `_Promise` 的内部状态，初始化为 `pending`，resolve 函数执行的时候 会把它的值 从 `pending` 变成`fullfilled`，这也就是说 `_Promise` 执行成功，反之，`reject`函数会把它的值 从 `pending` 变成 `rejected`。一旦 `this._status` 的值发生发生了改变之后，它的值就会保持不变，也就是说，它的值会一直保持在 `fullfilled` 或 `rejected` 状态 。  
++ `this._result`: 是在 roslve 或者 reject 的时候 需要传递给 then 函数的值。
