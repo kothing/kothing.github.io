@@ -132,3 +132,36 @@ var fibonacci = function (n) {
 }
 fibonacci(30)
 ```
+
+## 手写实现Promise
+Promise是ES6中提供的一种异步编程的解决方案，是一种强大而好用的方法，为解决回调地狱提供了优美的解决办法。
+Promise 的基本用法：
+Promise构造函数接受一个函数作为参数，此函数传入两个参数resolve函数和reject函数，分别作为执行成功或者执行失败的函数
+```js
+const promiseFn = new Promise((resolve, reject) => {
+  if ('异步执行成功') {
+    resolve('需要返回的值');
+  } else {
+    reject('错误信息');
+  }
+});
+// new Promise()创建的promiseFn是一个异步函数
+```
+上文通过new Promise() 创建的promiseFn可以通过then执行成功后的代码，同时then接受两个函数作为参数，第二个参数是可选的
+```js
+promiseFn().then(() => {
+  // 成功后的操作
+}, () => {
+  // 失败后的操作
+});
+```
+
+知道了 Promise 的基本用法，那么我们就来模拟一下它
+第一步，当然是要一个构造函数了，为了语义化，我就给它命名为  `_Promise`
+```js
+function _Promise(resolver) {
+  this._status = 'pending';
+  this._result = '';
+  resolver(this.resolve.bind(this), this.reject.bind(this));
+}
+```
