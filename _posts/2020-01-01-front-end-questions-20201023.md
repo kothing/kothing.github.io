@@ -164,28 +164,21 @@ function _Promise(resolver) {
   this._result = '';
   resolver(this.resolve.bind(this), this.reject.bind(this));
 }
-```
-此构造函数的属性作用
-+ `resolver`: 作为构造函数的参数传进来的 `resolver`，它是一个函数 ，当 `_Promise`被实例化的时候， `resolver`  函数会立即执行，它接受两个参数，分别是 `resolve` 和 `reject`。
-+ `resolve`: 执行成功和执行失败的函数  
-+ `reject`: 执行失败的函数  
-+ `this._status`: 是 `_Promise` 的内部状态，初始化为 `pending`，resolve 函数执行的时候 会把它的值 从 `pending` 变成`fullfilled`，这也就是说 `_Promise` 执行成功，反之，`reject`函数会把它的值 从 `pending` 变成 `rejected`。一旦 `this._status` 的值发生发生了改变之后，它的值就会保持不变，也就是说，它的值会一直保持在 `fullfilled` 或 `rejected` 状态 。  
-+ `this._result`: 是在 roslve 或者 reject 的时候 需要传递给 then 函数的值。
 
-接下来我们来看 resolve 和 reject 函数
-```js
 _Promise.prototype.resolve = function(result){
   if(this._status === 'pending') {
     this._stauts = 'fullfilled';
     this._result = result;
   }
 }
+
 _Promise.prototype.reject = function(result) {
   if(this._status === 'pending') {
     this._stauts = 'rejected';
     this._result = result;
   }
 }
+
 _Promise.prototype.then = function() {
   if() {
     let _isPromise = isResolve(this._result);
@@ -203,6 +196,13 @@ _Promise.prototype.then = function() {
   }
 }
 ```
+此构造函数的属性作用
++ `resolver`: 作为构造函数的参数传进来的 `resolver`，它是一个函数 ，当 `_Promise`被实例化的时候， `resolver`  函数会立即执行，它接受两个参数，分别是 `resolve` 和 `reject`。
++ `resolve`: 执行成功和执行失败的函数  
++ `reject`: 执行失败的函数  
++ `this._status`: 是 `_Promise` 的内部状态，初始化为 `pending`，resolve 函数执行的时候 会把它的值 从 `pending` 变成`fullfilled`，这也就是说 `_Promise` 执行成功，反之，`reject`函数会把它的值 从 `pending` 变成 `rejected`。一旦 `this._status` 的值发生发生了改变之后，它的值就会保持不变，也就是说，它的值会一直保持在 `fullfilled` 或 `rejected` 状态 。  
++ `this._result`: 是在 roslve 或者 reject 的时候 需要传递给 then 函数的值。
+
 当它们被调用的时候，首先需要判断 `_Promise`的 `_status` 是不是为 `pending` ，只有在 `_status` 的值是 `pending` 的时候才会进行后面的操作。当 `_status` 的值为`pending`的时候，`resolve` 函数会把 `_status`的值变成 `fullfilled`,如果是 `reject` 被执行，那么它就会把 `_status` 的值变成 `rejected`。同时，`resolve` 和 `reject` 函数都会把传递进来的参数 `result` 赋值给 `this._result` ,而这个值会被 之后的 `then` 函数拿到。  
 
 `then`函数接收两个参数，分别是 `isResolve` 和 `isReject` ，分别是 `resolve` （成功）和 `reject`（失败） 时调用的函数。因为考虑到 可能会出现多次链式的调用，比如  Promise.then().then().then()这样的，所以 `then` 函数 要返回来 一个 `_Promise`。
