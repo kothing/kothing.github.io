@@ -10,9 +10,8 @@ rating: 4.5
 ---
 前端经典题目第一期
 
-#### 标题
-
-1. 用js打印一个乘法表
+## 打印一个乘法表
+用js打印一个乘法表
 ```js
 console.log(`
 1*1=1
@@ -36,4 +35,38 @@ for (let i = 1; i < 10; i += 1) {
   str += '\n';
 }
 console.log(str);
+```
+
+## 斐波那契数列函数
+斐波那契数，指的是这样一个数列：1、1、2、3、5、8、13、21、……在数学上，斐波那契数列以如下被以递归的方法定义：F0=0，F1=1，Fn=Fn-1+Fn-2(n>=2，n∈N*)，用文字来说，就是斐波那契数列由 0 和 1 开始，之后的斐波那契数列系数就由之前的两数相加。　　
+
+常用的计算斐波那契数列的方法分为两大类：递归和循环。
+
+### 递归
+**方法一：普通递归**
+代码优美逻辑清晰。但是有重复计算的问题，如：当n为5的时候要计算fibonacci(4) + fibonacci(3)，当n为4的要计算fibonacci(3) + fibonacci(2) ，这时fibonacci(3)就是重复计算了。运行 fibonacci(50) 会出现浏览器假死现象，毕竟递归需要堆栈，数字过大内存不够。
+```js
+function fibonacci(n) {
+    if (n == 1 || n == 2) {
+        return 1;
+    };
+    return fibonacci(n - 2) + fibonacci(n - 1);
+}
+fibonacci(30);
+```
+
+**方法二：改进递归-把前两位数字做成参数避免重复计算**
+```js
+function fibonacci(n) {
+    function fib(n, v1, v2) {
+        if (n == 1)
+            return v1;
+        if (n == 2)
+            return v2;
+        else
+            return fib(n - 1, v2, v1 + v2)
+    }
+    return fib(n, 1, 1)
+}
+fibonacci(30)
 ```
