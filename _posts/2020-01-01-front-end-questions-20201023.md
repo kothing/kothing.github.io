@@ -217,3 +217,35 @@ _Promise.prototype.catch = function(isReject) {
 当它们被调用的时候，首先需要判断 `_Promise`的 `_status` 是不是为 `pending` ，只有在 `_status` 的值是 `pending` 的时候才会进行后面的操作。当 `_status` 的值为`pending`的时候，`resolve` 函数会把 `_status`的值变成 `fullfilled`,如果是 `reject` 被执行，那么它就会把 `_status` 的值变成 `rejected`。同时，`resolve` 和 `reject` 函数都会把传递进来的参数 `result` 赋值给 `this._result` ,而这个值会被 之后的 `then` 函数拿到。  
 
 `then`函数接收两个参数，分别是 `isResolve` 和 `isReject` ，分别是 `resolve` （成功）和 `reject`（失败） 时调用的函数。因为考虑到 可能会出现多次链式的调用，比如  Promise.then().then().then()这样的，所以 `then` 函数 要返回来 一个 `_Promise`。
+
+
+## 实现字符串的全排列算法
+
+**目标**：把一个字符串中的字符重新排列生成新的字符串，例如, abc 总共有6种排列 (abc, acb, bac, bca, cab, cba)。
+
+**思路**：递归方式实现，基本思路是通过双循环来实现递归的主逻辑部分，外层循环 str，内层循环 n - 1 时的返回数组 preResult 部分，算法逻辑如下方流程图。
+首先，考虑递归如何产生，假如当 n = 1，即传参 str 的长度只有1时，则直接返回只有 str 的数组；当 n > 1时，则考虑 n 和 n - 1 方法返回数组的关系。可以想到，n 时多出的一个字符，来添加到 n - 1 返回数组中每个字符串的头部。
+**代码**：
+```js
+// perm function
+var perm = function (s) {
+  var result = [];
+  if (s.length <= 1) {
+    return [s];
+  } else {
+    for (var i = 0; i < s.length; i++) {
+      var c = s[i];
+      var newStr = s.slice(0, i) + s.slice(i + 1, s.length);
+      var l = perm(newStr);
+
+      for (var j = 0; j < l.length; j++) {
+        var tmp = c + l[j];
+        result.push(tmp);
+      }
+    }
+  }
+  return result;
+};
+```
+
+
