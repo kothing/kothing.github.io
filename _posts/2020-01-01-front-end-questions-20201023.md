@@ -8,6 +8,7 @@ image: assets/images/13.jpg
 description: "前端经典题目第一期"
 rating: 4.5
 ---
+前端经典题目第一期
 
 #### 标题
 
@@ -27,12 +28,12 @@ console.log(`
 ```
 代码
 ```js
-let str = "";
-for(let i = 1; i < 10; i += 1){
-	for(var j = 1; j<= i; j++){
-			str+= i + "x" + j + "=" + i*j +"\t";
-}
-	str += "\n"
+let str = '';
+for (let i = 1; i < 10; i += 1) {
+  for (var j = 1; j <= i; j += 1) {
+    str += i + 'x' + j + '=' + i * j + '\t';
+  }
+  str += '\n';
 }
 console.log(str);
 ```
