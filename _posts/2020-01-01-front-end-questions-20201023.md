@@ -105,3 +105,30 @@ var fibonacci=memoizer(function(n){
 })
 fibonacci(30)
 ```
+
+### 循环
+**方法一：普通for循环** 
+```js
+function fibonacci(n) {
+    var n1 = 1, n2 = 1, sum;
+    for (let i = 2; i < n; i++) {
+        sum = n1 + n2
+        n1 = n2
+        n2 = sum
+    }
+    return sum
+}
+fibonacci(30)
+```
+
+**方法二：for循环+解构赋值** 
+```js
+var fibonacci = function (n) {
+    let n1 = 1; n2 = 1;
+    for (let i = 2; i < n; i++) {
+        [n1, n2] = [n2, n1 + n2]
+    }
+    return n2
+}
+fibonacci(30)
+```
