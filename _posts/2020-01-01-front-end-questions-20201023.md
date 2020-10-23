@@ -195,6 +195,17 @@ _Promise.prototype.then = function(isResolve, isReject) {
     return this;
   }
 }
+
+_Promise.prototype.catch = function(isReject) {
+  if(this._status === 'rejected') {
+    let err = new TypeError(this._result);
+    let _isPromise = isReject(err);
+    if(_isPromise instanceof _Promise) {
+      return _isPromise;
+    }
+    return this;
+  }
+}
 ```
 此构造函数的属性作用
 + `resolver`: 作为构造函数的参数传进来的 `resolver`，它是一个函数 ，当 `_Promise`被实例化的时候， `resolver`  函数会立即执行，它接受两个参数，分别是 `resolve` 和 `reject`。
