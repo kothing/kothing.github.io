@@ -70,3 +70,38 @@ function fibonacci(n) {
 }
 fibonacci(30)
 ```
+
+**方法三：改进递归-利用闭包特性把运算结果存储在数组里，避免重复计算**
+```js
+var fibonacci = function () {
+    let memo = [0, 1];
+    let fib = function (n) {
+        if (memo[n] == undefined) {
+            memo[n] = fib(n - 2) + fib(n - 1)
+        }
+        return memo[n]
+    }
+    return fib;
+}()
+fibonacci(30)
+```
+
+**方法三1：改进递归-摘出存储计算结果的功能函数**
+```js
+var memoizer = function (func) {
+    let memo = [];
+    return function (n) {
+        if (memo[n] == undefined) {
+            memo[n] = func(n)
+        }
+        return memo[n]
+    }
+};
+var fibonacci=memoizer(function(n){
+    if (n == 1 || n == 2) {
+        return 1
+    };
+    return fibonacci(n - 2) + fibonacci(n - 1);
+})
+fibonacci(30)
+```
