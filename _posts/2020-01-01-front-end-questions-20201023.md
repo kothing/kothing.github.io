@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "前端经典题目第一期"
+title:  "前端经典题目第1期"
 author: Kothing
 categories: [ Questions ]
 tags: [Web,JavaScript]
 image: assets/images/13.jpg
-description: "前端经典题目第一期"
+description: "前端经典题目第1期"
 rating: 4.5
 ---
-前端经典题目第一期
+前端经典题目第1期
 
 ## 打印一个乘法表
 用js打印一个乘法表
