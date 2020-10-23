@@ -179,7 +179,7 @@ _Promise.prototype.reject = function(result) {
   }
 }
 
-_Promise.prototype.then = function() {
+_Promise.prototype.then = function(isResolve, isReject) {
   if() {
     let _isPromise = isResolve(this._result);
     if(_isPromise instanceof _Promise) {
