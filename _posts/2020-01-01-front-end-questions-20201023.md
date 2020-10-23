@@ -31,7 +31,7 @@ console.log(`
 let str = '';
 for (let i = 1; i < 10; i += 1) {
   for (let j = 1; j <= i; j += 1) {
-    str += i + 'x' + j + '=' + i * j + '\t';
+    str += i + '*' + j + '=' + i * j + '\t';
   }
   str += '\n';
 }
