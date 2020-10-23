@@ -204,4 +204,5 @@ _Promise.prototype.then = function() {
 }
 ```
 当它们被调用的时候，首先需要判断 `_Promise`的 `_status` 是不是为 `pending` ，只有在 `_status` 的值是 `pending` 的时候才会进行后面的操作。当 `_status` 的值为`pending`的时候，`resolve` 函数会把 `_status`的值变成 `fullfilled`,如果是 `reject` 被执行，那么它就会把 `_status` 的值变成 `rejected`。同时，`resolve` 和 `reject` 函数都会把传递进来的参数 `result` 赋值给 `this._result` ,而这个值会被 之后的 `then` 函数拿到。  
+
 `then`函数接收两个参数，分别是 `isResolve` 和 `isReject` ，分别是 `resolve` （成功）和 `reject`（失败） 时调用的函数。因为考虑到 可能会出现多次链式的调用，比如  Promise.then().then().then()这样的，所以 `then` 函数 要返回来 一个 `_Promise`。
