@@ -227,25 +227,29 @@ _Promise.prototype.catch = function(isReject) {
 首先，考虑递归如何产生，假如当 n = 1，即传参 str 的长度只有1时，则直接返回只有 str 的数组；当 n > 1时，则考虑 n 和 n - 1 方法返回数组的关系。可以想到，n 时多出的一个字符，来添加到 n - 1 返回数组中每个字符串的头部。
 **代码**：
 ```js
-// perm function
-var perm = function (s) {
-  var result = [];
-  if (s.length <= 1) {
-    return [s];
-  } else {
-    for (var i = 0; i < s.length; i++) {
-      var c = s[i];
-      var newStr = s.slice(0, i) + s.slice(i + 1, s.length);
-      var l = perm(newStr);
+// permute function
+function permute(s) {
+  if (s && typeof s === 'string') {
+    let result = [];
+    if (s.length <= 1) {
+      return [s];
+    } else {
+      for (let i = 0; i < s.length; i++) {
+        let c = s[i];
+        let newStr = s.slice(0, i) + s.slice(i + 1, s.length);
+        let l = permute(newStr);
 
-      for (var j = 0; j < l.length; j++) {
-        var tmp = c + l[j];
-        result.push(tmp);
+        for (let j = 0; j < l.length; j++) {
+          let tmp = c + l[j];
+          result.push(tmp);
+        }
       }
     }
+    return result.join('');
+  } else {
+    return '';
   }
-  return result;
-};
+}
 ```
 
 
