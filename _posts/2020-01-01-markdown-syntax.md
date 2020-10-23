@@ -128,7 +128,7 @@ ___
 
 {% highlight ruby %}
 语法：
-[超链接名](超链接地址 "超链接title")
+`[超链接名](超链接地址 "超链接title")`
 title可加可不加
 示例：
 [百度](http://baidu.com)
