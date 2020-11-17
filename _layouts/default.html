@@ -85,20 +85,6 @@
                             {% endif %}
                         </a>
                     </li>
-
-                    {% if page.url == "/typescript" %}
-                    <li class="nav-item active">
-                    {% else %}
-                    <li class="nav-item">
-                    {% endif %}
-                        <a class="nav-link" href="{{ site.baseurl }}/typescript">
-                            {% if site.locale == "zh-cn" %}
-                                {{ site.zh-cn_typescript }}
-                            {% else %}
-                                {{ site.en_typescript }}
-                            {% endif %}
-                        </a>
-                    </li>
 			
                     {% if page.url == "/about" %}
                     <li class="nav-item active">
