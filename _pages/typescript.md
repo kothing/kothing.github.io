@@ -68,13 +68,20 @@ comments: false
         </tr>
     </tbody>
 </table>
-    
+
 
 <h5>1.2 获取 TypeScript</h5>
 
 ```js
 $ npm install -g typescript
 ```
+
+2.查看 TypeScript 版本
+```js
+$ tsc -v 
+# Version 4.0.2
+```
+
 
 </div>
 </div>
