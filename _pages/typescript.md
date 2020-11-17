@@ -12,23 +12,20 @@ comments: false
 
 <h4>目录</h4>
 <ul>
-    <li>Built for Jekyll</li>
-    <li>Compatible with Github pages</li>
-    <li>Featured Posts</li>
-    <li>Index Pagination</li>
-    <li>Multi Language</li>
-    <li>SEO</li>
-    <li>Feed</li>
-    <li>Sitemap</li>
-    <li>Post Share</li>
-    <li>Post Categories</li>
-    <li>Prev/Next Link</li>
-    <li>Category Archives (Compatible with Github pages)</li>
-    <li>Jumbotron Categories</li>
-    <li>Post Reviews with Stars</li>
-    <li>Blurred Spoilers</li>
-    <li>Table of Content</li>
-    <li>Lazy Load Images</li>
+    <li>一、TypeScript 是什么</li>
+    <li>二、TypeScript 基础类型</li>
+    <li>三、TypeScript 断言</li>
+    <li>四、类型守卫</li>
+    <li>五、联合类型和类型别名</li>
+    <li>六、交叉类型</li>
+    <li>七、TypeScript 函数</li>
+    <li>八、TypeScript 数组</li>
+    <li>九、TypeScript 对象</li>
+    <li>十、TypeScript 接口</li>
+    <li>十一、TypeScript 类</li>
+    <li>十二、TypeScript 泛型</li>
+    <li>十三、TypeScript 装饰器</li>
+    <li>十四、编译上下文</li>
 </ul>
 
 <h4>一、TypeScript 是什么</h4>
