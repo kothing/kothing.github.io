@@ -72,15 +72,16 @@ comments: false
 
 <h5>1.2 获取 TypeScript</h5>
 
-```js
+<pre>
 $ npm install -g typescript
-```
+</pre>
 
-2.查看 TypeScript 版本
-```js
+<h5>2.查看 TypeScript 版本</h5>
+
+<pre>
 $ tsc -v 
 # Version 4.0.2
-```
+</pre>
 
 
 </div>
