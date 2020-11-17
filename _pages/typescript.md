@@ -72,6 +72,9 @@ comments: false
 
 <h5>1.2 获取 TypeScript</h5>
 
+```js
+$ npm install -g typescript
+```
 
 </div>
 </div>
