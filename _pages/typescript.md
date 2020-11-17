@@ -32,18 +32,45 @@ comments: false
 
 <p>TypeScript 是一种由微软开发的自由和开源的编程语言。它是 JavaScript 的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程。</p>
 
-#### 1.1 TypeScript 与 JavaScript 的区别  
+<h5> 1.1 TypeScript 与 JavaScript 的区别</h5>
 
-|  TypeScript   | JavaScript  | 
-|  ------------  | ------------  | 
-| JavaScript 的超集用于解决大型项目的代码复杂性  | 一种脚本语言，用于创建动态网页 | 
-| 可以在编译期间发现并纠正错误 | 作为一种解释型语言，只能在运行时发现错误 | 
-| 强类型，支持静态和动态类型 | 弱类型，没有静态类型选项 | 
-| 最终被编译成 JavaScript 代码，使浏览器可以理解 | 可以直接在浏览器中使用 | 
-| 支持模块、泛型和接口 | 不支持模块，泛型或接口 | 
-| 社区的支持仍在增长，而且还不是很大 | 大量的社区支持以及大量文档和解决问题的支持 | 
+<table class="rouge-table">
+    <thead>
+        <tr>
+          <th>TypeScript</th>
+          <th>JavaScript</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>JavaScript 的超集用于解决大型项目的代码复杂性</td>
+            <td>一种脚本语言，用于创建动态网页</td>
+        </tr>
+        <tr>
+            <td>可以在编译期间发现并纠正错误</td>
+            <td>作为一种解释型语言，只能在运行时发现错误</td>
+        </tr>
+        <tr>
+            <td>强类型，支持静态和动态类型</td>
+            <td>弱类型，没有静态类型选项</td>
+        </tr>
+        <tr>
+            <td>最终被编译成 JavaScript 代码，使浏览器可以理解</td>
+            <td>可以直接在浏览器中使用</td>
+        </tr>
+        <tr>
+            <td>支持模块、泛型和接口</td>
+            <td>不支持泛型或接口</td>
+        </tr>
+        <tr>
+            <td>社区的支持仍在增长，而且还不是很大</td>
+            <td>大量的社区支持以及大量文档和解决问题的支持</td>
+        </tr>
+    </tbody>
+</table>
+    
 
-#### 1.2 获取 TypeScript
+<h5>1.2 获取 TypeScript</h5>
 
 
 </div>
