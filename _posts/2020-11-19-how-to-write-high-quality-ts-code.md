@@ -108,7 +108,6 @@ const get: HTTPFunction = (url, opts) => { /* ... */ };
 const post: HTTPFunction = (url, opts) => { /* ... */ };
 ```
 <br/>
-<br/>
 
 
 ### 二、使用更精确的类型替代字符串类型
@@ -253,7 +252,7 @@ function pluck<T, K extends keyof T>(record: T[], key: K): T[K][] {
 // let releaseDateArr: Date[]
 let releaseDateArr = pluck(albums, 'releaseDate');
 ```
-
+<br/>
 
 
 ### 三、定义的类型总是表示有效的状态
@@ -364,7 +363,7 @@ async function changePage(state: State, newPage: string) {
 }
 ```
 在 `changePage` 函数中，会根据不同的情形设置不同的请求状态，而不同的请求状态会包含不同的信息。这样 `renderPage` 函数就可以根据统一的 `state` 属性值来进行相应的处理。因此，通过使用可辨识联合类型，让请求的每种状态都是有效的状态，不会出现无效状态的问题。
-
+<br/>
 
 
 ### 四、选择条件类型而不是重载声明
@@ -399,7 +398,7 @@ const num = double(10);
 const str = double('ts');
 console.log(str);
 ```
-不幸的是，我们对精确度的追求超过了预期。现在的类型有点太精确了。当传递一个字符串类型时，`double` 声明将返回一个字符串类型，这是正确的。但是当传递一个字符串字面量类型时，返回的类型是相同的字符串字面量类型。这是错误的，因为 ts 经过 `double` 函数处理后，返回的是 tsts，而不是 ts。
+不幸的是，我们对精确度的追求超过了预期。现在的类型有点太精确了。当传递一个字符串类型时，`double` 声明将返回一个字符串类型，这是正确的。但是当传递一个字符串字面量类型时，返回的类型是相同的字符串字面量类型，这是错误的，因为 ts 经过 `double` 函数处理后，返回的是 tsts，而不是 ts。
 
 另一种方案是提供多种类型声明。虽然 TypeScript 只允许你编写一个具体的实现，但它允许你编写任意数量的类型声明。你可以使用函数重载来改善 `double` 的类型：
 ```typescript
@@ -449,7 +448,7 @@ function f(x: number | string) {
   return double(x);
 }
 ```
-
+<br/>
 
 
 
