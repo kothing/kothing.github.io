@@ -368,7 +368,7 @@ async function changePage(state: State, newPage: string) {
 
 ### 四、选择条件类型而不是重载声明
 假设你要使用 TS 实现一个 `double` 函数，该函数支持 `string` 或 `number` 类型。这时，你可能已经想到了使用联合类型和函数重载：
-```javascript
+```typescript
 function double(x: number | string): number | string;
 function double(x: any) {
   return x + x;
@@ -427,6 +427,7 @@ function doubleFn(x: number | string) {
 function double<T extends number | string>(
   x: T
 ): T extends string ? string : number;
+
 function double(x: any) {
   return x + x;
 }
@@ -435,10 +436,8 @@ function double(x: any) {
 
 在引入条件类型之后，前面的所有例子就可以正常工作了：
 ```typescript
-// const num: number
-const num = double(10); 
-// const str: string
-const str = double("ts"); 
+const num = double(10);  // const num: number
+const str = double("ts");  // const str: string
 
 // function f(x: string | number): string | number
 function f(x: number | string) {
@@ -451,3 +450,108 @@ function f(x: number | string) {
 
 ### 五、一次性创建对象
 
+在 JavaScript 中可以很容易地创建一个表示二维坐标点的对象：
+```typescript
+const pt = {}; 
+pt.x = 3; 
+pt.y = 4;
+```
+
+然而对于同样的代码，在 TypeScript 中会提示以下错误信息：
+```typescript
+const pt = {};
+// Property 'x' does not exist on type '{}'
+pt.x = 3; // Error
+// Property 'y' does not exist on type '{}'
+pt.y = 4; // Error
+```
+这是因为第一行中 pt 变量的类型是根据它的值 {} 推断出来的，你只能对已知的属性赋值。针对这个问题，你可能会想到一种解决方案，即新声明一个 Point 类型，然后把它作为 pt 变量的类型：
+```typescript
+interface Point {
+  x: number;
+  y: number;
+}
+
+// Type '{}' is missing the following properties from type 'Point': x, y(2739)
+const pt: Point = {}; // Error
+pt.x = 3;
+pt.y = 4;
+```
+
+那么如何解决上述问题呢？其中一种最简单的解决方案是一次性创建对象：
+```typescript
+const pt = { 
+  x: 3,
+  y: 4, 
+}; // OK
+```
+
+如果你想一步一步地创建对象，你可以使用类型断言（as）来消除类型检查：
+```typescript
+const pt = {} as Point; 
+pt.x = 3;
+pt.y = 4; // OK
+```
+
+但是更好的方法是一次性创建对象并显式声明变量的类型：
+```typescript
+const pt: Point = { 
+  x: 3,
+  y: 4, 
+};
+```
+
+而当你需要从较小的对象来构建一个较大的对象时，你可能会这样处理，比如：
+```typescript
+const pt = { x: 3, y: 4 };
+const id = { name: "Pythagoras" };
+const namedPoint = {};
+Object.assign(namedPoint, pt, id);
+
+// Property 'id' does not exist on type '{}'.(2339)
+namedPoint.name; // Error
+```
+
+为了解决上述问题，你可以使用对象展开运算符 ... 来一次性构建大的对象：
+```typescript
+const namedPoint = {...pt, ...id}; 
+namedPoint.name; // OK, type is string
+```
+
+此外，你还可以使用对象展开运算符，以一种类型安全的方式逐个字段地构建对象。关键是在每次更新时使用一个新变量，这样每个变量都会得到一个新类型：
+```typescript
+const pt0 = {};
+const pt1 = {...pt0, x: 3};
+const pt: Point = {...pt1, y: 4}; // OK
+```
+
+虽然这是构建这样一个简单对象的一种迂回方式，但对于向对象添加属性并允许 TypeScript 推断新类型来说，这可能是一种有用的技术。要以类型安全的方式有条件地添加属性，可以使用带 null 或 {} 的对象展开运算符，它不会添加任何属性：
+```typescript
+declare var hasMiddle: boolean;
+const firstLast = {first: 'Harry', last: 'Truman'};
+const president = {...firstLast, ...(hasMiddle ? {middle: 'S'} : {})};
+```
+
+如果在编辑器中鼠标移到 president，你将看到 TypeScript 推断出的类型：
+```typescript
+const president: {
+  middle?: string;
+  first: string;
+  last: string;
+}
+```
+
+最终通过设置 hasMiddle 变量的值，你就可以控制 president 对象中 middle 属性的值：
+```typescript
+declare var hasMiddle: boolean;
+var hasMiddle = true;
+const firstLast = {first: 'Harry', last: 'Truman'};
+const president = {...firstLast, ...(hasMiddle ? {middle: 'S'} : {})};
+
+let mid = president.middle
+console.log(mid); // S
+```
+
+<br/>
+
+### 六、参考资源
