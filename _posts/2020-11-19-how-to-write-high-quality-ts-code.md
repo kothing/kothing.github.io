@@ -109,6 +109,7 @@ const post: HTTPFunction = (url, opts) => { /* ... */ };
 ```
 
 
+
 ### 二、使用更精确的类型替代字符串类型
 假设你正在构建一个音乐集，并希望为专辑定义一个类型。这时你可以使用 `interface` 关键字来定义一个 `Album` 类型：
 ```typescript
@@ -252,7 +253,117 @@ function pluck<T, K extends keyof T>(record: T[], key: K): T[K][] {
 let releaseDateArr = pluck(albums, 'releaseDate');
 ```
 
+
+
 ### 三、定义的类型总是表示有效的状态
+加入编写一个分页的组件，允许用户指定页码，然后加载并显示该页面对应内容的 `Web` 内容。  
+你可能会先定义 State 对象：
+```typescript
+interface State {
+  pageContent: string;
+  isLoading: boolean;
+  errorMsg?: string;
+}
+```
+
+接着你会编写一个渲染页面函数 `renderPage` 函数，用来渲染页面：
+```typescript
+function renderPage(state: State) {
+  if (state.errorMsg) {
+    return `呜呜呜，加载页面出现异常了...${state.errorMsg}`;
+  } else if (state.isLoading) {
+    return `页面加载中~~~`;
+  }
+  return `<div>${state.pageContent}</div>`;
+}
+
+// 输出结果：页面加载中~~~
+console.log(renderPage({isLoading: true, pageContent: ""}));
+
+// 输出结果：<div>Hello TypeScript !</div>
+console.log(renderPage({isLoading: false, pageContent: "Hello TypeScript !"}));
+```
+
+创建好 `renderPage` 函数，你可以继续定义一个分页函数 `changePage` 函数，用于根据页码获取对应的页面数据：
+```typescript
+async function changePage(state: State, newPage: string) {
+  state.isLoading = true;
+  try {
+    const response = await fetch(getUrlForPage(newPage));
+    if (!response.ok) {
+      throw new Error(`Unable to load ${newPage}: ${response.statusText}`);
+    }
+    const text = await response.text();
+    state.isLoading = false;
+    state.pageContent = text;
+  } catch (e) {
+    state.errorMsg = "" + e;
+  }
+}
+```
+对于以上的 `changePage` 函数，它存在以下问题： 
++ 在 `catch` 语句中，未把 `state.isLoading` 的状态设置为 `false`； 
++ 未及时清理 `state.errorMsg` 的值，因此如果之前的请求失败，那么你将继续看到错误消息，而不是加载消息。 
+
+出现上述问题的原因是，前面定义的 `State` 类型允许同时设置 `isLoading` 和 `errorMsg` 的值，尽管这是一种无效的状态。针对这个问题，你可以考虑引入可辨识联合类型来定义不同的页面请求状态：
+```typescript
+interface RequestPending {
+  state: "pending";
+}
+
+interface RequestError {
+  state: "error";
+  errorMsg: string;
+}
+
+interface RequestSuccess {
+  state: "ok";
+  pageContent: string;
+}
+
+type RequestState = RequestPending | RequestError | RequestSuccess;
+
+interface State {
+  currentPage: string;
+  requests: { [page: string]: RequestState };
+}
+```
+
+在以上代码中，通过使用可辨识联合类型分别定义了 3 种不同的请求状态，这样就可以很容易的区分出不同的请求状态，从而让业务逻辑处理更加清晰。接下来，需要基于更新后的 `State` 类型，来分别更新一下前面创建的 `renderPage` 和 `changePage` 函数：
+```typescript
+// 完善后的 renderPage 函数
+function renderPage(state: State) {
+  const { currentPage } = state;
+  const requestState = state.requests[currentPage];
+  switch (requestState.state) {
+    case "pending":
+      return `页面加载中~~~`;
+    case "error":
+      return `呜呜呜，加载第${currentPage}页出现异常了...${requestState.errorMsg}`;
+    case "ok":
+      `<div>第${currentPage}页的内容：${requestState.pageContent}</div>`;
+  }
+}
+```
+```typescript
+// 完善后的 changePage 函数
+async function changePage(state: State, newPage: string) {
+  state.requests[newPage] = { state: "pending" };
+  state.currentPage = newPage;
+  try {
+    const response = await fetch(getUrlForPage(newPage));
+    if (!response.ok) {
+      throw new Error(`无法正常加载页面 ${newPage}: ${response.statusText}`);
+    }
+    const pageContent = await response.text();
+    state.requests[newPage] = { state: "ok", pageContent };
+  } catch (e) {
+    state.requests[newPage] = { state: "error", errorMsg: "" + e };
+  }
+}
+```
+在 `changePage` 函数中，会根据不同的情形设置不同的请求状态，而不同的请求状态会包含不同的信息。这样 `renderPage` 函数就可以根据统一的 `state` 属性值来进行相应的处理。因此，通过使用可辨识联合类型，让请求的每种状态都是有效的状态，不会出现无效状态的问题。
+
 
 
 ### 四、选择条件类型而不是重载声明
