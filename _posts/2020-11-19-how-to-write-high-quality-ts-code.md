@@ -63,7 +63,7 @@ type Options = typeof INIT_OPTIONS;
 ```
 
 
-而在使用可辨识联合（Discriminated Unions）的过程中，也可能出现重复代码。比如：
+而在使用[可辨识联合（Discriminated Unions）](./typescript-discriminated-unions)的过程中，也可能出现重复代码。比如：
 ```typescript
 interface SaveAction { 
   type: 'save';
