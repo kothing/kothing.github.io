@@ -555,3 +555,4 @@ console.log(mid); // S
 <br/>
 
 ### 六、参考资源
+[Effective TypeScript(]https://github.com/danvk/effective-typescript)
