@@ -6,11 +6,11 @@ categories: [ Javascript, TypeScript ]
 image: assets/images/5.jpg
 ---
 
-如何编写高质高效的TypeScript代码
+如何编写高质高效的TypeScript代码，根据以往开发经验，本文给出以下建议
 
 ### 一、减少重复代码
 
-对于TypeScript新手小伙伴来说，在定义接口时，可能一不小心会出现以下类似的重复代码。比如：
+对于TypeScript新手小伙伴来说，在定义接口时，可能会编写类似以下的代码：
 ```typescript
 interface Person {
   firstName: string;
@@ -23,7 +23,7 @@ interface PersonWithBirthDate {
   birth: Date;
 }
 ```
-很明显，相对于 `Person` 接口来说，`PersonWithBirthDate` 接口只是多了一个 `birth` 属性，其他的属性跟 `Person` 接口是一样的。那么如何避免出现例子中的重复代码呢？要解决这个问题，可以利用 extends 关键字：
+很明显，接口定义出现重复代码，相对于 `Person` 接口来说，`PersonWithBirthDate` 接口只是多了一个 `birth` 属性，其他的属性跟 `Person` 接口是一样的。那么如何避免出现例子中的重复代码呢？要解决这个问题，可以利用 extends 关键字：
 ```typescript
 interface Person { 
   firstName: string; 
