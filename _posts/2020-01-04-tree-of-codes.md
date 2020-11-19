@@ -4,9 +4,10 @@ title:  "Tree of Codes"
 author: Kothing
 categories: [ Blog ]
 tags: [ Jekyll, tutorial ]
-featured: true
+featured: false
 rating: 5
 image: assets/images/9.jpg
+hidden: true
 ---
 
 Kothing bloggers. Review products, books, movies, restaurant and anything you like on your blog with Kothing
