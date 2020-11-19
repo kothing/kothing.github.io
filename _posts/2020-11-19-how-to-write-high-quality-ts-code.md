@@ -3,7 +3,7 @@ layout: post
 title:  "如何编写高质量TypeScript代码"
 author: Kothing
 categories: [ Javascript, TypeScript ]
-image: assets/images/1.jpg
+image: assets/images/5.jpg
 ---
 
 如何编写高质高效的TypeScript代码
