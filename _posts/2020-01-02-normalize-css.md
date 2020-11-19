@@ -5,7 +5,6 @@ author: Kothing
 categories: [ Web ]
 tags: [ css ]
 image: assets/images/17.jpg
-featured: true
 rating: 5
 ---
 
