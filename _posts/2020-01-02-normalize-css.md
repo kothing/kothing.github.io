@@ -5,9 +5,8 @@ author: Kothing
 categories: [ Web ]
 tags: [ css ]
 image: assets/images/17.jpg
-featured: false
+featured: true
 rating: 5
-hidden: true
 ---
 
 Normalize.css 只是一个很小的CSS文件，但它在默认的HTML元素样式上提供了跨浏览器的高度一致性。相比于传统的CSS reset， Normalize.css是一种现代的、为HTML5准备的优质替代方案。Normalize.css现在已经被用于Twitter Bootstrap以及许许多多其他框架、工具和网站上。
