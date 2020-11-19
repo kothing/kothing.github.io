@@ -19,7 +19,7 @@
     {% if page.layout == 'post' or page.layout == 'page' %}
         <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/share/css/share.min.css">
         {% if site.comments.gitalk %}
-            <link rel="stylesheet" href="{{ site.baseurl }}/assets/plugins/gitalk/gitalk.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
         {% endif %}
     {% endif %}
 
@@ -230,7 +230,7 @@
     {% if page.layout == 'post' or page.layout == 'page' %}
         <script src="{{ site.baseurl }}/assets/plugins/share/js/social-share.min.js"></script>
         {% if site.comments.gitalk %}
-            <script src="{{ site.baseurl }}/assets/plugins/gitalk/gitalk.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
             <script src="{{ site.baseurl }}/assets/js/md5.min.js"></script>
             <script>
                 setTimeout(() => {
