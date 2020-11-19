@@ -161,10 +161,29 @@ const dangerous: Album = {
 假设你需要写一个函数，用于从一个对象数组（如下源数组）中抽取某个属性的值并保存到数组中，在 Underscore 库中，这个操作被称为 “pluck”。
 ```javascript
 // 源数组
-const arr: any[] = [{name: 'Tom', color: 'gray'}, {name: 'Jerry', color: 'orange'}, {name: 'Spike', color: 'white'}];
+const album = [
+  {
+    artist: "Michael Jackson",
+    title: "Dangerous",
+    releaseDate: new Date("1991-11-31"),
+    recordingType: "studio",
+  },
+  {
+    artist: "Eminem",
+    title: "Beautiful",
+    releaseDate: new Date("2018-10-06"),
+    recordingType: "live",
+  },
+  {
+    artist: "Adele",
+    title: "Hello",
+    releaseDate: new Date("2019-06-10"),
+    recordingType: "studio",
+  },
+];
 
 // 目标数组
-const targetArr = ['Tom','Jerry','Spike'];
+const song = ['Dangerous', 'Beautiful', 'Hello'];
 ```
 
 要实现该功能，你可能最先想到以下代码：
