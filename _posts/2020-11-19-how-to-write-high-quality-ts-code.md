@@ -367,6 +367,89 @@ async function changePage(state: State, newPage: string) {
 
 
 ### 四、选择条件类型而不是重载声明
+假设你要使用 TS 实现一个 `double` 函数，该函数支持 `string` 或 `number` 类型。这时，你可能已经想到了使用联合类型和函数重载：
+```javascript
+function double(x: number | string): number | string;
+function double(x: any) {
+  return x + x;
+}
+```
+
+虽然这个 double 函数的声明是正确的，但它有一点不精确：
+```typescript
+// const num: string | number
+const num = double(10); 
+// const str: string | number
+const str = double('ts');
+```
+
+对于 double 函数，你期望传入的参数类型是 `number` 类型，其返回值的类型也是 `number` 类型。当你传入的参数类型是 `string` 类型，其返回的类型也是 `string` 类型。而上面的 `double` 函数却是返回了 `string | number` 类型。为了实现上述的要求，你可能想到了引入泛型变量和泛型约束：
+```typescript
+function double<T extends number | string>(x: T): T;
+function double(x: any) {
+  return x + x;
+}
+```
+在上面的 `double` 函数中，引入了泛型变量 `T`，同时使用 `extends` 约束了其类型范围。
+```typescript
+// const num: 10
+const num = double(10);
+// const str: "ts"
+const str = double('ts');
+console.log(str);
+```
+不幸的是，我们对精确度的追求超过了预期。现在的类型有点太精确了。当传递一个字符串类型时，`double` 声明将返回一个字符串类型，这是正确的。但是当传递一个字符串字面量类型时，返回的类型是相同的字符串字面量类型。这是错误的，因为 ts 经过 `double` 函数处理后，返回的是 tsts，而不是 ts。
+
+另一种方案是提供多种类型声明。虽然 TypeScript 只允许你编写一个具体的实现，但它允许你编写任意数量的类型声明。你可以使用函数重载来改善 `double` 的类型：
+```typescript
+function double(x: number): number;
+function double(x: string): string;
+function double(x: any) {
+  return x + x;
+}
+
+// const num: number
+const num = double(10); 
+// const str: string
+const str = double("ts");
+```
+很明显此时 `num` 和 `str` 变量的类型都是正确的，但不幸的是，double 函数还有一个小问题。因为 `double` 函数的声明只支持 `string` 或 `number` 类型的值，而不支持 `string | number` 联合类型，比如：
+```typescript
+function doubleFn(x: number | string) {
+  // Argument of type 'string | number' is not assignable to 
+  // parameter of type 'number'.
+  // Argument of type 'string | number' is not assignable to 
+  // parameter of type 'string'.
+  return double(x); // Error
+}
+```
+为什么会提示以上的错误呢？因为当 TypeScript 编译器处理函数重载时，它会查找重载列表，直到找一个匹配的签名。对于 `number | string` 联合类型，很明显是匹配失败的。
+
+然而对于上述的问题，虽然可以通过新增 `string | number` 的重载签名来解决，但最好的方案是使用条件类型。在类型空间中，条件类型就像 `if` 语句一样：
+```typescript
+function double<T extends number | string>(
+  x: T
+): T extends string ? string : number;
+function double(x: any) {
+  return x + x;
+}
+```
+这与前面引入泛型版本的 `double` 函数声明类似，只是它引入更复杂的返回类型。条件类型使用起来很简单，与 JavaScript 中的三目运算符（?:）一样的规则。`T extends string ? string : number` 的意思是，如果 `T` 类型是 `string` 类型的子集，则 `double` 函数的返回值类型为 `string` 类型，否则为 `number` 类型。
+
+在引入条件类型之后，前面的所有例子就可以正常工作了：
+```typescript
+// const num: number
+const num = double(10); 
+// const str: string
+const str = double("ts"); 
+
+// function f(x: string | number): string | number
+function f(x: number | string) {
+  return double(x);
+}
+```
+
+
 
 
 ### 五、一次性创建对象
