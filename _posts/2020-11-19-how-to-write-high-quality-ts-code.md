@@ -377,10 +377,11 @@ function double(x: any) {
 
 虽然这个 double 函数的声明是正确的，但它有一点不精确：
 ```typescript
-// const num: string | number
 const num = double(10); 
-// const str: string | number
+// const num: string | number
+
 const str = double('ts');
+// const str: string | number
 ```
 
 对于 double 函数，你期望传入的参数类型是 `number` 类型，其返回值的类型也是 `number` 类型。当你传入的参数类型是 `string` 类型，其返回的类型也是 `string` 类型。而上面的 `double` 函数却是返回了 `string | number` 类型。为了实现上述的要求，你可能想到了引入泛型变量和泛型约束：
@@ -392,10 +393,8 @@ function double(x: any) {
 ```
 在上面的 `double` 函数中，引入了泛型变量 `T`，同时使用 `extends` 约束了其类型范围。
 ```typescript
-// const num: 10
-const num = double(10);
-// const str: "ts"
-const str = double('ts');
+const num = double(10); // const num: 10
+const str = double('ts');// const str: "ts"
 console.log(str);
 ```
 不幸的是，我们对精确度的追求超过了预期。现在的类型有点太精确了。当传递一个字符串类型时，`double` 声明将返回一个字符串类型，这是正确的。但是当传递一个字符串字面量类型时，返回的类型是相同的字符串字面量类型，这是错误的，因为 ts 经过 `double` 函数处理后，返回的是 tsts，而不是 ts。
@@ -408,10 +407,8 @@ function double(x: any) {
   return x + x;
 }
 
-// const num: number
-const num = double(10); 
-// const str: string
-const str = double("ts");
+const num = double(10); // const num: number
+const str = double("ts"); // const str: string
 ```
 很明显此时 `num` 和 `str` 变量的类型都是正确的，但不幸的是，double 函数还有一个小问题。因为 `double` 函数的声明只支持 `string` 或 `number` 类型的值，而不支持 `string | number` 联合类型，比如：
 ```typescript
