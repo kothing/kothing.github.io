@@ -3,7 +3,7 @@ layout: post
 title:  "TypeScript 可辨识联合类型"
 author: Kothing
 categories: [ Javascript, TypeScript ]
-image: assets/images/5.jpg
+image: assets/images/photo-10.jpg
 ---
 
 TypeScript 可辨识联合（Discriminated Unions）类型，也称为代数数据类型或标签联合类型。它包含 3 个要点：可辨识、联合类型和类型守卫。
