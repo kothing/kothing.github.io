@@ -5,7 +5,7 @@ permalink: /image
 comments: false
 ---
 
-<div class="container">
+<div class="image-page">
   <div class="row">
     <!--img-->
     <div class="col-lg-4 col-md-6 mb-30px card-group">
