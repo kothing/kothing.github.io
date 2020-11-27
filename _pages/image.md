@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Kothing imgages
-permalink: /imgage
+permalink: /image
 comments: false
 ---
 
