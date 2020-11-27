@@ -88,6 +88,20 @@
                         </a>
                     </li>
 			
+                    {% if page.url == "/image" %}
+                    <li class="nav-item active">
+                    {% else %}
+                    <li class="nav-item">
+                    {% endif %}
+                        <a class="nav-link" href="{{ site.baseurl }}/image">
+                            {% if site.locale == "zh-cn" %}
+                                {{ site.zh-cn_image }}
+                            {% else %}
+                                {{ site.en_image }}
+                            {% endif %}
+                        </a>
+                    </li>
+			
                     {% if page.url == "/about" %}
                     <li class="nav-item active">
                     {% else %}
@@ -200,15 +214,6 @@
                 </div>
 	    	<div class="col-md-4 col-sm-4 text-center text-lg-left">
                     <ul>
-			<li>
-			    <a href="/image" target="_blank">
-			        {% if site.locale == "zh-cn" %}
-                                    {{ site.zh-cn_image }}
-                            	{% else %}
-                               	    {{ site.en_image }}
-                            	{% endif %}
-			    </a>
-			</li>
 			<li><a href="https://cloud.tencent.com/developer/devdocs" target="_blank">开发者手册</a></li>
 		    </u/>
                 </div>
