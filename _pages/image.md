@@ -134,8 +134,70 @@ comments: false
     <div class="col-lg-4 col-md-6 mb-30px card-group">
       <div class="card h-100">
         <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-01.jpg' /></div>
-        <img src="https://github.com/kothing/kothing.github.io/blob/master/assets/images/photo-01.jpg"/>
         <div class="card-body">/assets/images/photo-01.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-02.jpg' /></div>
+        <div class="card-body">/assets/images/photo-02.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-03.jpg' /></div>
+        <div class="card-body">/assets/images/photo-03.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-04.jpg' /></div>
+        <div class="card-body">/assets/images/photo-04.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-05.jpg' /></div>
+        <div class="card-body">/assets/images/photo-05.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-06.jpg' /></div>
+        <div class="card-body">/assets/images/photo-06.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-07.jpg' /></div>
+        <div class="card-body">/assets/images/photo-07.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-08.jpg' /></div>
+        <div class="card-body">/assets/images/photo-08.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-09.jpg' /></div>
+        <div class="card-body">/assets/images/photo-09.jpg</div>
+      </div>
+    </div>
+    <!--img-->
+    <div class="col-lg-4 col-md-6 mb-30px card-group">
+      <div class="card h-100">
+        <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-10.jpg' /></div>
+        <div class="card-body">/assets/images/photo-10.jpg</div>
       </div>
     </div>
   </div>
