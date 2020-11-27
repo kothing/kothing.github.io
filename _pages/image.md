@@ -134,6 +134,7 @@ comments: false
     <div class="col-lg-4 col-md-6 mb-30px card-group">
       <div class="card h-100">
         <div class="maxthumb"><img class="img-fluid" src='https://kothing.github.io/assets/images/photo-01.jpg' /></div>
+        <img src="https://github.com/kothing/kothing.github.io/blob/master/assets/images/photo-01.jpg"/>
         <div class="card-body">/assets/images/photo-01.jpg</div>
       </div>
     </div>
