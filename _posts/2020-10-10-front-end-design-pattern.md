@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Front-end design pattern"
+title:  ""
 author: Kothing
 categories: [ Web ]
 tags: [Javascript]
 image: http://lc-3Cv4Lgro.cn-n1.lcfile.com/c1af7a4c1b765d6fb777/banner.png
-description: "什么是设计模式？"
+description: "什么是前端设计模式，有哪些设计模式？"
 rating: 5
 ---
 
