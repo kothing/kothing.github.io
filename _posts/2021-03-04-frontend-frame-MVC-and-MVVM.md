@@ -4,7 +4,6 @@ title: "前端框架MVC和MVVM的理解"
 author: Kothing
 categories: [ Blog ]
 image: assets/images/7.jpg
-featured: true
 rating: 5
 hidden: true
 ---
