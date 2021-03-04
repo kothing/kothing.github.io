@@ -3,7 +3,7 @@ layout: post
 title: "前端框架MVC和MVVM的理解"
 author: Kothing
 categories: [ Javascript ]
-image: assets/images/7.jpg
+image: assets/images/13.jpg
 rating: 5
 hidden: true
 ---
