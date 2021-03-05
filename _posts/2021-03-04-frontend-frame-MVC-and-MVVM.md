@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "关于前端框架MVC和MVVM以及前端工程化"
+title: "关于前端框架MVC和MVVM以及前端工程化的理解"
 author: Kothing
 categories: [ Javascript ]
 image: assets/images/13.jpg
