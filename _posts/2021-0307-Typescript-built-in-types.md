@@ -2,7 +2,7 @@
 layout: post
 title: "Typescript实用的内置类型"
 author: Kothing
-categories: [ Typescript ]
+categories: [ TypeScript ]
 image: assets/images/13.jpg
 rating: 5
 hidden: true
