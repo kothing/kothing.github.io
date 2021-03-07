@@ -164,9 +164,29 @@ type result = Extract<"a" | "b" | "c" | "d", "a" | "c" | "f"> ;
 ```
 type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>
 ```
+`K extends keyof T`说明这个类型值必须为T类型属性的子集。  
+假如有一个interface定义如下:
+```
+interface Student {
+    name: string;
+    age: number;
+}
+```
+在传入这个Student到Pick中时
+```
+type PickStudent1 = Pick<Student, "name"> // 正确
+type PickStudent2 = Pick<Student, "score"> // 错误，因为Student里没有score
+```
+在上面的Omit实现中，我们用到了Exclude这个条件类型，根据上文中的说明，Exclude的效果就是寻找在keyof T中有，但在K类型中没有的成员，这样就将剩余的类型过滤了出来，再去应用Pick，就获得了我们的Omit实现。  
 用法示例: 
 ```
-type resType= Omit<{id: number, name: string, age: number}, "age" | "name">; // "{id: number}"
+interface TestOmit {
+  a: string;
+  b: numer;
+  c: boolean;
+}
+type result = Omit<TestOmit, 'a'> // 结果：result = {b: number; c: boolean}
+type result= Omit<{id: number, name: string, age: number}, "age" | "name">; // 结果：result = {id: number}
 ```
 
 ## 九、`NonNullable<T>`：从 T 中剔除 null，underfined 类型
