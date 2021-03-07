@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ""
+title:  "前端设计模式"
 author: Kothing
 categories: [ Web ]
 tags: [Javascript]
