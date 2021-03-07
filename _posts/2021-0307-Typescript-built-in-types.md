@@ -157,6 +157,7 @@ type Extract<T, U> = T extends U ? T: never
 type result = Extract<"a" | "b" | "c" | "d", "a" | "c" | "f"> ;
 结果："a" | "c"
 ```
+![Exclude](https://kothing.github.io/assets/public/Extract.png 'Exclude')  
  
 
 ## 八、`Omit<T, K>`：从类型 T 中 除去指定属性类型 K
