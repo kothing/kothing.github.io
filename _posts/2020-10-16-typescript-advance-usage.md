@@ -2,7 +2,7 @@
 layout: post
 title:  "Typescript高级用法"
 author: Kothing
-categories: [ Web ]
+categories: [ Typescript ]
 tags: [Typescript]
 image: assets/images/5.jpg
 description: "Typescript高级用法"
