@@ -9,7 +9,7 @@ description: "Typescript高级用法"
 rating: 4.5
 ---
 
-# typescript 高级技巧
+# Typescript 高级技巧
 
 ## 01 keyof
 
