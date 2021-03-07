@@ -144,7 +144,7 @@ type TestType =  {name: string} | {name: string, age: number} | "a" | "c" | "d"
 type result = Exclude<TestType, {name: string} | "c"> ;
 //结果: "a" | "d"
 ```
-![Exclude](https://github.com/kothing/Front-end-Interview/raw/main/Img/Exclude.png 'Exclude')  
+![Exclude](https://kothing.github.io/assets/public/Exclude.png 'Exclude')  
  
 
 ## 七、`Extract<T, U>`：Exclude 的反操作，（取 T U 两者的交集属性）
