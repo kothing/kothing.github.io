@@ -66,12 +66,15 @@ export const ItemContext = createContext<{
 // Child.tsx
 
 import React, { useContext } from 'react';
-import { Radio } from 'antd';
+import { Form, Radio } from 'antd';
 import { ItemStatus } from './types';
 import { ItemStatusConf } from './constant';
 import { ItemContext } from './context.ts';
 
-const Child = () => {
+interface ChildProps {
+}
+
+const Child: React.FC<ChildProps> = () => {
   const { id, type, form, viewMode, setViewMode } = useContext(ItemContext);
 
   const [value, setValue] = useState<ItemStatus>(ItemStatus.Draft);
