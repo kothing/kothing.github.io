@@ -7,7 +7,7 @@ image: assets/images/14.jpg
 rating: 4.5
 ---
 
-type.ts
+type.tsx
 ```typescript
 export enum ItemType {
   Reveal = 'REVEAL',
@@ -20,6 +20,7 @@ export enum ViewMode {
 }
 ```
 
+context.tsx
 ```typescript
 import React, { createContext, Dispatch, SetStateAction, } from 'react';
 import { FormInstance } from 'antd';
