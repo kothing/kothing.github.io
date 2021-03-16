@@ -11,8 +11,9 @@ rating: 4.5
 
 React中使用createContext的TypeScript写法示例
 
-type.tsx
+
 ```typescript
+// type.tsx
 export enum ItemType {
   Reveal = 'REVEAL',
   Replay = 'REPLAY'
@@ -24,8 +25,9 @@ export enum ViewMode {
 }
 ```
 
-context.tsx
+
 ```typescript
+// context.tsx
 import React, { createContext, Dispatch, SetStateAction, } from 'react';
 import { FormInstance } from 'antd';
 import { ReportType, ViewMode } from './types';
