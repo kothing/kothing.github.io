@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "React createContext的TypeScript写法"
+title:  "React使用createContext的TypeScript写法"
 author: Kothing
 categories: [ Typescript, React ]
+tags: [ Typescript ]
 image: assets/images/14.jpg
 rating: 4.5
 ---
