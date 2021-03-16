@@ -127,7 +127,7 @@ const App: React.FC<AppProps> = ({ id, type }) => {
 
   const contextValue = useMemo(() => ({
     id,
-    type: ItemType.Reveal,
+    type,
     form,
     viewMode, 
     setViewMode,
