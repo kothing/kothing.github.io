@@ -49,7 +49,7 @@ export const ItemStatusConf: Record<ItemStatus, string> = {
 // context.tsx
 import React, { createContext, Dispatch, SetStateAction, } from 'react';
 import { FormInstance } from 'antd';
-import { ReportType, ViewMode } from './types';
+import { ItemType, ViewMode } from './types';
 
 export const ItemContext = createContext<{
   id: number;
@@ -127,7 +127,7 @@ const App: React.FC<AppProps> = ({ id, type }) => {
 
   const contextValue = useMemo(() => ({
     id,
-    type,
+    type: ItemType.Reveal,
     form,
     viewMode, 
     setViewMode,
