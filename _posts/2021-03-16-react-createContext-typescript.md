@@ -38,8 +38,8 @@ export enum ItemStatus {
 import { ItemStatus } from './types';
 export const ItemStatusConf: Record<ItemStatus, string> = {
   [ItemStatus.Draft]: '草稿',
-  [ItemStatus.Approval]: '报告审核',
-  [ItemStatus.Approved]: '审核通过',
+  [ItemStatus.Approval]: '待审核',
+  [ItemStatus.Approved]: '已审核',
   [ItemStatus.Done]: '已完成'
 }
 ```
