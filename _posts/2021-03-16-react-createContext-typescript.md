@@ -24,6 +24,24 @@ export enum ViewMode {
   View,
   Edit
 }
+
+export enum ItemStatus {
+  Draft = 'DRAFT',
+  Approval = 'APPROVAL',
+  Approved = 'APPROVED',
+  Done = 'DONE'
+}
+```
+
+```typescript
+// constant.ts
+import { ItemStatus } from './types';
+export const ItemStatusConf: Record<ItemStatus, string> = {
+  [ItemStatus.Draft]: '草稿',
+  [ItemStatus.Approval]: '报告审核',
+  [ItemStatus.Approved]: '审核通过',
+  [ItemStatus.Done]: '已完成'
+}
 ```
 
 
@@ -36,9 +54,54 @@ import { ReportType, ViewMode } from './types';
 export const ItemContext = createContext<{
   id: number;
   type: ItemType;
-  form: FormInstance<any>;
+  form?: FormInstance<any>;
+  status?: ItemStatus;
   viewMode: ViewMode;
   setViewMode: Dispatch<SetStateAction<ViewMode>>;
-  forceUpdate: () => void;
+  forceUpdate?: () => void;
 }>({} as any);
+```
+
+```typescript
+// App.tsx
+import { Radio } from 'antd';
+import { ItemType, ItemStatus, ViewMode } from './types';
+import { ItemContext } from './context.ts'
+import { ItemStatusConf } from './constant';
+
+interface AppProps {
+  id: number;
+  type: ItemType;
+}
+
+const forceUpdate = () => {
+  console.log('forceUpdate');
+}
+
+const App: React.FC<AppProps> = ({ id, type }) => {
+  const initMode = !id ? ViewMode.Edit : ViewMode.View;
+  const [viewMode, setViewMode] = useState<ViewMode>(initMode);
+  const [radioValue, setRadioValue] = useState<ItemStatus>(ItemStatus.Draft);
+
+  const onChange = e => {
+    console.log('radio checked', e.target.value);
+    setValue(e.target.value);
+  };
+
+  const contextValue = useMemo(() => ({
+    id,
+    type,
+    viewMode, 
+    setViewMode,
+    forceUpdate
+  }), [id, type, viewMode, setViewMode, forceUpdate]);
+
+  return (
+    <RiskReportContext.Provider value={contextValue}>
+      <Radio.Group onChange={onChange} value={radioValue}>
+        {Object.entries(ItemStatusConf).map(([value, text]) => (<Radio value={value}>{text}</Radio>))}
+      </Radio.Group>
+    </RiskReportContext.Provider>
+  );
+};
 ```
