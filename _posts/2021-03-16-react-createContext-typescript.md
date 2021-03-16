@@ -64,10 +64,11 @@ export const ItemContext = createContext<{
 
 ```typescript
 // App.tsx
+import React, { useMemo } from 'react';
 import { Radio } from 'antd';
 import { ItemType, ItemStatus, ViewMode } from './types';
-import { ItemContext } from './context.ts'
 import { ItemStatusConf } from './constant';
+import { ItemContext } from './context.ts';
 
 interface AppProps {
   id: number;
@@ -97,11 +98,13 @@ const App: React.FC<AppProps> = ({ id, type }) => {
   }), [id, type, viewMode, setViewMode, forceUpdate]);
 
   return (
-    <RiskReportContext.Provider value={contextValue}>
+    <ItemContext.Provider value={contextValue}>
       <Radio.Group onChange={onChange} value={radioValue}>
         {Object.entries(ItemStatusConf).map(([value, text]) => (<Radio value={value}>{text}</Radio>))}
       </Radio.Group>
-    </RiskReportContext.Provider>
+    </ItemContext.Provider>
   );
 };
+
+export default App;
 ```
