@@ -54,7 +54,7 @@ import { ReportType, ViewMode } from './types';
 export const ItemContext = createContext<{
   id: number;
   type: ItemType;
-  form?: FormInstance<any>;
+  form: FormInstance<any>;
   status?: ItemStatus;
   viewMode: ViewMode;
   setViewMode: Dispatch<SetStateAction<ViewMode>>;
@@ -105,7 +105,7 @@ export default Child;
 // App.tsx
 
 import React, { useMemo } from 'react';
-import { Radio } from 'antd';
+import { Form } from 'antd';
 import { ItemType, ViewMode } from './types';
 import { ItemStatusConf } from './constant';
 import { ItemContext } from './context.ts';
@@ -123,10 +123,12 @@ const forceUpdate = () => {
 const App: React.FC<AppProps> = ({ id, type }) => {
   const initMode = !id ? ViewMode.Edit : ViewMode.View;
   const [viewMode, setViewMode] = useState<ViewMode>(initMode);
+  const [form] = Form.useForm();
 
   const contextValue = useMemo(() => ({
     id,
     type,
+    form,
     viewMode, 
     setViewMode,
     forceUpdate
