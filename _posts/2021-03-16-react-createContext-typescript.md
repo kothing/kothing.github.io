@@ -63,12 +63,50 @@ export const ItemContext = createContext<{
 ```
 
 ```typescript
-// App.tsx
-import React, { useMemo } from 'react';
+// Child.tsx
+
+import React, { useContext } from 'react';
 import { Radio } from 'antd';
-import { ItemType, ItemStatus, ViewMode } from './types';
+import { ItemStatus } from './types';
 import { ItemStatusConf } from './constant';
 import { ItemContext } from './context.ts';
+
+const Child = () => {
+  const { id, type, form, viewMode, setViewMode } = useContext(ItemContext);
+
+  const [value, setValue] = useState<ItemStatus>(ItemStatus.Draft);
+
+  const onChange = e => {
+    console.log('radio checked', e.target.value);
+    setValue(e.target.value);
+  };
+
+  return (
+    <Form
+      name="test_form"
+      form={form}
+    >
+      <Form.Item name="status" label="状态">
+        <Radio.Group onChange={onChange} value={value}>
+          {Object.entries(ItemStatusConf).map(([status, text]) => (<Radio value={status}>{text}</Radio>))}
+        </Radio.Group>
+      </Form.Item>
+    </Form>
+  );
+};
+
+export default Child;
+```
+
+```typescript
+// App.tsx
+
+import React, { useMemo } from 'react';
+import { Radio } from 'antd';
+import { ItemType, ViewMode } from './types';
+import { ItemStatusConf } from './constant';
+import { ItemContext } from './context.ts';
+import Child from './Child';
 
 interface AppProps {
   id: number;
@@ -82,12 +120,6 @@ const forceUpdate = () => {
 const App: React.FC<AppProps> = ({ id, type }) => {
   const initMode = !id ? ViewMode.Edit : ViewMode.View;
   const [viewMode, setViewMode] = useState<ViewMode>(initMode);
-  const [radioValue, setRadioValue] = useState<ItemStatus>(ItemStatus.Draft);
-
-  const onChange = e => {
-    console.log('radio checked', e.target.value);
-    setValue(e.target.value);
-  };
 
   const contextValue = useMemo(() => ({
     id,
@@ -99,9 +131,7 @@ const App: React.FC<AppProps> = ({ id, type }) => {
 
   return (
     <ItemContext.Provider value={contextValue}>
-      <Radio.Group onChange={onChange} value={radioValue}>
-        {Object.entries(ItemStatusConf).map(([value, text]) => (<Radio value={value}>{text}</Radio>))}
-      </Radio.Group>
+      <Child/>
     </ItemContext.Provider>
   );
 };
