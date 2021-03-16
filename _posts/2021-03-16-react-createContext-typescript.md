@@ -7,6 +7,10 @@ image: assets/images/14.jpg
 rating: 4.5
 ---
 
+## React createContext的TypeScript写法
+
+React中使用createContext的TypeScript写法示例
+
 type.tsx
 ```typescript
 export enum ItemType {
@@ -27,8 +31,7 @@ import { FormInstance } from 'antd';
 import { ReportType, ViewMode } from './types';
 
 export const ItemContext = createContext<{
-  caseId: number;
-  reportId: number;
+  id: number;
   type: ItemType;
   form: FormInstance<any>;
   viewMode: ViewMode;
