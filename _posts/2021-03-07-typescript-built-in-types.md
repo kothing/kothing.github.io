@@ -19,6 +19,8 @@ typescript 提供了很多实用内置的类型，大家安装typescript 的时�
 - `ReturnType<T>`：获取函数返回值类型。
 - `InstanceType<T>`：获取构造函数类型的实例类型。
 
+TypeScript在线运行：https://www.typescriptlang.org/zh/play
+
 ## 一、`Required<T>` ：将所有属性类型转为必选属性类型
   
   源码实现：把问号减去
