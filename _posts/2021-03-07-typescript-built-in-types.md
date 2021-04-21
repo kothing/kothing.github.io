@@ -11,7 +11,7 @@ hidden: true
 
 # Typescript实用的内置类型
 
-typescript除了一些常用的`typeof`,`keyof`等外还提供了很多实用内置的类型，大家安装typescript 的时候，可以在node-module/typescript/lib/文件下面有对js 所有的声明文件，包含es5,es6...到最新的esnext 版本，本篇主要是总结一下对typescript 实用内置类型的笔记，比如 官方文档给出的这些：
+typescript除了一些常用的`typeof`获取一个变量或对象的类型、`keyof`遍历类型的属性等外，还提供了很多实用内置的类型，大家安装typescript 的时候，可以在node-module/typescript/lib/文件下面有对js 所有的声明文件，包含es5,es6...到最新的esnext 版本，本篇主要是总结一下对typescript 实用内置类型的笔记，比如 官方文档给出的这些：
 
 - `Exclude<T, U>`：从T中剔除可以赋值给U的类型。
 - `Extract<T, U>`：提取T中可以赋值给U的类型。
