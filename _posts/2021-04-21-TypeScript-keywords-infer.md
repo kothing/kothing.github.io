@@ -13,6 +13,7 @@ hidden: true
 官方对 infer 的解释是这样的：
 
 > Within the extends clause of a conditional type, it is now possible to have infer declarations that introduce a type variable to be inferred. Such inferred type variables may > be referenced in the true branch of the conditional type. It is possible to have multiple infer locations for the same type variable.
+
 翻译后大概意思：
 > infer 关键词常在条件类型中和 extends 关键词一同出现，表示将要推断的类型，作为类型变量可以在三元表达式的 True 部分引用。而 ReturnType 正是使用这种方式提取到了函数的返回类型
 
