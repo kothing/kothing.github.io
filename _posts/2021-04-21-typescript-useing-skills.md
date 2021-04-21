@@ -56,3 +56,7 @@ const AnimalMap: Record<AnimalType, AnimalDescription> = {
 ```
 const toArray = <T>(element: T) => [element]; // Error in .tsx file.
 ```
+加 extends 可破
+```
+const toArray = <T extends {}>(element: T) => [element]; // No errors.
+```
