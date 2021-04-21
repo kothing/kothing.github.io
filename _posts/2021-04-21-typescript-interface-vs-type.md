@@ -4,7 +4,7 @@ title: "Typescript中interface和type区别详解"
 author: Kothing
 categories: [ TypeScript ]
 tags: [ TypeScript ]
-image: assets/images/13.jpg
+image: assets/images/photo-35.jpg
 rating: 5
 hidden: true
 ---
@@ -89,6 +89,7 @@ type User = Name & {
 **type 可以而 interface 不行**
 
 - type 可以声明基本类型别名，联合类型，元组等类型
+
 ```
 // 基本类型别名
 type Name = string
@@ -108,6 +109,7 @@ type PetList = [Dog, Pet]
 ```
 
 - type 语句中还可以使用 typeof 获取实例的 类型进行赋值
+
 ```
 // 当你想获取一个变量的类型时，使用 typeof
 let div = document.createElement('div');
