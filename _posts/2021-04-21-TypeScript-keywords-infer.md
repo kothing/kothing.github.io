@@ -19,6 +19,17 @@ hidden: true
 
 **`infer`作用是在extends的条件语句中推断待推断的类型**
 
+## 解析举例
+```
+type ReturnType<T> = T extends (...args: any[]) => infer R ? R : any;
+
+type func = () => number;
+type variable = string;
+type funcReturnType = ReturnType<func>; // funcReturnType 类型为 number
+type varReturnType = ReturnType<variable>; // varReturnType 类型为 string
+```
+在这个例子中，infer R代表待推断的返回值类型，如果T是一个函数，则返回函数的返回值，否则返回any
+
 ## infer 的常见使用方式
 ### 1. 简单的类型提取
 ```
