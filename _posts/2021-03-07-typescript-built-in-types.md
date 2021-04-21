@@ -206,7 +206,7 @@ type T0 = NonNullable<string | number | undefined>;
 type T0 = string | number
 ```
 
-## 十、`inter` 关键词
+## 十、`infer` 关键词
 1. typescript2.8 新出的语法
 2. 在条件语句中作为待推断的类型变量，推断返回值类型
 3. 可以将元组变成联合类型
