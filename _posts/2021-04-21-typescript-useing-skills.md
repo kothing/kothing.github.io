@@ -24,22 +24,29 @@ interface Person {
 ## 巧用Record类型
 业务中，我们经常会写枚举和对应的映射:
 ```
-type AnimalType = 'cat' | 'dog' | 'frog';
+type AnimalType = 'cat' | 'dog' | 'fish';
 const AnimalMap = {
-  cat: { name: '猫', icon: ' '},
-  dog: { name: '狗', icon: ' ' },
-  forg: { name: '蛙', icon: ' ' },
+  cat: { name: '猫', age: 1},
+  dog: { name: '狗', age: 2 },
+  fish: { name: '鱼', age: 1 },
 };
 ```
-注意到上面 `forg` 拼错了吗？
+但是没有给每个Animal描述设置ts类型，怎么做呢？
 
-`Record` 可以保证映射完整:
+使用`Record`:
 ```
-type AnimalType = 'cat' | 'dog' | 'frog';
-interface AnimalDescription { name: string, icon: string }
+// 动物名
+type AnimalType = 'cat' | 'dog' | 'fish';
+// 动物属性描述
+interface AnimalDescription {
+  name: string;
+  age: number;
+}
+// 使用Record给动物的描述定义类型
 const AnimalMap: Record<AnimalType, AnimalDescription> = {
-  cat: { name: '猫', icon: ' '},
-  dog: { name: '狗', icon: ' ' },
-  forg: { name: '蛙', icon: ' ' }, // Hey!
+  cat: { name: '猫', age: 1},
+  dog: { name: '狗', age: 2 },
+  fish: { name: '蛙', age: 1 },
 };
+// 此时 cat、dog、fish的name类型是string，age是number类型
 ```
