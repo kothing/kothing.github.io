@@ -50,3 +50,9 @@ const AnimalMap: Record<AnimalType, AnimalDescription> = {
 };
 // 此时 cat、dog、fish的name类型是string，age是number类型
 ```
+
+## 巧用tsx+extends
+在React中.tsx 文件里，泛型可能会被当做 jsx 标签
+```
+const toArray = <T>(element: T) => [element]; // Error in .tsx file.
+```
