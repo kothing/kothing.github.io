@@ -4,7 +4,7 @@ title: "Typescript关键字infer的理解与使用"
 author: Kothing
 categories: [ TypeScript ]
 tags: [ TypeScript ]
-image: assets/images/photo-32.jpg
+image: assets/images/17.jpg
 rating: 5
 hidden: true
 ---
