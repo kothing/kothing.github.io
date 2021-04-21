@@ -56,6 +56,8 @@ const AnimalMap: Record<AnimalType, AnimalDescription> = {
 ```
 const toArray = <T>(element: T) => [element]; // Error in .tsx file.
 ```
+TypeScript泛型写法<T>在React中被误认为是html标签（类似<div>）
+
 加 extends 可破
 ```
 const toArray = <T extends {}>(element: T) => [element]; // No errors.
