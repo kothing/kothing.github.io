@@ -65,7 +65,7 @@ let user: Partial<User> = {} ;//属性类型为可选，所以不写也不会报
 ```
  
 
-## 三、`Readony`： 将所有属性类型转为只读属性选项类型
+## 三、`Readony<T>`： 将所有属性类型转为只读属性选项类型
 源码实现: 在属性key 前面加readonly 关键词
 ```
 type Readonly<T> = {
@@ -86,7 +86,7 @@ readOnlyUser.name = "mike" ;//报错，无法赋值，只读属性，只能初�
 ```
  
 
-## 四、`Pick`：从 T 中筛选出 K (大类型中挑选小类型)
+## 四、`Pick<T, K>`：从 T 中筛选出 K (大类型中挑选小类型)
 源码实现：
 ```
 type Pick<T, K extends keyof T> = {
@@ -112,7 +112,7 @@ let newDirection: ResDirection = {
 ```
  
 
-## 五、`Record`： 标记 K 中的属性为 T 类型; key=>value 
+## 五、`Record<T, K>`： 标记 K 中的属性为 T 类型; key=>value 
 源码实现:
 ```
 type Record<K extends keyof any, T> = {
