@@ -102,12 +102,13 @@ type Direction  = {
   "RIGHT": string,
   "BOTTOM": string
 }
-type resDirection = Pick<Direction, "LEFT" | "TOP">
-//resType 结果是： { "LEFT": string, "TOP": string}
-let res: resType = {
+type ResDirection = Pick<Direction, "LEFT" | "TOP">
+
+let newDirection: ResDirection = {
    LEFT: "left",
    TOP: "top"
 }
+//newDirection 结果是： { "LEFT": string, "TOP": string}
 ```
  
 
