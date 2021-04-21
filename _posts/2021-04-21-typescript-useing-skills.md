@@ -68,8 +68,8 @@ const toArray = <T extends {}>(element: T) => [element]; // No errors.
 - **对象属性不存在错误**:
 
 这种情况一般在于，该对象值TS知道其有明确类型（不是any，如果是any就不会报错了），但是当前要访问的属性不存在与其已知类型结构。这种情况分两种办法解决：
-> 如果能修改该值的类型声明，那么添加上缺损值的属性即可；
-> 否则，使用 // @ts-ignore 注释，或者使用类型断言，强制为 any 类型：(this.props as any).notExists
+> 如果能修改该值的类型声明，那么添加上缺损值的属性即可；  
+> 否则，使用 // @ts-ignore 注释，或者使用类型断言，强制为 any 类型：(this.props as any).notExists  
 
 - **类型不明确的错误**:
 
