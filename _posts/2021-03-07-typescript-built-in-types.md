@@ -197,7 +197,7 @@ type result= Omit<{id: number, name: string, age: number}, "age" | "name">; // �
 ## 九、`NonNullable<T>`：从 T 中剔除 null，underfined 类型
 源码实现：
 ```
-type NonNullable<T> = T extends null | undefined?never: T
+type NonNullable<T> = T extends null | undefined ? never : T
 ```
 用法示例：
 ```
