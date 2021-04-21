@@ -63,7 +63,7 @@ TypeScript泛型写法<T>在React中被误认为是html标签（类似<div>）
 const toArray = <T extends {}>(element: T) => [element]; // No errors.
 ```
 
-## 解决类型错误提示问题
+## 解决类型错误问题
 
 - **对象属性不存在错误**:
 
@@ -71,6 +71,7 @@ const toArray = <T extends {}>(element: T) => [element]; // No errors.
 
 > 如果能修改该值的类型声明，那么添加上缺损值的属性即可；  
 > 否则，使用 `// @ts-ignore` 注释，或者使用类型断言，强制为 any 类型   
+
 
 - **类型不明确的错误**:
 
@@ -81,6 +82,7 @@ const toArray = <T extends {}>(element: T) => [element]; // No errors.
 > 使用 // @ts-ignore 注释  
 
 应该优先考虑类型保护，因为类型保护本质上就是增加代码逻辑，帮助TS理解确定当前类型，所以代码也会更健壮。而后两种办法，除非明确知道此时该值就是确定的类型，否则即使通过了TS编译器，在代码执行阶段，依然有可能出错！
+
 
 - **值可能不存在的或为undefined的错误**:
 
