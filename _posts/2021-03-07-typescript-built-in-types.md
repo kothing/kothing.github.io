@@ -112,7 +112,7 @@ let newDirection: ResDirection = {
 ```
  
 
-## 五、`Record<T, K>`： 标记 K 中的属性为 T 类型; key=>value 
+## 五、`Record<T, K>`： 将K中所有属性值转化为T类型
 源码实现:
 ```
 type Record<K extends keyof any, T> = {
