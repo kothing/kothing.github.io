@@ -201,7 +201,9 @@ type NonNullable<T> = T extends null | undefined ? never : T
 ```
 用法示例：
 ```
-type resType = NonNullable<string | number | null | undefined> // string | number
+type T0 = NonNullable<string | number | undefined>;
+// 结果
+type T0 = string | number
 ```
 
 ## 十、`inter` 关键词
