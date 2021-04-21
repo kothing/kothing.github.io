@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Typescript实用的内置类型"
+title: "Typescript关键字infer的理解与使用"
 author: Kothing
 categories: [ TypeScript ]
 tags: [ TypeScript ]
