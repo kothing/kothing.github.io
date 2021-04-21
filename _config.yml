@@ -1,7 +1,7 @@
 # Site
 name: "Kothing"
-title: "Kothing, 记录、分享程序之美"
-description: "Accept what was and what is, and you’ll have more positive energy to pursue what will be."
+title: "Kothing, 分享、记录代码之美，Share and record the beauty of code"
+description: "Share and record the beauty of code"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
