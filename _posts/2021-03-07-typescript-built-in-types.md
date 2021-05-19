@@ -6,7 +6,6 @@ categories: [ TypeScript ]
 tags: [ TypeScript ]
 image: assets/images/photo-43.jpg
 rating: 5
-hidden: true
 ---
 
 # Typescript实用的内置类型
