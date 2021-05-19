@@ -4,7 +4,7 @@ title: "Git经常使用的实用命令"
 author: Kothing
 categories: [ Git ]
 tags: [ Git ]
-image: assets/images/photo-43.jpg
+image: assets/images/photo-09.jpg
 rating: 5
 ---
 
