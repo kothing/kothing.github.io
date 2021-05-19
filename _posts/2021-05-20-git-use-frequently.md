@@ -32,13 +32,13 @@ git log -p [filename]
 git remote -v
 ```
 
-### 4、git reset --hard  | --soft | --mixed 的区别
+### 4、`git reset --hard`  | `--soft` | `--mixed` 的用法
 
-- --hard 退回到某一个版本，这个版本之后的提交都不见了
-- --soft  退回到某一个版本，这个版本之后的提交都等待commit
-- --mixed (默认)退回到某一个版本，这个版本之后的提交都等待add
+- `--hard` 退回到某一个版本，这个版本之后的提交都不见了
+- `--soft`  退回到某一个版本，这个版本之后的提交都等待commit
+- `--mixed` (默认)退回到某一个版本，这个版本之后的提交都等待add
 
-### 5、如何覆盖上一次的提交记录？
+### 5、覆盖上一次的提交记录
 
 ```bash
 # 使用一次新的commit,替代上一次提交 (important)
@@ -46,7 +46,23 @@ git remote -v
 git commit --amend -m [message]
 ```
 
-### 6、如何合并某一次 commit 的修改？
+### 6、清除未跟踪的文件
+
+```bash
+git clean -f
+```
+
+### 7、查看两次 commit 的差异
+
+```bash
+# 比较两个 commit 之间的差异
+git diff [commit1] [commit2]
+
+# 显示暂存区与工作区的差异
+git diff
+```
+
+### 8、合并某一次 commit 的修改
 `git cherry-pick`：能够把另一个分支的一个或多个提交复制到当前分支。
 
 ```bash
@@ -62,23 +78,8 @@ git cherry-pick [commit]
 
 > git cherry-pick 参考： http://www.ruanyifeng.com/blog/2020/04/git-cherry-pick.html
 
-### 7、如何清除未跟踪的文件？
 
-```bash
-git clean -f
-```
-
-### 8、查看两次 commit 的差异
-
-```bash
-# 比较两个 commit 之间的差异
-git diff [commit1] [commit2]
-
-# 显示暂存区与工作区的差异
-git diff
-```
-
-### 9、如何合并多个 commit?
+### 9、合并多个 commit?
 
 1、使用 git reset（推荐）
 
