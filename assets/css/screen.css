@@ -118,8 +118,7 @@ section.recent-posts {
 }
 
 .article-post {
-    font-family: Merriweather;
-    font-size: 1.1rem;
+    font-size: 1.0rem;
     line-height: 1.75rem;
     color: rgba(0, 0, 0, .8);
 }
