@@ -17,6 +17,10 @@ h6 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 700;
     margin: 1rem 0;
+    background: linear-gradient(45deg,#151d1a,#00ab6b);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    transition: transform .35s;
 }
 
 .h1, h1 {
