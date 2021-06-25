@@ -117,6 +117,18 @@ section.recent-posts {
     margin-bottom: -1px;
 }
 
+.article-post {
+    font-family: Merriweather;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+    color: rgba(0, 0, 0, .8);
+}
+
+.article-post p,
+.article-post blockquote {
+    margin: 0 0 0.75rem 0;
+}
+
 .article-post ol,
 .article-post ul {
     margin-bottom: 1.5rem;
@@ -396,13 +408,6 @@ span.post-read-more a:hover {
     color: rgba(0, 0, 0, .8);
 }
 
-.article-post {
-    font-family: Merriweather;
-    font-size: 1.1rem;
-    line-height: 1.75rem;
-    color: rgba(0, 0, 0, .8);
-}
-
 blockquote {
     border-left: 4px solid #00ab6b;
     padding: 0 20px;
@@ -410,10 +415,7 @@ blockquote {
     color: rgba(0, 0, 0, .5);
 }
 
-.article-post p,
-.article-post blockquote {
-    margin: 0 0 0.75rem 0;
-}
+
 
 .featured-image-box {
     width: auto;
