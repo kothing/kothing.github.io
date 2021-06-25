@@ -16,6 +16,7 @@ h5,
 h6 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-weight: 700;
+    margin: 0;
 }
 
 .h1, h1 {
