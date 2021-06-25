@@ -4,7 +4,7 @@
     font-size: 100%;
 }
 .highlight {
-    background-color: #efefef;
+    background-color: #f6f8fa;
     .c { color: #999988; font-style: italic } /* Comment */
     .err { color: #a61717; background-color: #e3d2d2 } /* Error */
     .k { color:#d73a49; } /* Keyword */
@@ -78,4 +78,5 @@ td.rouge-code {
 pre.lineno {
     color: #9999;
     border-right: #E3EDF3 1px solid;
+    padding-left: 10px;
 }
