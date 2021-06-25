@@ -749,22 +749,31 @@ h4,
 h5,
 h6 {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
 }
 
-.article-post .h1,
-.article-post .h2,
-.article-post .h3,
-.article-post .h4,
-.article-post .h5,
-.article-post .h6,
-.article-post h1,
-.article-post h2,
-.article-post h3,
-.article-post h4,
-.article-post h5,
-.article-post h6 {
-    font-weight: 700;
-    margin: 0;
+.h1, h1 {
+    line-height: 2.5rem
+}
+
+.h2, h2 {
+    line-height: 2rem
+}
+
+.h3, h3 {
+    line-height: 1.75rem
+}
+
+.h4, h4 {
+    line-height: 1.5rem
+}
+
+.h5, h5 {
+    line-height: 1.25rem
+}
+
+.h6, h6 {
+    line-height: 1rem
 }
 
 .article-post img.shadow {
