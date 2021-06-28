@@ -41,7 +41,7 @@ rating: 5
 
 比如，我们可以应用外观模式封装一个统一的DOM元素事件绑定/取消方法，用于兼容不同版本的浏览器和更方便的调用：
 
-```
+```js
 // 绑定事件
 function addEvent(element, event, handler) {
   if (element.addEventListener) {
@@ -89,7 +89,7 @@ function removeEvent(element, event, handler) {
 
 **StockPriceAPI：**
 
-```
+```js
 function StockPriceAPI() {
   // Subject Interface实现
   this.getValue = function (stock, callback) {
@@ -117,7 +117,7 @@ function StockPriceAPI() {
 
 **StockPriceAPIProxy：**
 
-```
+```js
 function StockPriceAPIProxy() {
   // 缓存对象
   this.cache = {};
@@ -143,7 +143,7 @@ function StockPriceAPIProxy() {
 
 测试一下：
 
-```
+```js
 const api = new StockPriceAPIProxy();
 api.getValue('GOOGL', (price) => { console.log(price) });
 api.getValue('AAPL', (price) => { console.log(price) });
@@ -158,7 +158,7 @@ setTimeout(() => {
 
 **输出：**
 
-```
+```js
 Calling external API ... 
 Calling external API ... 
 Calling external API ... 
@@ -186,7 +186,7 @@ $173.70
 
 以上图为例，我们构造一个简单的汽车工厂来生产汽车：
 
-```
+```js
 // 汽车构造函数
 function SuzukiCar(color) {
   this.color = color;
@@ -233,7 +233,7 @@ function CarFactory() {
 
 **测试一下：**
 
-```
+```js
 const carFactory = new CarFactory();
 const cars = [];
 
@@ -252,7 +252,7 @@ for (const car of cars) {
 
 **输出：**
 
-```
+```js
 Hi, I am a brown Suzuki car
 Hi, I am a grey Honda car
 Hi, I am a red BMW car
@@ -284,7 +284,7 @@ Hi, I am a red BMW car
 
 Javascript中单例模式可以通过以下方式实现：
 
-```
+```js
 // 单例构造器
 const FooServiceSingleton = (function () {
   // 隐藏的Class的构造函数
@@ -309,7 +309,7 @@ const FooServiceSingleton = (function () {
 
 我们可以验证下单例对象是否创建成功：
 
-```
+```js
 const fooService1 = FooServiceSingleton.getInstance();
 const fooService2 = FooServiceSingleton.getInstance();
 
@@ -326,7 +326,7 @@ console.log(fooService1 === fooService2); // true
 
 还是以登录鉴权的例子我们仿照 **passport.js** 的思路通过代码来理解策略模式：
 
-```
+```js
 /**
  * 登录控制器
  */
@@ -417,7 +417,7 @@ ES6中的迭代器 [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaS
 
 为Javascript的数组实现一个迭代器可以这么写：
 
-```
+```js
 const item = [1, 'red', false, 3.14];
 
 function Iterator(items) {
@@ -437,7 +437,7 @@ Iterator.prototype = {
 
 验证一下迭代器是否工作：
 
-```
+```js
 const iterator = new Iterator(item);
 
 while(iterator.hasNext()){
@@ -454,7 +454,7 @@ ES6提供了更简单的迭代循环语法 `for...of`，使用该语法的前提
 
 比如我们实现一个 `Range` 类用于在某个数字区间进行迭代：
 
-```
+```js
 function Range(start, end) {
   return {
     [Symbol.iterator]: function () {
@@ -473,14 +473,14 @@ function Range(start, end) {
 
 **验证一下：**
 
-```
+```js
 for (num of Range(1, 5)) {
   console.log(num);
 }
 ```
 
 **输出：**
-```
+```js
 1, 2, 3, 4
 ```
 
@@ -492,7 +492,7 @@ for (num of Range(1, 5)) {
 
 比如给DOM元素绑定事件的 `addEventListener()` 方法：
 
-```
+```js
 target.addEventListener(type, listener [, options]);
 ```
 
@@ -508,7 +508,7 @@ Target就是被观察对象Subject，listener就是观察者Observer。
 
 用JavaScript手动实现观察者模式：
 
-```
+```js
 // 被观察者
 function Subject() {
   this.observers = [];
@@ -536,7 +536,7 @@ Subject.prototype = {
 
 验证一下订阅是否成功：
 
-```
+```js
 const subject = new Subject();
 
 function observer1() {
@@ -555,21 +555,21 @@ subject.fire();
 
 **输出：**
 
-```
+```js
 Observer 1 Firing! 
 Observer 2 Firing!
 ```
 
 验证一下取消订阅是否成功：
 
-```
+```js
 subject.unsubscribe(observer2);
 subject.fire();
 ```
 
 **输出：**
 
-```
+```js
 Observer 1 Firing!
 ```
 
@@ -583,7 +583,7 @@ Observer 1 Firing!
 
 **聊天室成员类：**
 
-```
+```js
 function Member(name) {
   this.name = name;
   this.chatroom = null;
@@ -603,7 +603,7 @@ Member.prototype = {
 
 **聊天室类：**
 
-```
+```js
 function Chatroom() {
   this.members = {};
 }
@@ -623,7 +623,7 @@ Chatroom.prototype = {
 
 **测试一下：**
 
-```
+```js
 const chatroom = new Chatroom();
 const bruce = new Member('bruce');
 const frank = new Member('frank');
@@ -636,7 +636,7 @@ bruce.send('Hey frank', frank);
 
 **输出：**
 
-```
+```js
 bruce to frank: hello frank
 ```
 
@@ -663,7 +663,7 @@ bruce to frank: hello frank
 
 **Receiving Object：**
 
-```
+```js
 function Employee(name, salary) {
   this.name = name;
   this.salary = salary;
@@ -684,7 +684,7 @@ Employee.prototype = {
 
 **Visitor Object：**
 
-```
+```js
 function Visitor() { }
 
 Visitor.prototype = {
@@ -696,7 +696,7 @@ Visitor.prototype = {
 
 **验证一下：**
 
-```
+```js
 const employee = new Employee('bruce', 1000);
 const visitor = new Visitor();
 employee.accept(visitor);
@@ -705,7 +705,7 @@ console.log(employee.getSalary());
 ```
 
 **输出：**
-```
+```js
 2000
 ```
 
