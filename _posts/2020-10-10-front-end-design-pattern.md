@@ -27,15 +27,12 @@ rating: 5
 
 以上定义非常的抽象和晦涩，对于我们初学者并没有太多帮助，要了解这些设计模式真正的作用和价值还是需要通过实践去加以理解。这三大类设计模式又可以分成更多的小类，如下图：
 
-![design patterns](http://lc-3Cv4Lgro.cn-n1.lcfile.com/960df36ee5a693833541/patterns.svg)
 
 下面我们选择一些在前端开发过程中常见的模式进行一一讲解。
 
 # 一. 结构型模式（Structural Patterns）
 
 ## 1. 外观模式（Facade Pattern）
-
-![facade](http://lc-3Cv4Lgro.cn-n1.lcfile.com/23064fc82c0d5b7b8d2d/facade.png)
 
 外观模式是最常见的设计模式之一，它为子系统中的一组接口提供一个统一的高层接口，使子系统更容易使用。简而言之外观设计模式就是把多个子系统中复杂逻辑进行抽象，从而提供一个更统一、更简洁、更易用的API。很多我们常用的框架和库基本都遵循了外观设计模式，比如JQuery就把复杂的原生DOM操作进行了抽象和封装，并消除了浏览器之间的兼容问题，从而提供了一个更高级更易用的版本。其实在平时工作中我们也会经常用到外观模式进行开发，只是我们不自知而已。
 
@@ -66,8 +63,6 @@ function removeEvent(element, event, handler) {
 ```
 
 ## 2. 代理模式（Proxy Pattern）
-
-![proxy](http://lc-3Cv4Lgro.cn-n1.lcfile.com/5529c921e862b72a3746/proxy.png)
 
 首先，一切皆可代理，不管是在实现世界还是计算机世界。现实世界中买房有中介、打官司有律师、投资有经纪人，他们都是代理，由他们帮你处理由于你缺少时间或者专业技能而无法完成的事务。类比到计算机领域，代理也是一样的作用，当访问一个对象本身的代价太高（比如太占内存、初始化时间太长等）或者需要增加额外的逻辑又不修改对象本身时便可以使用代理。ES6中也增加了 [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) 的功能。
 
@@ -178,8 +173,6 @@ $173.70
 
 ## 1. 工厂模式（Factory Pattern）
 
-![factory](http://lc-3Cv4Lgro.cn-n1.lcfile.com/3af93a26cdc73dd6b492/factory.png)
-
 现实生活中的工厂按照既定程序制造产品，随着生产原料和流程不同生产出来的产品也会有区别。应用到软件工程的领域，工厂可以看成是一个制造其他对象的对象，制造出的对象也会随着传入工厂对象参数的不同而有所区别。
 
 什么场景适合应用工厂模式而不是直接 `new` 一个对象呢？当构造函数过多不方便管理，且需要创建的对象之间存在某些关联（有同一个父类、实现同一个接口等）时，不妨使用工厂模式。工厂模式提供一种集中化、统一化的方式，避免了分散创建对象导致的代码重复、灵活性差的问题。
@@ -262,8 +255,6 @@ Hi, I am a red BMW car
 
 ## 2. 单例模式（Singleton Pattern）
 
-![singleton](http://lc-3Cv4Lgro.cn-n1.lcfile.com/7c16c62186e7d711218d/singleton.png)
-
 顾名思义，单例模式中Class的实例个数最多为1。当需要一个对象去贯穿整个系统执行某些任务时，单例模式就派上了用场。而除此之外的场景尽量避免单例模式的使用，因为单例模式会引入全局状态，而一个健康的系统应该避免引入过多的全局状态。
 
 实现单例模式需要解决以下几个问题：
@@ -319,8 +310,6 @@ console.log(fooService1 === fooService2); // true
 # 三. 行为型模式（Behavioral Patterns）
 
 ## 1. 策略模式（Strategy Pattern）
-
-![strategy](http://lc-3Cv4Lgro.cn-n1.lcfile.com/8371529e9200dba8abc4/strategy.png)
 
 策略模式简单描述就是：对象有某个行为，但是在不同的场景中，该行为有不同的实现算法。比如每个人都要“交个人所得税”，但是“在美国交个人所得税”和“在中国交个人所得税”就有不同的算税方法。最常见的使用策略模式的场景如登录鉴权，鉴权算法取决于用户的登录方式是手机、邮箱或者第三方的微信登录等等，而且登录方式也只有在运行时才能获取，获取到登录方式后再动态的配置鉴权策略。所有这些策略应该实现统一的接口，或者说有统一的行为模式。Node 生态里著名的鉴权库 [Passport.js](http://www.passportjs.org/) API的设计就应用了策略模式。
 
@@ -398,8 +387,6 @@ app.use('/login/social', function (req, res) {
 1. 关注分离，每个strategy类控制自己的算法逻辑，strategy和其使用者之间也相互独立
 
 ## 2. 迭代器模式（Iterator Pattern）
-
-![iterator](http://lc-3Cv4Lgro.cn-n1.lcfile.com/aeaeff96a83849a91731/Iterator.png)
 
 ES6中的迭代器 [Iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators) 相信大家都不陌生，迭代器用于遍历容器（集合）并访问容器中的元素，而且无论容器的数据结构是什么（Array、Set、Map等），迭代器的接口都应该是一样的，都需要遵循 [迭代器协议](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol)。
 
@@ -485,8 +472,6 @@ for (num of Range(1, 5)) {
 ```
 
 ## 3. 观察者模式（Observer Pattern）
-
-![observer](http://lc-3Cv4Lgro.cn-n1.lcfile.com/252c467e10809ca02945/observer.png)
 
 观察者模式又称发布订阅模式（Publish/Subscribe Pattern），是我们经常接触到的设计模式，日常生活中的应用也比比皆是，比如你订阅了某个博主的频道，当有内容更新时会收到推送；又比如JavaScript中的事件订阅响应机制。观察者模式的思想用一句话描述就是：**被观察对象（subject）维护一组观察者（observer），当被观察对象状态改变时，通过调用观察者的某个方法将这些变化通知到观察者**。
 
@@ -575,8 +560,6 @@ Observer 1 Firing!
 
 ## 4. 中介者模式（Mediator Pattern）
 
-![mediator](http://lc-3Cv4Lgro.cn-n1.lcfile.com/f5e2d4040c795599060d/mediator.png)
-
 在中介者模式中，中介者（Mediator）包装了一系列对象相互作用的方式，使得这些对象不必直接相互作用，而是由中介者协调它们之间的交互，从而使它们可以松散偶合。当某些对象之间的作用发生改变时，不会立即影响其他的一些对象之间的作用，保证这些作用可以彼此独立的变化。
 
 中介者模式和观察者模式有一定的相似性，都是一对多的关系，也都是集中式通信，不同的是中介者模式是处理同级对象之间的交互，而观察者模式是处理Observer和Subject之间的交互。中介者模式有些像婚恋中介，相亲对象刚开始并不能直接交流，而是要通过中介去筛选匹配再决定谁和谁见面。中介者模式比较常见的应用比如聊天室，聊天室里面的人之间并不能直接对话，而是通过聊天室这一媒介进行转发。一个简易的聊天室模型可以实现如下：
@@ -644,8 +627,6 @@ bruce to frank: hello frank
 
 
 ## 5. 访问者模式（Visitor Pattern）
-
-![visitor](http://lc-3Cv4Lgro.cn-n1.lcfile.com/e46eca323512078a4db3/visitor.svg)
 
 访问者模式是一种将算法与对象结构分离的设计模式，通俗点讲就是：访问者模式让我们能够在不改变一个对象结构的前提下能够给该对象增加新的逻辑，新增的逻辑保存在一个独立的访问者对象中。访问者模式常用于拓展一些第三方的库和工具。
 
