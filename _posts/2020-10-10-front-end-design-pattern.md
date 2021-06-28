@@ -4,7 +4,7 @@ title:  "前端设计模式"
 author: Kothing
 categories: [ Web ]
 tags: [Javascript]
-image: /assets/images/photo-55.jpg
+image: assets/images/photo-55.jpg
 description: "什么是前端设计模式，有哪些设计模式？"
 rating: 5
 ---
