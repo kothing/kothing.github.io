@@ -917,27 +917,25 @@
       }
 
       function ke_create() {
-        var kothingEditor_c = KothingEditor.create("exampleFunction", options);
-
-        kothingEditor_c.onScroll = function(e) {
+        kothingEditor.onScroll = function(e) {
           console.log("onScroll", e);
         };
-        kothingEditor_c.onClick = function(e) {
+        kothingEditor.onClick = function(e) {
           console.log("onClick", e);
         };
-        kothingEditor_c.onKeyDown = function(e) {
+        kothingEditor.onKeyDown = function(e) {
           console.log("onKeyDown", e);
         };
-        kothingEditor_c.onKeyUp = function(e) {
+        kothingEditor.onKeyUp = function(e) {
           console.log("onKeyUp", e);
         };
-        kothingEditor_c.onDrop = function(e) {
+        kothingEditor.onDrop = function(e) {
           console.log("onDrop", e);
         };
-        kothingEditor_c.onChange = function(contents) {
+        kothingEditor.onChange = function(contents) {
           console.log("onChange", contents);
         };
-        kothingEditor_c.onImageUpload = function(
+        kothingEditor.onImageUpload = function(
           targetImgElement,
           index,
           state,
@@ -957,7 +955,7 @@
               remainingFilesCount
           );
         };
-        kothingEditor_c.showInline = function(toolbar, context) {
+        kothingEditor.showInline = function(toolbar, context) {
           console.log("toolbar", toolbar);
           console.log("context", context);
         };
