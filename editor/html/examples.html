@@ -787,7 +787,7 @@
       editorImageSample.onImageUpload = imageUpload;
 
       // user function
-      var KothingEditor = null;
+      var kothingEditor = null;
       var opt1 = document.getElementById("opt1");
       var opt2 = document.getElementById("opt2");
 
@@ -805,7 +805,7 @@
       };
 
       function ke_setOptions() {
-        KothingEditor.setOptions({
+        kothingEditor.setOptions({
           mode: "inline",
           minHeight: "300px",
           colorList: [
@@ -826,7 +826,7 @@
       }
 
       function ke_replaceOptions() {
-        KothingEditor.setOptions({
+        kothingEditor.setOptions({
           mode: "classic",
           minHeight: null,
           colorList: null,
@@ -853,90 +853,90 @@
       }
 
       function ke_noticeOpen(message) {
-        KothingEditor.noticeOpen(message);
+        kothingEditor.noticeOpen(message);
       }
 
       function ke_noticeClose() {
-        KothingEditor.noticeClose();
+        kothingEditor.noticeClose();
       }
 
       function ke_save() {
-        KothingEditor.save();
+        kothingEditor.save();
       }
 
       function ke_getContext() {
-        console.log(KothingEditor.getContext());
+        console.log(kothingEditor.getContext());
       }
 
       function ke_getContents() {
-        alert(KothingEditor.getContents());
+        alert(kothingEditor.getContents());
       }
 
       function ke_getImagesInfo() {
-        console.log(KothingEditor.getImagesInfo());
+        console.log(kothingEditor.getImagesInfo());
       }
 
       function ke_insertImage() {
-        KothingEditor.insertImage(
+        kothingEditor.insertImage(
           document.getElementById("example_files_input").files
         );
       }
 
       function ke_insertHTML(html) {
-        KothingEditor.insertHTML(html);
+        kothingEditor.insertHTML(html);
       }
 
       function ke_setContents(content) {
-        KothingEditor.setContents(content);
+        kothingEditor.setContents(content);
       }
 
       function ke_appendContents(content) {
-        KothingEditor.appendContents(content);
+        kothingEditor.appendContents(content);
       }
 
       function ke_disabled() {
-        KothingEditor.disabled();
+        kothingEditor.disabled();
       }
 
       function ke_enabled() {
-        KothingEditor.enabled();
+        kothingEditor.enabled();
       }
 
       function ke_show() {
-        KothingEditor.show();
+        kothingEditor.show();
       }
 
       function ke_hide() {
-        KothingEditor.hide();
+        kothingEditor.hide();
       }
 
       function ke_destroy() {
-        KothingEditor.destroy();
+        kothingEditor.destroy();
         KothingEditor = null;
       }
 
       function ke_create() {
-        KothingEditor = KothingEditor.create("exampleFunction", options);
+        var kothingEditor_c = KothingEditor.create("exampleFunction", options);
 
-        KothingEditor.onScroll = function(e) {
+        kothingEditor_c.onScroll = function(e) {
           console.log("onScroll", e);
         };
-        KothingEditor.onClick = function(e) {
+        kothingEditor_c.onClick = function(e) {
           console.log("onClick", e);
         };
-        KothingEditor.onKeyDown = function(e) {
+        kothingEditor_c.onKeyDown = function(e) {
           console.log("onKeyDown", e);
         };
-        KothingEditor.onKeyUp = function(e) {
+        kothingEditor_c.onKeyUp = function(e) {
           console.log("onKeyUp", e);
         };
-        KothingEditor.onDrop = function(e) {
+        kothingEditor_c.onDrop = function(e) {
           console.log("onDrop", e);
         };
-        KothingEditor.onChange = function(contents) {
+        kothingEditor_c.onChange = function(contents) {
           console.log("onChange", contents);
         };
-        KothingEditor.onImageUpload = function(
+        kothingEditor_c.onImageUpload = function(
           targetImgElement,
           index,
           state,
@@ -956,7 +956,7 @@
               remainingFilesCount
           );
         };
-        KothingEditor.showInline = function(toolbar, context) {
+        kothingEditor_c.showInline = function(toolbar, context) {
           console.log("toolbar", toolbar);
           console.log("context", context);
         };
