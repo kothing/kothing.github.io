@@ -89,8 +89,8 @@ let fruits: Food.Fruits;
 
 ## 如何引入写好的命名空间?
 有2种方式：
-+ 第一种：/// <reference path="xxx.ts" />, 
-+ 第二种：还有就是import:
++ 第一种："/// <reference path="xxx.ts" />" 
++ 第二种：还有就是import
 
 ### 通过 "/// <reference path='xxx.ts'/>" 导入
 通过reference进行导入相当于xxx.ts文件内的命名空间和当前文件进行了合并:
