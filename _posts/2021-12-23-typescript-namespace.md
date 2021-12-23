@@ -6,7 +6,6 @@ categories: [ Blog ]
 image: assets/images/7.jpg
 featured: true
 rating: 5
-hidden: true
 ---
 
 什么时候要用命名空间?
