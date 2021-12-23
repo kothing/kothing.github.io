@@ -176,6 +176,41 @@ type Vh = Food.Vegetables['heat'] // number;
 
 ## 命名空间在lodash里的应用
 其实我们看下那些老牌插件(jq/lodash)里使用namespace特性的代码, 可以发现主要是在声明文件中(xxx.d.ts), 用来表示暴露出来的全局变量(比如lodash的"_").
+```typescript
+/// <reference path="./common/common.d.ts" />
+/// <reference path="./common/array.d.ts" />
+/// <reference path="./common/collection.d.ts" />
+/// <reference path="./common/date.d.ts" />
+/// <reference path="./common/function.d.ts" />
+/// <reference path="./common/lang.d.ts" />
+/// <reference path="./common/math.d.ts" />
+/// <reference path="./common/number.d.ts" />
+/// <reference path="./common/object.d.ts" />
+/// <reference path="./common/seq.d.ts" />
+/// <reference path="./common/string.d.ts" />
+/// <reference path="./common/util.d.ts" />
+
+export = _;
+export as namespace _;
+
+declare const _: _.LoDashStatic;
+declare namespace _ {
+    // tslint:disable-next-line no-empty-interface (This will be augmented)
+    interface LoDashStatic {}
+}
+
+// Backward compatibility with --target es5
+declare global {
+    // tslint:disable-next-line:no-empty-interface
+    interface Set<T> { }
+    // tslint:disable-next-line:no-empty-interface
+    interface Map<K, V> { }
+    // tslint:disable-next-line:no-empty-interface
+    interface WeakSet<T> { }
+    // tslint:disable-next-line:no-empty-interface
+    interface WeakMap<K extends object, V> { }
+}
+```
 
 ## 关于声明文件
 上面为了解释命名空间提及了声明文件(xxx.d.ts), 但由于声明(declare)的内容很多,
