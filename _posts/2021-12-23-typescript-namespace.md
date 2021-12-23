@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript什么时候要用命名空间"
 author: Kothing
 categories: [ TypeScript ]
-image: assets/images/7.jpg
+image: assets/images/8.jpg
 featured: false
 rating: 5
 ---
