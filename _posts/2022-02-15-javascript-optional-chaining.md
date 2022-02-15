@@ -107,7 +107,7 @@ alert(user1?.[key]?.something?.not?.existing); // undefined
 ```js
 delete user?.name; // 如果 user 存在，则删除 user.name
 ```
-需要注意的是，使用 ?. 可以进行删除和读取操作，但是不能进行赋值操作
+需要注意的是，使用 `?.` 可以进行删除和读取操作，但是不能进行赋值操作
 ```js
 let user = null;
 
