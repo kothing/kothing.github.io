@@ -2,7 +2,7 @@
 layout: post
 title: "Javascript可选链操作符(?.)"
 author: Kothing
-categories: [ TypeScript ]
+categories: [ Javascript ]
 image: assets/images/11.jpg
 featured: false
 rating: 5
