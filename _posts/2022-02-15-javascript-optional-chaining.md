@@ -118,9 +118,9 @@ user?.name = "John"; // Error，不起作用
 ## 四、总结
 可选链 ?. 有三种形式：
 
-+ obj?.prop —— 如果 `obj` 存在则返回 `obj.prop`，否则返回 `undefined`。
-+ obj?.[prop] —— 如果 `obj` 存在则返回 `obj[prop]`，否则返回 `undefined`。
-+ obj.method?.() —— 如果 `obj.method` 存在则调用 `obj.method()`，否则返回 `undefined`。
++ `obj?.prop` —— 如果 `obj` 存在则返回 `obj.prop`，否则返回 `undefined`。
++ `obj?.[prop]` —— 如果 `obj` 存在则返回 `obj[prop]`，否则返回 `undefined`。
++ `obj.method?.()` —— 如果 `obj.method` 存在则调用 `obj.method()`，否则返回 `undefined`。
 这几种形式都是检查 `?.` 左侧的值是否为 `null` 或 `undefined`，如果不是的话则继续执行。
 
 **注意**：应该仅在 `?.` 左侧的值可能不存在的情况下才使用，这样发生错误时才能更容易地找到问题。
