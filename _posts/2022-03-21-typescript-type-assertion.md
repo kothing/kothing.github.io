@@ -122,6 +122,79 @@ Uncaught TypeError: animal.swim is not a function
 
 ### 将一个父类断言为更加具体的子类
 
+当类之间有继承关系时，类型断言也是很常见的：
+```ts
+class ApiError extends Error {
+    code: number = 0;
+}
+class HttpError extends Error {
+    statusCode: number = 200;
+}
+
+function isApiError(error: Error) {
+    if (typeof (error as ApiError).code === 'number') {
+        return true;
+    }
+    return false;
+}
+```
+上面的例子中，我们声明了函数 `isApiError`，它用来判断传入的参数是不是 `ApiError` 类型，为了实现这样一个函数，它的参数的类型肯定得是比较抽象的父类 `Error`，这样的话这个函数就能接受 `Error` 或它的子类作为参数了。
+
+但是由于父类 `Error` 中没有 `code` 属性，故直接获取 `error.code` 会报错，需要使用类型断言获取 `(error as ApiError).code`。
+
+大家可能会注意到，在这个例子中有一个更合适的方式来判断是不是 `ApiError`，那就是使用 `instanceof`：
+```ts
+class ApiError extends Error {
+    code: number = 0;
+}
+class HttpError extends Error {
+    statusCode: number = 200;
+}
+
+function isApiError(error: Error) {
+    if (error instanceof ApiError) {
+        return true;
+    }
+    return false;
+}
+```
+上面的例子中，确实使用 `instanceof` 更加合适，因为 `ApiError` 是一个 JavaScript 的类，能够通过 `instanceof` 来判断 `error` 是否是它的实例。
+
+但是有的情况下 `ApiError` 和 `HttpError` 不是一个真正的类，而只是一个 TypeScript 的接口（`interface`），接口是一个类型，不是一个真正的值，它在编译结果中会被删除，当然就无法使用 `instanceof` 来做运行时判断了：
+```ts
+interface ApiError extends Error {
+    code: number;
+}
+interface HttpError extends Error {
+    statusCode: number;
+}
+
+function isApiError(error: Error) {
+    if (error instanceof ApiError) {
+        return true;
+    }
+    return false;
+}
+
+// index.ts:9:26 - error TS2693: 'ApiError' only refers to a type, but is being used as a value here.
+```
+此时就只能用类型断言，通过判断是否存在 `code` 属性，来判断传入的参数是不是 `ApiError` 了：
+```ts
+interface ApiError extends Error {
+    code: number;
+}
+interface HttpError extends Error {
+    statusCode: number;
+}
+
+function isApiError(error: Error) {
+    if (typeof (error as ApiError).code === 'number') {
+        return true;
+    }
+    return false;
+}
+```
+
 ### 将任何一个类型断言为 `any`
 
 ### 将 `any` 断言为一个具体的类型
