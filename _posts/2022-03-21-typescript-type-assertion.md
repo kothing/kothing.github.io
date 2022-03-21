@@ -1,3 +1,14 @@
+---
+layout: post
+title: "Typescript类型断言"
+author: Kothing
+categories: [ TypeScript ]
+tags: [ TypeScript ]
+image: assets/images/photo-35.jpg
+rating: 5
+hidden: true
+---
+
 # 类型断言
 类型断言（Type Assertion）可以用来手动指定一个值的类型。
 
