@@ -67,8 +67,8 @@ function isFish(animal: Cat | Fish) {
 // index.ts:11:23 - error TS2339: Property 'swim' does not exist on type 'Cat | Fish'.
 //   Property 'swim' does not exist on type 'Cat'.
 ```
-上面的例子中，获取 animal.swim 的时候会报错。  
-此时可以使用类型断言，将 animal 断言成 Fish：
+上面的例子中，获取 `animal.swim` 的时候会报错。  
+此时可以使用类型断言，将 `animal` 断言成 `Fish`：
 ```ts
 interface Cat {
     name: string;
@@ -86,7 +86,7 @@ function isFish(animal: Cat | Fish) {
     return false;
 }
 ```
-这样就可以解决访问 animal.swim 时报错的问题了。  
+这样就可以解决访问 `animal.swim` 时报错的问题了。  
 
 需要注意的是，类型断言只能够「欺骗」TypeScript 编译器，无法避免运行时的错误，反而滥用类型断言可能会导致运行时错误：
 ```ts
