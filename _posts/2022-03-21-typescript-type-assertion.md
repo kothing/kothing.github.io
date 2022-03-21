@@ -232,10 +232,114 @@ window.foo = 1;
 总之，一方面不能滥用 `as any`，另一方面也不要完全否定它的作用，我们需要在类型的严格性和开发的便利性之间掌握平衡（这也是 TypeScript 的设计理念之一），才能发挥出 TypeScript 最大的价值。
 
 ### 将 `any` 断言为一个具体的类型
+在日常的开发中，我们不可避免的需要处理 any 类型的变量，它们可能是由于第三方库未能定义好自己的类型，也有可能是历史遗留的或其他人编写的烂代码，还可能是受到 TypeScript 类型系统的限制而无法精确定义类型的场景。
+
+遇到 `any` 类型的变量时，我们可以选择无视它，任由它滋生更多的 `any`。
+
+我们也可以选择改进它，通过类型断言及时的把 `any` 断言为精确的类型，亡羊补牢，使我们的代码向着高可维护性的目标发展。
+
+举例来说，历史遗留的代码中有个 `getCacheData`，它的返回值是 `any`：
+```ts
+function getCacheData(key: string): any {
+    return (window as any).cache[key];
+}
+```
+那么我们在使用它时，最好能够将调用了它之后的返回值断言成一个精确的类型，这样就方便了后续的操作：
+```ts
+function getCacheData(key: string): any {
+    return (window as any).cache[key];
+}
+
+interface Cat {
+    name: string;
+    run(): void;
+}
+
+const tom = getCacheData('tom') as Cat;
+tom.run();
+```
+上面的例子中，我们调用完 `getCacheData` 之后，立即将它断言为 `Cat` 类型。这样的话明确了 `tom` 的类型，后续对 `tom` 的访问时就有了代码补全，提高了代码的可维护性。
 
 ---
 
 ## 类型断言的限制
+那么类型断言有没有什么限制呢？是不是任何一个类型都可以被断言为任何另一个类型呢？
+
+答案是否定的——并不是任何一个类型都可以被断言为任何另一个类型。
+
+具体来说，若 `A` 兼容 `B`，那么 `A` 能够被断言为 `B`，`B` 也能被断言为 `A`。
+
+下面我们通过一个简化的例子，来理解类型断言的限制：
+```ts
+interface Animal {
+    name: string;
+}
+interface Cat {
+    name: string;
+    run(): void;
+}
+
+let tom: Cat = {
+    name: 'Tom',
+    run: () => { console.log('run') }
+};
+let animal: Animal = tom;
+```
+我们知道，TypeScript 是结构类型系统，类型之间的对比只会比较它们最终的结构，而会忽略它们定义时的关系。
+
+在上面的例子中，`Cat` 包含了 `Animal` 中的所有属性，除此之外，它还有一个额外的方法 `run`。TypeScript 并不关心 `Cat` 和 `Animal` 之间定义时是什么关系，而只会看它们最终的结构有什么关系——所以它与 `Cat extends Animal` 是等价的：
+```ts
+interface Animal {
+    name: string;
+}
+interface Cat extends Animal {
+    run(): void;
+}
+```
+那么也不难理解为什么 `Cat` 类型的 `tom` 可以赋值给 `Animal` 类型的 `animal` 了——就像面向对象编程中我们可以将子类的实例赋值给类型为父类的变量。
+
+我们把它换成 TypeScript 中更专业的说法，即：`Animal` 兼容 `Cat`。
+
+当 `Animal` 兼容 `Cat` 时，它们就可以互相进行类型断言了：
+```ts
+interface Animal {
+    name: string;
+}
+interface Cat {
+    name: string;
+    run(): void;
+}
+
+function testAnimal(animal: Animal) {
+    return (animal as Cat);
+}
+function testCat(cat: Cat) {
+    return (cat as Animal);
+}
+```
+这样的设计其实也很容易就能理解：
+
++ 允许 `animal as Cat` 是因为「父类可以被断言为子类」，这个前面已经学习过了
++ 允许 `cat as Animal` 是因为既然子类拥有父类的属性和方法，那么被断言为父类，获取父类的属性、调用父类的方法，就不会有任何问题，故「子类可以被断言为父类」
+需要注意的是，这里我们使用了简化的父类子类的关系来表达类型的兼容性，而实际上 TypeScript 在判断类型的兼容性时，比这种情况复杂很多，详细请参考[类型的兼容性（TODO)][]章节。
+
+总之，若 `A` 兼容 `B`，那么 `A` 能够被断言为 `B`，`B` 也能被断言为 `A`。
+
+同理，若 `B` 兼容 `A`，那么 `A` 能够被断言为 `B`，`B` 也能被断言为 `A`。
+
+所以这也可以换一种说法：
+
+要使得 `A` 能够被断言为 `B`，只需要 `A` 兼容 `B` 或 `B` 兼容 `A` 即可，这也是为了在类型断言时的安全考虑，毕竟毫无根据的断言是非常危险的。
+
+综上所述：
+
++ 联合类型可以被断言为其中一个类型
++ 父类可以被断言为子类
++ 任何类型都可以被断言为 `any`
++ `any` 可以被断言为任何类型
++ 要使得 `A` 能够被断言为 `B`，只需要 `A` 兼容 `B` 或 `B` 兼容 `A` 即可
+
+其实前四种情况都是最后一个的特例。
 
 ---
 
