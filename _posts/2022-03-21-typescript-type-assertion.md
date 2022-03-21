@@ -6,7 +6,6 @@ categories: [ TypeScript ]
 tags: [ TypeScript ]
 image: assets/images/photo-35.jpg
 rating: 5
-hidden: true
 ---
 
 # 类型断言
