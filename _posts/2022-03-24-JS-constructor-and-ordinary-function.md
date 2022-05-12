@@ -5,7 +5,7 @@ author: Kothing
 categories: [ Javascript ]
 tags: [ Javascript ]
 featured: true
-image: assets/images/photo-40.jpg
+image: assets/images/photo-02.jpg
 rating: 5
 ---
 
