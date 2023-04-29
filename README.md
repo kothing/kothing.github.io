@@ -2,7 +2,7 @@
 
 [Live Demo](https://kothing.github.io/) &nbsp; | &nbsp; [Download](https://github.com/kothing/kothing-theme/archive/master.zip)
 
-![Kothing](assets/images/kothing-template.jpg)
+![Kothing](https://kothing.github.io/assets/images/kothing-template.jpg)
 
 
 ### Copyright
